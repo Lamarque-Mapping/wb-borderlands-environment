@@ -128,13 +128,28 @@ def prepare(review):
     return outputs,audit
 
 def amend_page(html):
+    def finish(html):
+        old=['corridors/corridor-integration.js?v=2026-10-10.2','corridors/corridor-integration-v3.js?v=2026-10-10.3','corridors/corridor-integration-v4.js?v=2026-10-10.4']
+        new='corridors/corridor-integration-v5.js?v=2026-10-11.5'
+        if html.count(new)!=1:
+            matches=[path for path in old if html.count(path)==1]
+            assert len(matches)==1
+            html=html.replace(matches[0],new)
+        old_groups="fews:['fews'],"
+        new_groups="fews:['fews','roads'],"
+        if old_groups in html:
+            assert html.count(old_groups)==1
+            html=html.replace(old_groups,new_groups)
+        assert html.count(new_groups)==1
+        roads='  if(name==="fews")add("primaryRoads");\n'
+        if roads not in html:
+            anchor='  if(name==="towns")add("towns");\n'
+            assert html.count(anchor)==1
+            html=html.replace(anchor,anchor+roads)
+        assert html.count(roads)==1
+        return html
     if 'window.createWBCorridors({DATA,map' in html:
-        old=['corridors/corridor-integration.js?v=2026-10-10.2','corridors/corridor-integration-v3.js?v=2026-10-10.3']
-        new='corridors/corridor-integration-v4.js?v=2026-10-10.4'
-        if html.count(new)==1:return html
-        matches=[path for path in old if html.count(path)==1]
-        assert len(matches)==1
-        return html.replace(matches[0],new)
+        return finish(html)
     def replace(old,new):
         nonlocal html
         assert html.count(old)==1,old[:100]
@@ -171,7 +186,7 @@ def amend_page(html):
 <tr><td>GEMS source project locations</td><td>User-supplied World Bank GEMS CSV; official titles and project IDs matched against the World Bank project API.</td><td>Source attribution: World Bank GEMS; official project metadata: World Bank Projects and Operations. The supplied CSV contained no location-level licence or observation date.</td><td>GEMS coordinates remain separate from the project directory’s published evidence. Links use exact project IDs, including explicitly identified associated operations; family links do not merge different World Bank IDs. Implementation status, coordinate precision and observation date were not supplied; country labels were not independently validated. Source rows are not necessarily distinct sites. Mandera marine-fisheries point P163980 is withheld pending verification. P096367 retains a historical closing-date flag. Straight-line distance to a major road is not road access. <a href="https://projects.worldbank.org/" target="_blank" rel="noopener noreferrer">Official project catalogue</a>.</td></tr>
 """
     replace('        </tbody>\n      </table></div>',source_rows+'        </tbody>\n      </table></div>')
-    return html
+    return finish(html)
 
 def build(review,site):
     outputs,audit=prepare(review)
@@ -193,10 +208,10 @@ def build(review,site):
         (site/'decoded'/('new_'+code+'.html')).write_text(html)
         manifest[name]=asset(html.encode(),'text/html')
     boot['manifest']=asset(json.dumps(manifest,separators=(',',':')).encode(),'application/json')
-    boot['ui_revision']='2026-10-10.corridors.32'
+    boot['ui_revision']='2026-10-11.fews-gems.33'
     (site/'boot.json').write_text(json.dumps(boot,separators=(',',':'))+'\n');changed.append('boot.json')
     audit_path='tools/corridor-integration/validation/stage3_review_2026-10-10.json';f=site/audit_path;f.parent.mkdir(parents=True,exist_ok=True);f.write_text(json.dumps(audit,indent=2)+'\n');changed.append(audit_path)
-    changed.append('corridors/corridor-integration-v4.js')
+    changed.append('corridors/corridor-integration-v5.js')
     (site/'changes.json').write_text(json.dumps(changed,indent=2));print(json.dumps(audit,indent=2));print('Changed files:',len(changed))
 
 if __name__=='__main__':build(pathlib.Path(sys.argv[1]),pathlib.Path(sys.argv[2]))

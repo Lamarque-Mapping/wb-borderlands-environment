@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-11",
+  "revision": "2026-10-11.fews-gems.33",
+  "changes": [
+    "Existing primary roads visible by default in FEWS views, labelled geographic context",
+    "GEMS overlay initially hidden; explicit show toggle and show-and-locate actions retained",
+    "Independent GEMS filter reset and disabled empty-result CSV/locate actions",
+    "Compact action layout and expandable evidence note; accessible popup/detail actions"
+  ],
+  "data_descriptors_unchanged": true,
+  "public_access_settings_unchanged": true,
+  "page_checks": [
+    {
+      "map": "moyale_borana",
+      "primary_roads_manifest_entry": "moyale_borana/roads",
+      "idempotent": true,
+      "original_and_upgrade_identical": true,
+      "inline_js_syntax": "pass"
+    },
+    {
+      "map": "mandera_triangle",
+      "primary_roads_manifest_entry": "mandera_triangle/roads",
+      "idempotent": true,
+      "original_and_upgrade_identical": true,
+      "inline_js_syntax": "pass"
+    },
+    {
+      "map": "karamoja",
+      "primary_roads_manifest_entry": "karamoja/roads",
+      "idempotent": true,
+      "original_and_upgrade_identical": true,
+      "inline_js_syntax": "pass"
+    },
+    {
+      "map": "dikhil",
+      "primary_roads_manifest_entry": "dikhil/roads",
+      "idempotent": true,
+      "original_and_upgrade_identical": true,
+      "inline_js_syntax": "pass"
+    }
+  ],
+  "live_checks": "pending"
+}
