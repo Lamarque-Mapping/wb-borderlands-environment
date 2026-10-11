@@ -40,5 +40,61 @@
   "cluster_ring_groups_checked": 3084,
   "source_rows_with_redundant_buttons": 447,
   "distinct_directory_targets_preserved": true,
-  "live_checks": "pending"
+  "live_checks": {
+    "release_commit": "29cb97504c2c23ee296eb8ef297f0b5be74ba9dd",
+    "pages_run": 38158666181,
+    "pages_conclusion": "success",
+    "module": "v7",
+    "urban_5km_summaries": {
+      "moyale_borana": [
+        208,
+        1126
+      ],
+      "mandera_triangle": [
+        325,
+        736
+      ],
+      "karamoja": [
+        277,
+        1366
+      ],
+      "dikhil": [
+        158,
+        633
+      ]
+    },
+    "karamoja_group_total": 1366,
+    "karamoja_overview_groups": 25,
+    "karamoja_urban_2km": [
+      171,
+      1366
+    ],
+    "karamoja_place_10km": [
+      659,
+      1366
+    ],
+    "satellite_detail_restored": true,
+    "dikhil_individual_popup_node": 9175924740,
+    "individual_zoom_button": "pass",
+    "fews_roads_default": true,
+    "gems_sites_default": false,
+    "mobile_width_px": 390,
+    "mobile_control_height_px": 44,
+    "mobile_horizontal_overflow": false,
+    "mobile_grid_and_junction_switch": "pass",
+    "proof": "tools/corridor-integration/validation/connectivity_live_2026-10-11.jpg"
+  },
+  "preview_checks": {
+    "module": "v6",
+    "karamoja_grouped_total": 1366,
+    "overview_groups": 25,
+    "keyboard_cluster_zoom": {
+      "groups": 15,
+      "individuals": 36
+    },
+    "grid_raw_count_cells": 234,
+    "dikhil_gems_source_row": 7136,
+    "dikhil_gems_directory_button_count": 1,
+    "context_directory_link": "correct project family opens"
+  }
 }
