@@ -1,6 +1,6 @@
 {
   "date": "2026-10-11",
-  "revision": "2026-10-11.connectivity.34",
+  "revision": "2026-10-11.connectivity.35",
   "changes": [
     "Default junction display with zoom clusters; ring split represents local reach at the selected threshold",
     "Selectable 10 km grid preserves all approved metrics; reach share is its initial metric",
