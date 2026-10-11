@@ -129,8 +129,8 @@ def prepare(review):
 
 def amend_page(html):
     def finish(html):
-        old=['corridors/corridor-integration.js?v=2026-10-10.2','corridors/corridor-integration-v3.js?v=2026-10-10.3','corridors/corridor-integration-v4.js?v=2026-10-10.4']
-        new='corridors/corridor-integration-v5.js?v=2026-10-11.5'
+        old=['corridors/corridor-integration.js?v=2026-10-10.2','corridors/corridor-integration-v3.js?v=2026-10-10.3','corridors/corridor-integration-v4.js?v=2026-10-10.4','corridors/corridor-integration-v5.js?v=2026-10-11.5']
+        new='corridors/corridor-integration-v6.js?v=2026-10-11.6'
         if html.count(new)!=1:
             matches=[path for path in old if html.count(path)==1]
             assert len(matches)==1
@@ -208,10 +208,11 @@ def build(review,site):
         (site/'decoded'/('new_'+code+'.html')).write_text(html)
         manifest[name]=asset(html.encode(),'text/html')
     boot['manifest']=asset(json.dumps(manifest,separators=(',',':')).encode(),'application/json')
-    boot['ui_revision']='2026-10-11.fews-gems.33'
+    boot['ui_revision']='2026-10-11.connectivity.34'
     (site/'boot.json').write_text(json.dumps(boot,separators=(',',':'))+'\n');changed.append('boot.json')
     audit_path='tools/corridor-integration/validation/stage3_review_2026-10-10.json';f=site/audit_path;f.parent.mkdir(parents=True,exist_ok=True);f.write_text(json.dumps(audit,indent=2)+'\n');changed.append(audit_path)
-    changed.append('corridors/corridor-integration-v5.js')
+    changed.append('corridors/corridor-integration-v6.js')
     (site/'changes.json').write_text(json.dumps(changed,indent=2));print(json.dumps(audit,indent=2));print('Changed files:',len(changed))
 
 if __name__=='__main__':build(pathlib.Path(sys.argv[1]),pathlib.Path(sys.argv[2]))
+

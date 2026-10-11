@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-11",
+  "revision": "2026-10-11.connectivity.34",
+  "changes": [
+    "Default junction display with zoom clusters; ring split represents local reach at the selected threshold",
+    "Selectable 10 km grid preserves all approved metrics; reach share is its initial metric",
+    "Quieter satellite context with optional full detail; cased analysed roads",
+    "Visible reach definition, threshold, and node-count summary",
+    "GEMS links collapsed by scope and opened family, preserving distinct destinations"
+  ],
+  "data_descriptors_unchanged": true,
+  "access_settings_unchanged": true,
+  "page_checks": [
+    {
+      "map": "moyale_borana",
+      "only_html_change": "versioned module URL",
+      "idempotent": true,
+      "inline_js_syntax": "pass"
+    },
+    {
+      "map": "mandera_triangle",
+      "only_html_change": "versioned module URL",
+      "idempotent": true,
+      "inline_js_syntax": "pass"
+    },
+    {
+      "map": "karamoja",
+      "only_html_change": "versioned module URL",
+      "idempotent": true,
+      "inline_js_syntax": "pass"
+    },
+    {
+      "map": "dikhil",
+      "only_html_change": "versioned module URL",
+      "idempotent": true,
+      "inline_js_syntax": "pass"
+    }
+  ],
+  "reach_cases_checked_against_approved_grid_totals": 24,
+  "cluster_ring_groups_checked": 3084,
+  "source_rows_with_redundant_buttons": 447,
+  "distinct_directory_targets_preserved": true,
+  "live_checks": "pending"
+}
