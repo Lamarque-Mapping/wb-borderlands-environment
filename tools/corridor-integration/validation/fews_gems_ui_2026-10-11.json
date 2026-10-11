@@ -39,5 +39,47 @@
       "inline_js_syntax": "pass"
     }
   ],
-  "live_checks": "pending"
+  "live_checks": {
+    "release_commit": "b836db41cc9f0ce05598c8e09100a30f5d04413a",
+    "pages_run": 38154602485,
+    "pages_conclusion": "success",
+    "desktop_fews_primary_road_paths": {
+      "moyale_borana": 263,
+      "mandera_triangle": 160,
+      "karamoja": 591,
+      "dikhil": 382
+    },
+    "desktop_gems_default_all_four_maps": {
+      "checked": false,
+      "visible_markers": 0
+    },
+    "gems_toggle": "pass",
+    "gems_project_and_relationship_filters": "pass",
+    "gems_empty_result_locate_and_csv_disabled": "pass",
+    "gems_reset_preserves_hidden_visibility": "pass",
+    "gems_locate_explicitly_shows_layer": "pass",
+    "gems_keyboard_popup_and_focal_directory_link": "pass",
+    "directory_show_gems_link": "pass",
+    "filtered_csv": {
+      "project_id": "P160083",
+      "source_row": 5246,
+      "rows": 1,
+      "content_verified": true,
+      "browser_download_wait_event": "timed out; downloaded file was present and verified"
+    },
+    "evidence_disclosure": "pass",
+    "clean_removes_fews_roads_and_panel": "pass",
+    "fews_place_close_and_reopen": "pass",
+    "mobile": {
+      "width": 390,
+      "gems_default_hidden": true,
+      "locate_button_height": 44,
+      "gems_locate_closes_views_panel": true,
+      "fews_roads_after_ready": 382,
+      "trade_tab_label": "Trade",
+      "trade_locate_closes_panel": true
+    },
+    "site_console_errors": [],
+    "fews_proof": "tools/corridor-integration/validation/fews_primary_roads_live_2026-10-11.jpg"
+  }
 }
