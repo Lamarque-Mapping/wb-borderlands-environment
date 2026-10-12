@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-12",
+  "revision": "2026-10-12.connectivity.37",
+  "transport_initial_subview": "crossings",
+  "transport_first_label": "Towns & transport",
+  "default_connectivity_display": "coloured roads",
+  "road_colours": "enclosing 10 km area values, not per-highway estimates",
+  "data_descriptors_unchanged": true,
+  "access_settings_unchanged": true,
+  "page_checks": [
+    {
+      "map": "moyale_borana",
+      "only_html_changes": [
+        "module URL",
+        "transport initial subview",
+        "transport subview order"
+      ],
+      "idempotent": true,
+      "inline_js_syntax": "pass"
+    },
+    {
+      "map": "mandera_triangle",
+      "only_html_changes": [
+        "module URL",
+        "transport initial subview",
+        "transport subview order"
+      ],
+      "idempotent": true,
+      "inline_js_syntax": "pass"
+    },
+    {
+      "map": "karamoja",
+      "only_html_changes": [
+        "module URL",
+        "transport initial subview",
+        "transport subview order"
+      ],
+      "idempotent": true,
+      "inline_js_syntax": "pass"
+    },
+    {
+      "map": "dikhil",
+      "only_html_changes": [
+        "module URL",
+        "transport initial subview",
+        "transport subview order"
+      ],
+      "idempotent": true,
+      "inline_js_syntax": "pass"
+    }
+  ],
+  "geometry_checks": [
+    {
+      "map": "moyale_borana",
+      "areas": 196,
+      "geometry_matches_shapely": true,
+      "metrics_unchanged": true
+    },
+    {
+      "map": "mandera_triangle",
+      "areas": 148,
+      "geometry_matches_shapely": true,
+      "metrics_unchanged": true
+    },
+    {
+      "map": "karamoja",
+      "areas": 234,
+      "geometry_matches_shapely": true,
+      "metrics_unchanged": true
+    },
+    {
+      "map": "dikhil",
+      "areas": 136,
+      "geometry_matches_shapely": true,
+      "metrics_unchanged": true
+    }
+  ],
+  "fews_and_gems_helpers_unchanged": true,
+  "live_checks": "pending"
+}
