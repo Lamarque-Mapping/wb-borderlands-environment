@@ -76,5 +76,38 @@
     }
   ],
   "fews_and_gems_helpers_unchanged": true,
-  "live_checks": "pending"
+  "live_checks": "pending",
+  "preview_checks": {
+    "pages_run": 38239092258,
+    "pages_conclusion": "success",
+    "karamoja_urban5_summary": [
+      277,
+      1366
+    ],
+    "karamoja_urban10_summary": [
+      301,
+      1366
+    ],
+    "road_areas": 234,
+    "area_selection": 2092,
+    "selected_area_junctions": [
+      0,
+      3
+    ],
+    "selected_area_road_km": 10.1,
+    "density_display": 8.2,
+    "transport_initial_selected": "Towns & transport",
+    "transport_first_button": "Towns & transport",
+    "normal_presets_restored_outside_connectivity": true,
+    "mobile_width_px": 390,
+    "mobile_horizontal_overflow": false,
+    "mobile_distance_button_height_px": 44,
+    "mobile_grid_switch": "pass",
+    "mobile_map_restore": "pass",
+    "dikhil_summary": [
+      158,
+      633
+    ],
+    "dikhil_road_areas": 136
+  }
 }

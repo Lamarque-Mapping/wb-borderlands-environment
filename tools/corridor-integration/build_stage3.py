@@ -210,7 +210,7 @@ def build(review,site):
         (site/'decoded'/('new_'+code+'.html')).write_text(html)
         manifest[name]=asset(html.encode(),'text/html')
     boot['manifest']=asset(json.dumps(manifest,separators=(',',':')).encode(),'application/json')
-    boot['ui_revision']='2026-10-11.connectivity.37'
+    boot['ui_revision']='2026-10-12.connectivity.37'
     (site/'boot.json').write_text(json.dumps(boot,separators=(',',':'))+'\n');changed.append('boot.json')
     audit_path='tools/corridor-integration/validation/stage3_review_2026-10-10.json';f=site/audit_path;f.parent.mkdir(parents=True,exist_ok=True);f.write_text(json.dumps(audit,indent=2)+'\n');changed.append(audit_path)
     changed.append('corridors/corridor-integration-v8.js')
