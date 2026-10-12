@@ -76,7 +76,29 @@
     }
   ],
   "fews_and_gems_helpers_unchanged": true,
-  "live_checks": "pending",
+  "live_checks": {
+    "release_commit": "a5014785c563a74fe992a6e27d656c7e9bc737c2",
+    "pages_run": 38239706168,
+    "pages_conclusion": "success",
+    "towns_default_selected": {
+      "karamoja": true,
+      "moyale_borana": true,
+      "mandera_triangle": true,
+      "dikhil": true
+    },
+    "towns_first_button": true,
+    "karamoja_urban5_summary": [
+      277,
+      1366
+    ],
+    "karamoja_road_areas": 234,
+    "default_junction_marker_count": 0,
+    "dikhil_fews_primary_road_path_count": 382,
+    "gems_default_off_verified_in_preview": true,
+    "proof_files": [
+      "tools/corridor-integration/validation/towns_default_live_2026-10-12.jpg"
+    ]
+  },
   "preview_checks": {
     "pages_run": 38239092258,
     "pages_conclusion": "success",
