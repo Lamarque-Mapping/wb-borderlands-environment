@@ -11,7 +11,7 @@ from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 ROOT = Path(__file__).resolve().parent
 SITE = ROOT / 'site'
 CODES = ['mandera_triangle', 'moyale_borana', 'karamoja', 'dikhil']
-REVISION = '2026-10-15.sedac.45'
+REVISION = '2026-10-15.sedac.46'
 BASE_HEAD = '7b6f221c2960e1ad9217be8733212104bf6e1a59'
 dump = lambda obj: json.dumps(obj, ensure_ascii=False, separators=(',', ':'), allow_nan=False).encode()
 boot = json.loads((ROOT.parent/'rural_access_default/site/boot.json').read_text())
@@ -20,7 +20,7 @@ baseline = json.loads((ROOT.parent/'rural_access_default/working/manifest.json')
 manifest = dict(baseline)
 aes = AESGCM(base64.b64decode(boot['public_key']))
 (SITE/'assets').mkdir(exist_ok=True)
-changes = ['sedac/sedac-v1.css', 'sedac/sedac-v1.js', 'sedac/analysis-v1.js']
+changes = ['sedac/sedac-v1.css', 'sedac/sedac-v2.js', 'sedac/analysis-v1.js']
 checks = []
 
 def asset(raw, mime, name):

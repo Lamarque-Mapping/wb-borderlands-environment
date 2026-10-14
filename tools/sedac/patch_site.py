@@ -4,7 +4,7 @@ import subprocess
 ROOT = Path(__file__).resolve().parent
 WORK = ROOT/'working'
 WORK.mkdir(exist_ok=True)
-REV='2026-10-15.sedac.45'
+REV='2026-10-15.sedac.46'
 
 def one(s,old,new):
     assert s.count(old)==1, (old[:100],s.count(old))
@@ -15,7 +15,7 @@ source_summary='''<section class="sedac-source-summary"><h3>NASA SEDAC · Urban 
 
 for code in ['mandera_triangle','moyale_borana','karamoja','dikhil']:
     page=(ROOT.parent/'rural_access_default/working'/('page_map_'+code+'.html')).read_text()
-    page=one(page,'</head>','<link rel="stylesheet" href="sedac/sedac-v1.css?v='+REV+'"><script src="sedac/sedac-v1.js?v='+REV+'"></script></head>')
+    page=one(page,'</head>','<link rel="stylesheet" href="sedac/sedac-v1.css?v='+REV+'"><script src="sedac/sedac-v2.js?v='+REV+'"></script></head>')
     page=one(page,"climate:'Drought & flood risk'","climate:'Drought & flood risk',heat:'Historical humid heat'")
     page=one(page,"['raster','Population surface']","['raster','Population surface'],['deprivation','Relative deprivation · SEDAC']")
     page=one(page," if(name==='population')return themeState.population==='raster'?['raster_population']:['hexes'];", " if(name==='population')return themeState.population==='deprivation'?['sedac']:themeState.population==='raster'?['raster_population']:['hexes'];")
