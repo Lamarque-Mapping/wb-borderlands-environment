@@ -1,0 +1,26 @@
+{
+  "commit": "03f0bcfe161f9b06692ea7c37b9ee8cd9a196704",
+  "revision": "2026-10-15.sedac.46",
+  "checks": {
+    "settlement_selection_Mandera": true,
+    "footprint_toggle_and_clear": true,
+    "GRDI_native_click_97_8": true,
+    "GRDI_csv_30791_values_exact": true,
+    "heat_map_Dikhil_threshold32": true,
+    "analysis_three_tabs": true,
+    "heat_analysis_Moyale_threshold30": true,
+    "heat_csv_34_years_exact": true,
+    "analysis_map_deep_link": true,
+    "zero_heat_days_distinct_from_missing": true,
+    "map_switcher": true,
+    "sources_table_new_three_rows": true,
+    "rural_access_default_preserved": true,
+    "towns_transport_default_preserved": true,
+    "settlement_details_visible_after_selection": true,
+    "final_raster_colours_match_legend": true
+  },
+  "visual_fixes": [
+    "separate no-data backdrop below raster colour layer",
+    "scroll selected settlement details into view"
+  ]
+}
