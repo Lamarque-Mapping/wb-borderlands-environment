@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "checks": [
+    "All five updated HTML pages pass JavaScript syntax checks",
+    "Weighted summaries agree between independent Python and JavaScript calculations",
+    "Unequal-weight fixture returns 82%, not the 50% unweighted mean",
+    "Missing denominator excluded from percentages and retained in CSV",
+    "58 unique original source records retained",
+    "Source-unit sort orders and CSV quoting verified",
+    "All four map source tables updated"
+  ],
+  "summaries": {
+    "moyale_borana": {
+      "count": 5,
+      "valid": 5,
+      "weighted": 56.284139362984774,
+      "min": 15.5081805708,
+      "max": 76.1905057248
+    },
+    "mandera_triangle": {
+      "count": 15,
+      "valid": 15,
+      "weighted": 29.606867675637574,
+      "min": 1.55468773622,
+      "max": 51.4513296134
+    },
+    "karamoja": {
+      "count": 27,
+      "valid": 26,
+      "weighted": 45.223804910940565,
+      "min": 6.3641078795,
+      "max": 100.0
+    },
+    "dikhil": {
+      "count": 11,
+      "valid": 11,
+      "weighted": 36.99197821186931,
+      "min": 16.7608850517,
+      "max": 67.6451822222
+    }
+  }
+}
