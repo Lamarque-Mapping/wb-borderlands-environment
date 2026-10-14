@@ -1,0 +1,78 @@
+{
+  "baseline_commit": "23467d53014689f87c3c1e84ff75297df8bd31a1",
+  "revision": "2026-10-15.views.48",
+  "checks": [
+    {
+      "page": "page/map=mandera_triangle",
+      "source_rows": 29,
+      "original_28_rows_preserved": true,
+      "source_cleanup_preserves_scripts": true,
+      "stable_menu_and_deferred_view_swap": true,
+      "no_featured_source_callouts_or_row_styles": true
+    },
+    {
+      "page": "page/map=moyale_borana",
+      "source_rows": 29,
+      "original_28_rows_preserved": true,
+      "source_cleanup_preserves_scripts": true,
+      "stable_menu_and_deferred_view_swap": true,
+      "no_featured_source_callouts_or_row_styles": true
+    },
+    {
+      "page": "page/map=karamoja",
+      "source_rows": 29,
+      "original_28_rows_preserved": true,
+      "source_cleanup_preserves_scripts": true,
+      "stable_menu_and_deferred_view_swap": true,
+      "no_featured_source_callouts_or_row_styles": true
+    },
+    {
+      "page": "page/map=dikhil",
+      "source_rows": 29,
+      "original_28_rows_preserved": true,
+      "source_cleanup_preserves_scripts": true,
+      "stable_menu_and_deferred_view_swap": true,
+      "no_featured_source_callouts_or_row_styles": true
+    },
+    {
+      "page": "page/analysis",
+      "source_rows": 29,
+      "original_28_rows_preserved": true,
+      "source_cleanup_preserves_scripts": true,
+      "stable_menu_and_deferred_view_swap": false,
+      "no_featured_source_callouts_or_row_styles": true
+    }
+  ],
+  "themes": [
+    "Administrative boundaries and borders",
+    "Borderland Analysis boundaries",
+    "Built-up surface",
+    "Calculated crossings and 10 km hexes",
+    "Conflict events",
+    "Development projects \u00b7 IATI",
+    "Drought risk",
+    "Energy and strategic infrastructure",
+    "GEMS source project locations",
+    "Groundwater",
+    "Historical border trade",
+    "Historical humid heat \u00b7 NASA SEDAC GEHE",
+    "Historical settlement change",
+    "Land cover",
+    "Local major-road connectivity",
+    "Night-time lights",
+    "Population",
+    "Rainfall",
+    "Relative deprivation \u00b7 NASA SEDAC GRDI v1",
+    "River flood exposure",
+    "Roads, settlements, services, airports and ports",
+    "Rural road access \u00b7 NASA SEDAC 2023",
+    "Satellite basemap",
+    "Surface water",
+    "Travel time to cities",
+    "Travel time to healthcare",
+    "UNHCR field sites",
+    "Urban settlement footprints and population \u00b7 NASA SEDAC GUPPD v1",
+    "Water points"
+  ],
+  "data_assets_unchanged": true
+}
