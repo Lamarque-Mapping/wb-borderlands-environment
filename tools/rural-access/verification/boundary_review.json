@@ -1,0 +1,2472 @@
+{
+  "map_head": "7b8ba4c422fbbd310a62e81cde9c8cfa26b781a9",
+  "gdal_version": "GDAL 3.8.4, released 2024/02/08",
+  "equal_area_crs": "EPSG:6933",
+  "diagnostic_policy": "Compare supplied source units against same-country polygons in their current cluster. Area overlap does not establish rate compatibility; no rates copied or apportioned. Full-precision source geometry is preserved; invalid geometry repairs occur only in diagnostic memory. Current map exports may be simplified or clipped, so results are diagnostic, not a cadastral boundary validation.",
+  "summary": {
+    "source_rows": 58,
+    "both_sides_at_least_95pct": 18,
+    "without_bidirectional_95pct_match": 40
+  },
+  "no_join_applied": true,
+  "repairs_for_diagnostics_only": [
+    {
+      "map_code": "karamoja",
+      "feature_index": 113,
+      "current_name": "Amuru"
+    },
+    {
+      "map_code": "karamoja",
+      "feature_index": 125,
+      "current_name": "Nabilatuk"
+    },
+    {
+      "map_code": "karamoja",
+      "feature_index": 130,
+      "current_name": "Pader"
+    }
+  ],
+  "records": [
+    {
+      "csv_line": 2,
+      "map_code": "mandera_triangle",
+      "source_fid": 21022,
+      "source_country": "Kenya",
+      "source_parent": "Mandera",
+      "source_name": "Banissa",
+      "source_area_km2": 2969.31785,
+      "source_covered_by_current_union_percent": 99.9269,
+      "mutual_95pct_diagnostic_count": 1,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 11,
+          "current_name": "Banissa",
+          "current_parent": "Mandera",
+          "source_area_covered_percent": 99.8587,
+          "current_area_covered_percent": 96.2539
+        },
+        {
+          "current_feature_index": 16,
+          "current_name": "Mandera West",
+          "current_parent": "Mandera",
+          "source_area_covered_percent": 0.0568,
+          "current_area_covered_percent": 0.0325
+        },
+        {
+          "current_feature_index": 14,
+          "current_name": "Mandera North",
+          "current_parent": "Mandera",
+          "source_area_covered_percent": 0.0116,
+          "current_area_covered_percent": 0.0056
+        }
+      ]
+    },
+    {
+      "csv_line": 3,
+      "map_code": "mandera_triangle",
+      "source_fid": 21023,
+      "source_country": "Kenya",
+      "source_parent": "Mandera",
+      "source_name": "Lafey",
+      "source_area_km2": 3190.082306,
+      "source_covered_by_current_union_percent": 99.3803,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 12,
+          "current_name": "Lafey",
+          "current_parent": "Mandera",
+          "source_area_covered_percent": 75.9509,
+          "current_area_covered_percent": 68.6068
+        },
+        {
+          "current_feature_index": 13,
+          "current_name": "Mandera East",
+          "current_parent": "Mandera",
+          "source_area_covered_percent": 20.9628,
+          "current_area_covered_percent": 26.6101
+        },
+        {
+          "current_feature_index": 14,
+          "current_name": "Mandera North",
+          "current_parent": "Mandera",
+          "source_area_covered_percent": 2.4666,
+          "current_area_covered_percent": 1.2842
+        }
+      ]
+    },
+    {
+      "csv_line": 4,
+      "map_code": "mandera_triangle",
+      "source_fid": 21024,
+      "source_country": "Kenya",
+      "source_parent": "Mandera",
+      "source_name": "Mandera East",
+      "source_area_km2": 2898.434104,
+      "source_covered_by_current_union_percent": 98.9088,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 13,
+          "current_name": "Mandera East",
+          "current_parent": "Mandera",
+          "source_area_covered_percent": 61.7195,
+          "current_area_covered_percent": 71.1838
+        },
+        {
+          "current_feature_index": 12,
+          "current_name": "Lafey",
+          "current_parent": "Mandera",
+          "source_area_covered_percent": 37.1893,
+          "current_area_covered_percent": 30.5221
+        }
+      ]
+    },
+    {
+      "csv_line": 5,
+      "map_code": "mandera_triangle",
+      "source_fid": 21025,
+      "source_country": "Kenya",
+      "source_parent": "Mandera",
+      "source_name": "Mandera North",
+      "source_area_km2": 6040.786353,
+      "source_covered_by_current_union_percent": 99.5094,
+      "mutual_95pct_diagnostic_count": 1,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 14,
+          "current_name": "Mandera North",
+          "current_parent": "Mandera",
+          "source_area_covered_percent": 99.4252,
+          "current_area_covered_percent": 98.0179
+        },
+        {
+          "current_feature_index": 11,
+          "current_name": "Banissa",
+          "current_parent": "Mandera",
+          "source_area_covered_percent": 0.0715,
+          "current_area_covered_percent": 0.1402
+        },
+        {
+          "current_feature_index": 12,
+          "current_name": "Lafey",
+          "current_parent": "Mandera",
+          "source_area_covered_percent": 0.0101,
+          "current_area_covered_percent": 0.0173
+        },
+        {
+          "current_feature_index": 16,
+          "current_name": "Mandera West",
+          "current_parent": "Mandera",
+          "source_area_covered_percent": 0.0015,
+          "current_area_covered_percent": 0.0018
+        },
+        {
+          "current_feature_index": 15,
+          "current_name": "Mandera South",
+          "current_parent": "Mandera",
+          "source_area_covered_percent": 0.0011,
+          "current_area_covered_percent": 0.0012
+        }
+      ]
+    },
+    {
+      "csv_line": 6,
+      "map_code": "mandera_triangle",
+      "source_fid": 21026,
+      "source_country": "Kenya",
+      "source_parent": "Mandera",
+      "source_name": "Mandera South",
+      "source_area_km2": 4108.813673,
+      "source_covered_by_current_union_percent": 100.0,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 15,
+          "current_name": "Mandera South",
+          "current_parent": "Mandera",
+          "source_area_covered_percent": 99.7261,
+          "current_area_covered_percent": 74.0076
+        },
+        {
+          "current_feature_index": 12,
+          "current_name": "Lafey",
+          "current_parent": "Mandera",
+          "source_area_covered_percent": 0.2597,
+          "current_area_covered_percent": 0.3022
+        },
+        {
+          "current_feature_index": 14,
+          "current_name": "Mandera North",
+          "current_parent": "Mandera",
+          "source_area_covered_percent": 0.0105,
+          "current_area_covered_percent": 0.007
+        },
+        {
+          "current_feature_index": 19,
+          "current_name": "Tarbaj",
+          "current_parent": "Wajir",
+          "source_area_covered_percent": 0.0029,
+          "current_area_covered_percent": 0.0016
+        },
+        {
+          "current_feature_index": 20,
+          "current_name": "Wajir East",
+          "current_parent": "Wajir",
+          "source_area_covered_percent": 0.0008,
+          "current_area_covered_percent": 0.0008
+        }
+      ]
+    },
+    {
+      "csv_line": 7,
+      "map_code": "mandera_triangle",
+      "source_fid": 21027,
+      "source_country": "Kenya",
+      "source_parent": "Mandera",
+      "source_name": "Mandera West",
+      "source_area_km2": 5190.191801,
+      "source_covered_by_current_union_percent": 99.9392,
+      "mutual_95pct_diagnostic_count": 1,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 16,
+          "current_name": "Mandera West",
+          "current_parent": "Mandera",
+          "source_area_covered_percent": 99.6593,
+          "current_area_covered_percent": 99.8311
+        },
+        {
+          "current_feature_index": 14,
+          "current_name": "Mandera North",
+          "current_parent": "Mandera",
+          "source_area_covered_percent": 0.2302,
+          "current_area_covered_percent": 0.195
+        },
+        {
+          "current_feature_index": 21,
+          "current_name": "Wajir North",
+          "current_parent": "Wajir",
+          "source_area_covered_percent": 0.0356,
+          "current_area_covered_percent": 0.0232
+        },
+        {
+          "current_feature_index": 11,
+          "current_name": "Banissa",
+          "current_parent": "Mandera",
+          "source_area_covered_percent": 0.0105,
+          "current_area_covered_percent": 0.0177
+        },
+        {
+          "current_feature_index": 15,
+          "current_name": "Mandera South",
+          "current_parent": "Mandera",
+          "source_area_covered_percent": 0.0038,
+          "current_area_covered_percent": 0.0036
+        }
+      ]
+    },
+    {
+      "csv_line": 8,
+      "map_code": "mandera_triangle",
+      "source_fid": 21028,
+      "source_country": "Kenya",
+      "source_parent": "Mandera",
+      "source_name": "unknown 1",
+      "source_area_km2": 1374.523929,
+      "source_covered_by_current_union_percent": 99.9996,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 15,
+          "current_name": "Mandera South",
+          "current_parent": "Mandera",
+          "source_area_covered_percent": 99.9708,
+          "current_area_covered_percent": 24.8186
+        },
+        {
+          "current_feature_index": 16,
+          "current_name": "Mandera West",
+          "current_parent": "Mandera",
+          "source_area_covered_percent": 0.0211,
+          "current_area_covered_percent": 0.0056
+        },
+        {
+          "current_feature_index": 14,
+          "current_name": "Mandera North",
+          "current_parent": "Mandera",
+          "source_area_covered_percent": 0.0056,
+          "current_area_covered_percent": 0.0012
+        },
+        {
+          "current_feature_index": 19,
+          "current_name": "Tarbaj",
+          "current_parent": "Wajir",
+          "source_area_covered_percent": 0.0021,
+          "current_area_covered_percent": 0.0004
+        }
+      ]
+    },
+    {
+      "csv_line": 9,
+      "map_code": "mandera_triangle",
+      "source_fid": 37056,
+      "source_country": "Somalia",
+      "source_parent": "Gedo",
+      "source_name": "Baar-Dheere",
+      "source_area_km2": 14788.033672,
+      "source_covered_by_current_union_percent": 99.7272,
+      "mutual_95pct_diagnostic_count": 1,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 32,
+          "current_name": "Baardheere",
+          "current_parent": "Gedo",
+          "source_area_covered_percent": 99.5627,
+          "current_area_covered_percent": 96.1452
+        },
+        {
+          "current_feature_index": 40,
+          "current_name": "Saakow",
+          "current_parent": "Middle Juba",
+          "source_area_covered_percent": 0.1058,
+          "current_area_covered_percent": 0.1955
+        },
+        {
+          "current_feature_index": 38,
+          "current_name": "Afmadow",
+          "current_parent": "Lower Juba",
+          "source_area_covered_percent": 0.0587,
+          "current_area_covered_percent": 0.1177
+        }
+      ]
+    },
+    {
+      "csv_line": 10,
+      "map_code": "mandera_triangle",
+      "source_fid": 37057,
+      "source_country": "Somalia",
+      "source_parent": "Gedo",
+      "source_name": "Beled Xaawo",
+      "source_area_km2": 4106.998546,
+      "source_covered_by_current_union_percent": 99.2926,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 33,
+          "current_name": "Belet Xaawo",
+          "current_parent": "Gedo",
+          "source_area_covered_percent": 91.8202,
+          "current_area_covered_percent": 98.2185
+        },
+        {
+          "current_feature_index": 36,
+          "current_name": "Garbahaarey",
+          "current_parent": "Gedo",
+          "source_area_covered_percent": 5.1474,
+          "current_area_covered_percent": 2.5398
+        },
+        {
+          "current_feature_index": 34,
+          "current_name": "Ceel Waaq",
+          "current_parent": "Gedo",
+          "source_area_covered_percent": 1.3014,
+          "current_area_covered_percent": 0.6851
+        },
+        {
+          "current_feature_index": 37,
+          "current_name": "Luuq",
+          "current_parent": "Gedo",
+          "source_area_covered_percent": 1.0236,
+          "current_area_covered_percent": 0.5067
+        }
+      ]
+    },
+    {
+      "csv_line": 11,
+      "map_code": "mandera_triangle",
+      "source_fid": 37058,
+      "source_country": "Somalia",
+      "source_parent": "Gedo",
+      "source_name": "Ceel Waaq",
+      "source_area_km2": 8248.622429,
+      "source_covered_by_current_union_percent": 99.2454,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 34,
+          "current_name": "Ceel Waaq",
+          "current_parent": "Gedo",
+          "source_area_covered_percent": 93.4937,
+          "current_area_covered_percent": 98.8507
+        },
+        {
+          "current_feature_index": 32,
+          "current_name": "Baardheere",
+          "current_parent": "Gedo",
+          "source_area_covered_percent": 5.7517,
+          "current_area_covered_percent": 3.0981
+        }
+      ]
+    },
+    {
+      "csv_line": 12,
+      "map_code": "mandera_triangle",
+      "source_fid": 37059,
+      "source_country": "Somalia",
+      "source_parent": "Gedo",
+      "source_name": "Dolow",
+      "source_area_km2": 1634.110739,
+      "source_covered_by_current_union_percent": 99.7449,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 35,
+          "current_name": "Doolow",
+          "current_parent": "Gedo",
+          "source_area_covered_percent": 89.4481,
+          "current_area_covered_percent": 88.7368
+        },
+        {
+          "current_feature_index": 37,
+          "current_name": "Luuq",
+          "current_parent": "Gedo",
+          "source_area_covered_percent": 6.2096,
+          "current_area_covered_percent": 1.2232
+        },
+        {
+          "current_feature_index": 33,
+          "current_name": "Belet Xaawo",
+          "current_parent": "Gedo",
+          "source_area_covered_percent": 4.0872,
+          "current_area_covered_percent": 1.7396
+        }
+      ]
+    },
+    {
+      "csv_line": 13,
+      "map_code": "mandera_triangle",
+      "source_fid": 37060,
+      "source_country": "Somalia",
+      "source_parent": "Gedo",
+      "source_name": "Garbahaaray",
+      "source_area_km2": 8010.223065,
+      "source_covered_by_current_union_percent": 100.0,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 36,
+          "current_name": "Garbahaarey",
+          "current_parent": "Gedo",
+          "source_area_covered_percent": 98.0887,
+          "current_area_covered_percent": 94.3943
+        },
+        {
+          "current_feature_index": 32,
+          "current_name": "Baardheere",
+          "current_parent": "Gedo",
+          "source_area_covered_percent": 1.3374,
+          "current_area_covered_percent": 0.6996
+        },
+        {
+          "current_feature_index": 34,
+          "current_name": "Ceel Waaq",
+          "current_parent": "Gedo",
+          "source_area_covered_percent": 0.4522,
+          "current_area_covered_percent": 0.4643
+        },
+        {
+          "current_feature_index": 31,
+          "current_name": "Qansax Dheere",
+          "current_parent": "Bay",
+          "source_area_covered_percent": 0.1217,
+          "current_area_covered_percent": 0.2985
+        }
+      ]
+    },
+    {
+      "csv_line": 14,
+      "map_code": "mandera_triangle",
+      "source_fid": 37061,
+      "source_country": "Somalia",
+      "source_parent": "Gedo",
+      "source_name": "Luuk",
+      "source_area_km2": 8247.863381,
+      "source_covered_by_current_union_percent": 100.0,
+      "mutual_95pct_diagnostic_count": 1,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 37,
+          "current_name": "Luuq",
+          "current_parent": "Gedo",
+          "source_area_covered_percent": 96.9764,
+          "current_area_covered_percent": 96.4184
+        },
+        {
+          "current_feature_index": 36,
+          "current_name": "Garbahaarey",
+          "current_parent": "Gedo",
+          "source_area_covered_percent": 3.0236,
+          "current_area_covered_percent": 2.996
+        }
+      ]
+    },
+    {
+      "csv_line": 15,
+      "map_code": "mandera_triangle",
+      "source_fid": 14551,
+      "source_country": "Ethiopia",
+      "source_parent": "Somali",
+      "source_name": "Afder",
+      "source_area_km2": 62048.465534,
+      "source_covered_by_current_union_percent": 90.852,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 4,
+          "current_name": "Afder",
+          "current_parent": "Somali",
+          "source_area_covered_percent": 67.2632,
+          "current_area_covered_percent": 98.7103
+        },
+        {
+          "current_feature_index": 7,
+          "current_name": "Liban",
+          "current_parent": "Somali",
+          "source_area_covered_percent": 12.4378,
+          "current_area_covered_percent": 24.4246
+        },
+        {
+          "current_feature_index": 9,
+          "current_name": "Shabelle",
+          "current_parent": "Somali",
+          "source_area_covered_percent": 11.1509,
+          "current_area_covered_percent": 37.3734
+        },
+        {
+          "current_feature_index": 2,
+          "current_name": "East Bale",
+          "current_parent": "Oromia",
+          "source_area_covered_percent": 0.0001,
+          "current_area_covered_percent": 0.0006
+        },
+        {
+          "current_feature_index": 0,
+          "current_name": "Bale",
+          "current_parent": "Oromia",
+          "source_area_covered_percent": 0.0,
+          "current_area_covered_percent": 0.0
+        }
+      ]
+    },
+    {
+      "csv_line": 16,
+      "map_code": "mandera_triangle",
+      "source_fid": 14556,
+      "source_country": "Ethiopia",
+      "source_parent": "Somali",
+      "source_name": "Liben",
+      "source_area_km2": 36202.316916,
+      "source_covered_by_current_union_percent": 99.2665,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 7,
+          "current_name": "Liban",
+          "current_parent": "Somali",
+          "source_area_covered_percent": 65.7306,
+          "current_area_covered_percent": 75.3111
+        },
+        {
+          "current_feature_index": 5,
+          "current_name": "Daawa",
+          "current_parent": "Somali",
+          "source_area_covered_percent": 33.4144,
+          "current_area_covered_percent": 99.9699
+        },
+        {
+          "current_feature_index": 4,
+          "current_name": "Afder",
+          "current_parent": "Somali",
+          "source_area_covered_percent": 0.1214,
+          "current_area_covered_percent": 0.1039
+        },
+        {
+          "current_feature_index": 1,
+          "current_name": "Borena",
+          "current_parent": "Oromia",
+          "source_area_covered_percent": 0.0,
+          "current_area_covered_percent": 0.0001
+        },
+        {
+          "current_feature_index": 0,
+          "current_name": "Bale",
+          "current_parent": "Oromia",
+          "source_area_covered_percent": 0.0,
+          "current_area_covered_percent": 0.0001
+        }
+      ]
+    },
+    {
+      "csv_line": 17,
+      "map_code": "moyale_borana",
+      "source_fid": 21029,
+      "source_country": "Kenya",
+      "source_parent": "Marsabit",
+      "source_name": "Laisamis",
+      "source_area_km2": 24062.734651,
+      "source_covered_by_current_union_percent": 99.9999,
+      "mutual_95pct_diagnostic_count": 1,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 24,
+          "current_name": "Laisamis",
+          "current_parent": "Marsabit",
+          "source_area_covered_percent": 99.938,
+          "current_area_covered_percent": 99.8665
+        },
+        {
+          "current_feature_index": 26,
+          "current_name": "North Horr",
+          "current_parent": "Marsabit",
+          "source_area_covered_percent": 0.0414,
+          "current_area_covered_percent": 0.0245
+        },
+        {
+          "current_feature_index": 27,
+          "current_name": "Saku",
+          "current_parent": "Marsabit",
+          "source_area_covered_percent": 0.0102,
+          "current_area_covered_percent": 0.1197
+        },
+        {
+          "current_feature_index": 32,
+          "current_name": "Turkana Central",
+          "current_parent": "Turkana",
+          "source_area_covered_percent": 0.0038,
+          "current_area_covered_percent": 0.0137
+        },
+        {
+          "current_feature_index": 33,
+          "current_name": "Turkana East",
+          "current_parent": "Turkana",
+          "source_area_covered_percent": 0.0029,
+          "current_area_covered_percent": 0.0144
+        }
+      ]
+    },
+    {
+      "csv_line": 18,
+      "map_code": "moyale_borana",
+      "source_fid": 21030,
+      "source_country": "Kenya",
+      "source_parent": "Marsabit",
+      "source_name": "Moyale",
+      "source_area_km2": 9283.047076,
+      "source_covered_by_current_union_percent": 99.9538,
+      "mutual_95pct_diagnostic_count": 1,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 25,
+          "current_name": "Moyale",
+          "current_parent": "Marsabit",
+          "source_area_covered_percent": 99.9398,
+          "current_area_covered_percent": 98.8892
+        },
+        {
+          "current_feature_index": 37,
+          "current_name": "Wajir North",
+          "current_parent": "Wajir",
+          "source_area_covered_percent": 0.0108,
+          "current_area_covered_percent": 0.0113
+        },
+        {
+          "current_feature_index": 26,
+          "current_name": "North Horr",
+          "current_parent": "Marsabit",
+          "source_area_covered_percent": 0.0021,
+          "current_area_covered_percent": 0.0005
+        },
+        {
+          "current_feature_index": 36,
+          "current_name": "Eldas",
+          "current_parent": "Wajir",
+          "source_area_covered_percent": 0.0011,
+          "current_area_covered_percent": 0.0037
+        }
+      ]
+    },
+    {
+      "csv_line": 19,
+      "map_code": "moyale_borana",
+      "source_fid": 21031,
+      "source_country": "Kenya",
+      "source_parent": "Marsabit",
+      "source_name": "North Horr",
+      "source_area_km2": 40384.602913,
+      "source_covered_by_current_union_percent": 99.9999,
+      "mutual_95pct_diagnostic_count": 1,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 26,
+          "current_name": "North Horr",
+          "current_parent": "Marsabit",
+          "source_area_covered_percent": 99.9921,
+          "current_area_covered_percent": 99.4121
+        },
+        {
+          "current_feature_index": 25,
+          "current_name": "Moyale",
+          "current_parent": "Marsabit",
+          "source_area_covered_percent": 0.0049,
+          "current_area_covered_percent": 0.0212
+        },
+        {
+          "current_feature_index": 27,
+          "current_name": "Saku",
+          "current_parent": "Marsabit",
+          "source_area_covered_percent": 0.002,
+          "current_area_covered_percent": 0.039
+        },
+        {
+          "current_feature_index": 32,
+          "current_name": "Turkana Central",
+          "current_parent": "Turkana",
+          "source_area_covered_percent": 0.0006,
+          "current_area_covered_percent": 0.004
+        },
+        {
+          "current_feature_index": 34,
+          "current_name": "Turkana North",
+          "current_parent": "Turkana",
+          "source_area_covered_percent": 0.0006,
+          "current_area_covered_percent": 0.0031
+        }
+      ]
+    },
+    {
+      "csv_line": 20,
+      "map_code": "moyale_borana",
+      "source_fid": 21032,
+      "source_country": "Kenya",
+      "source_parent": "Marsabit",
+      "source_name": "Saku",
+      "source_area_km2": 2044.881609,
+      "source_covered_by_current_union_percent": 100.0,
+      "mutual_95pct_diagnostic_count": 1,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 27,
+          "current_name": "Saku",
+          "current_parent": "Marsabit",
+          "source_area_covered_percent": 99.9213,
+          "current_area_covered_percent": 99.8412
+        },
+        {
+          "current_feature_index": 26,
+          "current_name": "North Horr",
+          "current_parent": "Marsabit",
+          "source_area_covered_percent": 0.0458,
+          "current_area_covered_percent": 0.0023
+        },
+        {
+          "current_feature_index": 24,
+          "current_name": "Laisamis",
+          "current_parent": "Marsabit",
+          "source_area_covered_percent": 0.0328,
+          "current_area_covered_percent": 0.0028
+        }
+      ]
+    },
+    {
+      "csv_line": 21,
+      "map_code": "moyale_borana",
+      "source_fid": 14536,
+      "source_country": "Ethiopia",
+      "source_parent": "Oromia",
+      "source_name": "Borena",
+      "source_area_km2": 52440.353464,
+      "source_covered_by_current_union_percent": 94.5511,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 1,
+          "current_name": "Borena",
+          "current_parent": "Oromia",
+          "source_area_covered_percent": 83.8544,
+          "current_area_covered_percent": 99.8367
+        },
+        {
+          "current_feature_index": 4,
+          "current_name": "West Guji",
+          "current_parent": "Oromia",
+          "source_area_covered_percent": 10.6423,
+          "current_area_covered_percent": 86.0545
+        },
+        {
+          "current_feature_index": 3,
+          "current_name": "Guji",
+          "current_parent": "Oromia",
+          "source_area_covered_percent": 0.0543,
+          "current_area_covered_percent": 0.2539
+        },
+        {
+          "current_feature_index": 11,
+          "current_name": "Konso",
+          "current_parent": "SNNP",
+          "source_area_covered_percent": 0.0001,
+          "current_area_covered_percent": 0.0017
+        },
+        {
+          "current_feature_index": 7,
+          "current_name": "Burji",
+          "current_parent": "SNNP",
+          "source_area_covered_percent": 0.0,
+          "current_area_covered_percent": 0.0014
+        }
+      ]
+    },
+    {
+      "csv_line": 22,
+      "map_code": "karamoja",
+      "source_fid": 21145,
+      "source_country": "Kenya",
+      "source_parent": "Turkana",
+      "source_name": "Loima",
+      "source_area_km2": 9769.119235,
+      "source_covered_by_current_union_percent": 99.942,
+      "mutual_95pct_diagnostic_count": 1,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 53,
+          "current_name": "Loima",
+          "current_parent": "Turkana",
+          "source_area_covered_percent": 99.3127,
+          "current_area_covered_percent": 99.5816
+        },
+        {
+          "current_feature_index": 56,
+          "current_name": "Turkana North",
+          "current_parent": "Turkana",
+          "source_area_covered_percent": 0.2585,
+          "current_area_covered_percent": 0.2055
+        },
+        {
+          "current_feature_index": 58,
+          "current_name": "Turkana West",
+          "current_parent": "Turkana",
+          "source_area_covered_percent": 0.218,
+          "current_area_covered_percent": 0.1614
+        },
+        {
+          "current_feature_index": 54,
+          "current_name": "Turkana Central",
+          "current_parent": "Turkana",
+          "source_area_covered_percent": 0.141,
+          "current_area_covered_percent": 0.2082
+        },
+        {
+          "current_feature_index": 65,
+          "current_name": "Kacheliba",
+          "current_parent": "West Pokot",
+          "source_area_covered_percent": 0.009,
+          "current_area_covered_percent": 0.0215
+        }
+      ]
+    },
+    {
+      "csv_line": 23,
+      "map_code": "karamoja",
+      "source_fid": 21146,
+      "source_country": "Kenya",
+      "source_parent": "Turkana",
+      "source_name": "Turkana Central",
+      "source_area_km2": 6606.465213,
+      "source_covered_by_current_union_percent": 99.9998,
+      "mutual_95pct_diagnostic_count": 1,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 54,
+          "current_name": "Turkana Central",
+          "current_parent": "Turkana",
+          "source_area_covered_percent": 99.3231,
+          "current_area_covered_percent": 99.181
+        },
+        {
+          "current_feature_index": 56,
+          "current_name": "Turkana North",
+          "current_parent": "Turkana",
+          "source_area_covered_percent": 0.4602,
+          "current_area_covered_percent": 0.2474
+        },
+        {
+          "current_feature_index": 42,
+          "current_name": "Laisamis",
+          "current_parent": "Marsabit",
+          "source_area_covered_percent": 0.1155,
+          "current_area_covered_percent": 0.0744
+        },
+        {
+          "current_feature_index": 53,
+          "current_name": "Loima",
+          "current_parent": "Turkana",
+          "source_area_covered_percent": 0.0555,
+          "current_area_covered_percent": 0.0376
+        },
+        {
+          "current_feature_index": 57,
+          "current_name": "Turkana South",
+          "current_parent": "Turkana",
+          "source_area_covered_percent": 0.0339,
+          "current_area_covered_percent": 0.0302
+        }
+      ]
+    },
+    {
+      "csv_line": 24,
+      "map_code": "karamoja",
+      "source_fid": 21147,
+      "source_country": "Kenya",
+      "source_parent": "Turkana",
+      "source_name": "Turkana East",
+      "source_area_km2": 8019.711799,
+      "source_covered_by_current_union_percent": 99.9993,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 55,
+          "current_name": "Turkana East",
+          "current_parent": "Turkana",
+          "source_area_covered_percent": 99.4511,
+          "current_area_covered_percent": 71.313
+        },
+        {
+          "current_feature_index": 46,
+          "current_name": "Samburu North",
+          "current_parent": "Samburu",
+          "source_area_covered_percent": 0.1308,
+          "current_area_covered_percent": 0.1353
+        },
+        {
+          "current_feature_index": 54,
+          "current_name": "Turkana Central",
+          "current_parent": "Turkana",
+          "source_area_covered_percent": 0.1132,
+          "current_area_covered_percent": 0.1372
+        },
+        {
+          "current_feature_index": 57,
+          "current_name": "Turkana South",
+          "current_parent": "Turkana",
+          "source_area_covered_percent": 0.1119,
+          "current_area_covered_percent": 0.1209
+        },
+        {
+          "current_feature_index": 47,
+          "current_name": "Samburu West",
+          "current_parent": "Samburu",
+          "source_area_covered_percent": 0.0955,
+          "current_area_covered_percent": 0.3095
+        }
+      ]
+    },
+    {
+      "csv_line": 25,
+      "map_code": "karamoja",
+      "source_fid": 21148,
+      "source_country": "Kenya",
+      "source_parent": "Turkana",
+      "source_name": "Turkana North",
+      "source_area_km2": 14609.670498,
+      "source_covered_by_current_union_percent": 83.3639,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 56,
+          "current_name": "Turkana North",
+          "current_parent": "Turkana",
+          "source_area_covered_percent": 83.204,
+          "current_area_covered_percent": 98.9091
+        },
+        {
+          "current_feature_index": 58,
+          "current_name": "Turkana West",
+          "current_parent": "Turkana",
+          "source_area_covered_percent": 0.1345,
+          "current_area_covered_percent": 0.149
+        },
+        {
+          "current_feature_index": 53,
+          "current_name": "Loima",
+          "current_parent": "Turkana",
+          "source_area_covered_percent": 0.0209,
+          "current_area_covered_percent": 0.0314
+        },
+        {
+          "current_feature_index": 54,
+          "current_name": "Turkana Central",
+          "current_parent": "Turkana",
+          "source_area_covered_percent": 0.0043,
+          "current_area_covered_percent": 0.0094
+        },
+        {
+          "current_feature_index": 43,
+          "current_name": "North Horr",
+          "current_parent": "Marsabit",
+          "source_area_covered_percent": 0.0003,
+          "current_area_covered_percent": 0.0003
+        }
+      ]
+    },
+    {
+      "csv_line": 26,
+      "map_code": "karamoja",
+      "source_fid": 21149,
+      "source_country": "Kenya",
+      "source_parent": "Turkana",
+      "source_name": "Turkana South",
+      "source_area_km2": 7410.685593,
+      "source_covered_by_current_union_percent": 99.9998,
+      "mutual_95pct_diagnostic_count": 1,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 57,
+          "current_name": "Turkana South",
+          "current_parent": "Turkana",
+          "source_area_covered_percent": 99.277,
+          "current_area_covered_percent": 99.1594
+        },
+        {
+          "current_feature_index": 54,
+          "current_name": "Turkana Central",
+          "current_parent": "Turkana",
+          "source_area_covered_percent": 0.3986,
+          "current_area_covered_percent": 0.4465
+        },
+        {
+          "current_feature_index": 53,
+          "current_name": "Loima",
+          "current_parent": "Turkana",
+          "source_area_covered_percent": 0.1873,
+          "current_area_covered_percent": 0.1425
+        },
+        {
+          "current_feature_index": 55,
+          "current_name": "Turkana East",
+          "current_parent": "Turkana",
+          "source_area_covered_percent": 0.1155,
+          "current_area_covered_percent": 0.0765
+        },
+        {
+          "current_feature_index": 65,
+          "current_name": "Kacheliba",
+          "current_parent": "West Pokot",
+          "source_area_covered_percent": 0.0162,
+          "current_area_covered_percent": 0.0294
+        }
+      ]
+    },
+    {
+      "csv_line": 27,
+      "map_code": "karamoja",
+      "source_fid": 21150,
+      "source_country": "Kenya",
+      "source_parent": "Turkana",
+      "source_name": "Turkana West",
+      "source_area_km2": 14109.047576,
+      "source_covered_by_current_union_percent": 93.0595,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 58,
+          "current_name": "Turkana West",
+          "current_parent": "Turkana",
+          "source_area_covered_percent": 92.9307,
+          "current_area_covered_percent": 99.4009
+        },
+        {
+          "current_feature_index": 56,
+          "current_name": "Turkana North",
+          "current_parent": "Turkana",
+          "source_area_covered_percent": 0.1178,
+          "current_area_covered_percent": 0.1352
+        },
+        {
+          "current_feature_index": 53,
+          "current_name": "Loima",
+          "current_parent": "Turkana",
+          "source_area_covered_percent": 0.0111,
+          "current_area_covered_percent": 0.0161
+        }
+      ]
+    },
+    {
+      "csv_line": 28,
+      "map_code": "karamoja",
+      "source_fid": 21151,
+      "source_country": "Kenya",
+      "source_parent": "Turkana",
+      "source_name": "unknown 2",
+      "source_area_km2": 3196.134754,
+      "source_covered_by_current_union_percent": 100.0,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 55,
+          "current_name": "Turkana East",
+          "current_parent": "Turkana",
+          "source_area_covered_percent": 99.0686,
+          "current_area_covered_percent": 28.3114
+        },
+        {
+          "current_feature_index": 57,
+          "current_name": "Turkana South",
+          "current_parent": "Turkana",
+          "source_area_covered_percent": 0.928,
+          "current_area_covered_percent": 0.3998
+        },
+        {
+          "current_feature_index": 46,
+          "current_name": "Samburu North",
+          "current_parent": "Samburu",
+          "source_area_covered_percent": 0.0034,
+          "current_area_covered_percent": 0.0014
+        }
+      ]
+    },
+    {
+      "csv_line": 29,
+      "map_code": "karamoja",
+      "source_fid": 21169,
+      "source_country": "Kenya",
+      "source_parent": "West Pokot",
+      "source_name": "Kacheliba",
+      "source_area_km2": 4112.94466,
+      "source_covered_by_current_union_percent": 98.5757,
+      "mutual_95pct_diagnostic_count": 1,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 65,
+          "current_name": "Kacheliba",
+          "current_parent": "West Pokot",
+          "source_area_covered_percent": 98.2241,
+          "current_area_covered_percent": 99.1345
+        },
+        {
+          "current_feature_index": 53,
+          "current_name": "Loima",
+          "current_parent": "Turkana",
+          "source_area_covered_percent": 0.2088,
+          "current_area_covered_percent": 0.0882
+        },
+        {
+          "current_feature_index": 57,
+          "current_name": "Turkana South",
+          "current_parent": "Turkana",
+          "source_area_covered_percent": 0.1025,
+          "current_area_covered_percent": 0.0568
+        },
+        {
+          "current_feature_index": 66,
+          "current_name": "Kapenguria",
+          "current_parent": "West Pokot",
+          "source_area_covered_percent": 0.0403,
+          "current_area_covered_percent": 0.0934
+        }
+      ]
+    },
+    {
+      "csv_line": 30,
+      "map_code": "karamoja",
+      "source_fid": 21170,
+      "source_country": "Kenya",
+      "source_parent": "West Pokot",
+      "source_name": "Kapenguria",
+      "source_area_km2": 1468.946408,
+      "source_covered_by_current_union_percent": 99.9654,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 66,
+          "current_name": "Kapenguria",
+          "current_parent": "West Pokot",
+          "source_area_covered_percent": 98.247,
+          "current_area_covered_percent": 81.2805
+        },
+        {
+          "current_feature_index": 65,
+          "current_name": "Kacheliba",
+          "current_parent": "West Pokot",
+          "source_area_covered_percent": 0.8421,
+          "current_area_covered_percent": 0.3036
+        },
+        {
+          "current_feature_index": 67,
+          "current_name": "Pokot South",
+          "current_parent": "West Pokot",
+          "source_area_covered_percent": 0.547,
+          "current_area_covered_percent": 0.6337
+        },
+        {
+          "current_feature_index": 68,
+          "current_name": "Sigor",
+          "current_parent": "West Pokot",
+          "source_area_covered_percent": 0.2979,
+          "current_area_covered_percent": 0.2034
+        },
+        {
+          "current_feature_index": 51,
+          "current_name": "Kwanza",
+          "current_parent": "Trans Nzoia",
+          "source_area_covered_percent": 0.0215,
+          "current_area_covered_percent": 0.0681
+        }
+      ]
+    },
+    {
+      "csv_line": 31,
+      "map_code": "karamoja",
+      "source_fid": 21171,
+      "source_country": "Kenya",
+      "source_parent": "West Pokot",
+      "source_name": "Pokot South",
+      "source_area_km2": 1475.033683,
+      "source_covered_by_current_union_percent": 99.9995,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 67,
+          "current_name": "Pokot South",
+          "current_parent": "West Pokot",
+          "source_area_covered_percent": 84.2864,
+          "current_area_covered_percent": 98.0655
+        },
+        {
+          "current_feature_index": 35,
+          "current_name": "Marakwet West",
+          "current_parent": "Elgeyo-Marakwet",
+          "source_area_covered_percent": 13.5867,
+          "current_area_covered_percent": 26.0374
+        },
+        {
+          "current_feature_index": 66,
+          "current_name": "Kapenguria",
+          "current_parent": "West Pokot",
+          "source_area_covered_percent": 1.3872,
+          "current_area_covered_percent": 1.1524
+        },
+        {
+          "current_feature_index": 68,
+          "current_name": "Sigor",
+          "current_parent": "West Pokot",
+          "source_area_covered_percent": 0.5612,
+          "current_area_covered_percent": 0.3849
+        },
+        {
+          "current_feature_index": 34,
+          "current_name": "Marakwet East",
+          "current_parent": "Elgeyo-Marakwet",
+          "source_area_covered_percent": 0.1789,
+          "current_area_covered_percent": 0.3256
+        }
+      ]
+    },
+    {
+      "csv_line": 32,
+      "map_code": "karamoja",
+      "source_fid": 21172,
+      "source_country": "Kenya",
+      "source_parent": "West Pokot",
+      "source_name": "Sigor",
+      "source_area_km2": 2151.372148,
+      "source_covered_by_current_union_percent": 99.9999,
+      "mutual_95pct_diagnostic_count": 1,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 68,
+          "current_name": "Sigor",
+          "current_parent": "West Pokot",
+          "source_area_covered_percent": 98.4967,
+          "current_area_covered_percent": 98.5255
+        },
+        {
+          "current_feature_index": 57,
+          "current_name": "Turkana South",
+          "current_parent": "Turkana",
+          "source_area_covered_percent": 0.7872,
+          "current_area_covered_percent": 0.2283
+        },
+        {
+          "current_feature_index": 67,
+          "current_name": "Pokot South",
+          "current_parent": "West Pokot",
+          "source_area_covered_percent": 0.2123,
+          "current_area_covered_percent": 0.3603
+        },
+        {
+          "current_feature_index": 55,
+          "current_name": "Turkana East",
+          "current_parent": "Turkana",
+          "source_area_covered_percent": 0.1844,
+          "current_area_covered_percent": 0.0355
+        },
+        {
+          "current_feature_index": 66,
+          "current_name": "Kapenguria",
+          "current_parent": "West Pokot",
+          "source_area_covered_percent": 0.1776,
+          "current_area_covered_percent": 0.2152
+        }
+      ]
+    },
+    {
+      "csv_line": 33,
+      "map_code": "karamoja",
+      "source_fid": 21173,
+      "source_country": "Kenya",
+      "source_parent": "West Pokot",
+      "source_name": "unknown 3",
+      "source_area_km2": 302.449202,
+      "source_covered_by_current_union_percent": 100.0,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 66,
+          "current_name": "Kapenguria",
+          "current_parent": "West Pokot",
+          "source_area_covered_percent": 98.3775,
+          "current_area_covered_percent": 16.7575
+        },
+        {
+          "current_feature_index": 65,
+          "current_name": "Kacheliba",
+          "current_parent": "West Pokot",
+          "source_area_covered_percent": 1.3854,
+          "current_area_covered_percent": 0.1028
+        },
+        {
+          "current_feature_index": 67,
+          "current_name": "Pokot South",
+          "current_parent": "West Pokot",
+          "source_area_covered_percent": 0.2371,
+          "current_area_covered_percent": 0.0566
+        }
+      ]
+    },
+    {
+      "csv_line": 34,
+      "map_code": "karamoja",
+      "source_fid": 21174,
+      "source_country": "Kenya",
+      "source_parent": "West Pokot",
+      "source_name": "unknown 8",
+      "source_area_km2": 0.001461,
+      "source_covered_by_current_union_percent": 100.0,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 66,
+          "current_name": "Kapenguria",
+          "current_parent": "West Pokot",
+          "source_area_covered_percent": 56.9061,
+          "current_area_covered_percent": 0.0
+        },
+        {
+          "current_feature_index": 65,
+          "current_name": "Kacheliba",
+          "current_parent": "West Pokot",
+          "source_area_covered_percent": 43.0939,
+          "current_area_covered_percent": 0.0
+        }
+      ]
+    },
+    {
+      "csv_line": 35,
+      "map_code": "karamoja",
+      "source_fid": 40708,
+      "source_country": "Uganda",
+      "source_parent": "Kotido",
+      "source_name": "Dodoth",
+      "source_area_km2": 7223.811842,
+      "source_covered_by_current_union_percent": 98.4766,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 116,
+          "current_name": "Kaabong",
+          "current_parent": "Northern",
+          "source_area_covered_percent": 64.4873,
+          "current_area_covered_percent": 98.8281
+        },
+        {
+          "current_feature_index": 117,
+          "current_name": "Karenga",
+          "current_parent": "Northern",
+          "source_area_covered_percent": 33.7048,
+          "current_area_covered_percent": 96.6043
+        },
+        {
+          "current_feature_index": 119,
+          "current_name": "Kotido",
+          "current_parent": "Northern",
+          "source_area_covered_percent": 0.2065,
+          "current_area_covered_percent": 0.4108
+        },
+        {
+          "current_feature_index": 118,
+          "current_name": "Kitgum",
+          "current_parent": "Northern",
+          "source_area_covered_percent": 0.0781,
+          "current_area_covered_percent": 0.1359
+        }
+      ]
+    },
+    {
+      "csv_line": 36,
+      "map_code": "karamoja",
+      "source_fid": 40709,
+      "source_country": "Uganda",
+      "source_parent": "Kotido",
+      "source_name": "Jie",
+      "source_area_km2": 3702.650058,
+      "source_covered_by_current_union_percent": 99.9996,
+      "mutual_95pct_diagnostic_count": 1,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 119,
+          "current_name": "Kotido",
+          "current_parent": "Northern",
+          "source_area_covered_percent": 96.6877,
+          "current_area_covered_percent": 98.6018
+        },
+        {
+          "current_feature_index": 117,
+          "current_name": "Karenga",
+          "current_parent": "Northern",
+          "source_area_covered_percent": 1.874,
+          "current_area_covered_percent": 2.753
+        },
+        {
+          "current_feature_index": 116,
+          "current_name": "Kaabong",
+          "current_parent": "Northern",
+          "source_area_covered_percent": 1.005,
+          "current_area_covered_percent": 0.7895
+        },
+        {
+          "current_feature_index": 118,
+          "current_name": "Kitgum",
+          "current_parent": "Northern",
+          "source_area_covered_percent": 0.2571,
+          "current_area_covered_percent": 0.2292
+        },
+        {
+          "current_feature_index": 108,
+          "current_name": "Abim",
+          "current_parent": "Northern",
+          "source_area_covered_percent": 0.1499,
+          "current_area_covered_percent": 0.2017
+        }
+      ]
+    },
+    {
+      "csv_line": 37,
+      "map_code": "karamoja",
+      "source_fid": 40710,
+      "source_country": "Uganda",
+      "source_parent": "Kotido",
+      "source_name": "Labwor",
+      "source_area_km2": 2353.511247,
+      "source_covered_by_current_union_percent": 99.9998,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 108,
+          "current_name": "Abim",
+          "current_parent": "Northern",
+          "source_area_covered_percent": 97.9468,
+          "current_area_covered_percent": 83.7656
+        },
+        {
+          "current_feature_index": 129,
+          "current_name": "Otuke",
+          "current_parent": "Northern",
+          "source_area_covered_percent": 0.9968,
+          "current_area_covered_percent": 1.4217
+        },
+        {
+          "current_feature_index": 119,
+          "current_name": "Kotido",
+          "current_parent": "Northern",
+          "source_area_covered_percent": 0.6615,
+          "current_area_covered_percent": 0.4288
+        },
+        {
+          "current_feature_index": 110,
+          "current_name": "Agago",
+          "current_parent": "Northern",
+          "source_area_covered_percent": 0.3224,
+          "current_area_covered_percent": 0.2159
+        },
+        {
+          "current_feature_index": 127,
+          "current_name": "Napak",
+          "current_parent": "Northern",
+          "source_area_covered_percent": 0.0725,
+          "current_area_covered_percent": 0.0381
+        }
+      ]
+    },
+    {
+      "csv_line": 38,
+      "map_code": "karamoja",
+      "source_fid": 40746,
+      "source_country": "Uganda",
+      "source_parent": "Moroto",
+      "source_name": "Bokora",
+      "source_area_km2": 4978.760119,
+      "source_covered_by_current_union_percent": 99.9997,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 127,
+          "current_name": "Napak",
+          "current_parent": "Northern",
+          "source_area_covered_percent": 89.2342,
+          "current_area_covered_percent": 99.226
+        },
+        {
+          "current_feature_index": 108,
+          "current_name": "Abim",
+          "current_parent": "Northern",
+          "source_area_covered_percent": 8.6066,
+          "current_area_covered_percent": 15.5709
+        },
+        {
+          "current_feature_index": 129,
+          "current_name": "Otuke",
+          "current_parent": "Northern",
+          "source_area_covered_percent": 1.5666,
+          "current_area_covered_percent": 4.7271
+        },
+        {
+          "current_feature_index": 119,
+          "current_name": "Kotido",
+          "current_parent": "Northern",
+          "source_area_covered_percent": 0.2879,
+          "current_area_covered_percent": 0.3947
+        },
+        {
+          "current_feature_index": 123,
+          "current_name": "Moroto",
+          "current_parent": "Northern",
+          "source_area_covered_percent": 0.2383,
+          "current_area_covered_percent": 0.3345
+        }
+      ]
+    },
+    {
+      "csv_line": 39,
+      "map_code": "karamoja",
+      "source_fid": 40747,
+      "source_country": "Uganda",
+      "source_parent": "Moroto",
+      "source_name": "Matheniko",
+      "source_area_km2": 3533.109388,
+      "source_covered_by_current_union_percent": 99.6851,
+      "mutual_95pct_diagnostic_count": 1,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 123,
+          "current_name": "Moroto",
+          "current_parent": "Northern",
+          "source_area_covered_percent": 99.2866,
+          "current_area_covered_percent": 98.9226
+        },
+        {
+          "current_feature_index": 116,
+          "current_name": "Kaabong",
+          "current_parent": "Northern",
+          "source_area_covered_percent": 0.1748,
+          "current_area_covered_percent": 0.131
+        },
+        {
+          "current_feature_index": 119,
+          "current_name": "Kotido",
+          "current_parent": "Northern",
+          "source_area_covered_percent": 0.1682,
+          "current_area_covered_percent": 0.1636
+        },
+        {
+          "current_feature_index": 125,
+          "current_name": "Nabilatuk",
+          "current_parent": "Northern",
+          "source_area_covered_percent": 0.0268,
+          "current_area_covered_percent": 0.0524
+        },
+        {
+          "current_feature_index": 127,
+          "current_name": "Napak",
+          "current_parent": "Northern",
+          "source_area_covered_percent": 0.0195,
+          "current_area_covered_percent": 0.0154
+        }
+      ]
+    },
+    {
+      "csv_line": 40,
+      "map_code": "karamoja",
+      "source_fid": 40748,
+      "source_country": "Uganda",
+      "source_parent": "Moroto",
+      "source_name": "Moroto",
+      "source_area_km2": 4.783161,
+      "source_covered_by_current_union_percent": 100.0,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 123,
+          "current_name": "Moroto",
+          "current_parent": "Northern",
+          "source_area_covered_percent": 100.0,
+          "current_area_covered_percent": 0.1349
+        }
+      ]
+    },
+    {
+      "csv_line": 41,
+      "map_code": "karamoja",
+      "source_fid": 40762,
+      "source_country": "Uganda",
+      "source_parent": "Nakapiripirit",
+      "source_name": "Chekwii",
+      "source_area_km2": 2956.737702,
+      "source_covered_by_current_union_percent": 99.9994,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 126,
+          "current_name": "Nakapiripirit",
+          "current_parent": "Northern",
+          "source_area_covered_percent": 77.8967,
+          "current_area_covered_percent": 96.8235
+        },
+        {
+          "current_feature_index": 125,
+          "current_name": "Nabilatuk",
+          "current_parent": "Northern",
+          "source_area_covered_percent": 21.1538,
+          "current_area_covered_percent": 34.658
+        },
+        {
+          "current_feature_index": 112,
+          "current_name": "Amudat",
+          "current_parent": "Northern",
+          "source_area_covered_percent": 0.6103,
+          "current_area_covered_percent": 1.0871
+        },
+        {
+          "current_feature_index": 127,
+          "current_name": "Napak",
+          "current_parent": "Northern",
+          "source_area_covered_percent": 0.2411,
+          "current_area_covered_percent": 0.1592
+        },
+        {
+          "current_feature_index": 96,
+          "current_name": "Katakwi",
+          "current_parent": "Eastern",
+          "source_area_covered_percent": 0.068,
+          "current_area_covered_percent": 0.0828
+        }
+      ]
+    },
+    {
+      "csv_line": 42,
+      "map_code": "karamoja",
+      "source_fid": 40763,
+      "source_country": "Uganda",
+      "source_parent": "Nakapiripirit",
+      "source_name": "Pian",
+      "source_area_km2": 1245.224668,
+      "source_covered_by_current_union_percent": 99.9999,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 125,
+          "current_name": "Nabilatuk",
+          "current_parent": "Northern",
+          "source_area_covered_percent": 94.5044,
+          "current_area_covered_percent": 65.2082
+        },
+        {
+          "current_feature_index": 126,
+          "current_name": "Nakapiripirit",
+          "current_parent": "Northern",
+          "source_area_covered_percent": 3.9132,
+          "current_area_covered_percent": 2.0484
+        },
+        {
+          "current_feature_index": 127,
+          "current_name": "Napak",
+          "current_parent": "Northern",
+          "source_area_covered_percent": 1.1161,
+          "current_area_covered_percent": 0.3104
+        },
+        {
+          "current_feature_index": 123,
+          "current_name": "Moroto",
+          "current_parent": "Northern",
+          "source_area_covered_percent": 0.468,
+          "current_area_covered_percent": 0.1643
+        }
+      ]
+    },
+    {
+      "csv_line": 43,
+      "map_code": "karamoja",
+      "source_fid": 40764,
+      "source_country": "Uganda",
+      "source_parent": "Nakapiripirit",
+      "source_name": "Pokot",
+      "source_area_km2": 1615.553446,
+      "source_covered_by_current_union_percent": 99.0422,
+      "mutual_95pct_diagnostic_count": 1,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 112,
+          "current_name": "Amudat",
+          "current_parent": "Northern",
+          "source_area_covered_percent": 97.7839,
+          "current_area_covered_percent": 95.1656
+        },
+        {
+          "current_feature_index": 126,
+          "current_name": "Nakapiripirit",
+          "current_parent": "Northern",
+          "source_area_covered_percent": 0.786,
+          "current_area_covered_percent": 0.5338
+        },
+        {
+          "current_feature_index": 123,
+          "current_name": "Moroto",
+          "current_parent": "Northern",
+          "source_area_covered_percent": 0.4053,
+          "current_area_covered_percent": 0.1847
+        },
+        {
+          "current_feature_index": 99,
+          "current_name": "Kween",
+          "current_parent": "Eastern",
+          "source_area_covered_percent": 0.0573,
+          "current_area_covered_percent": 0.1173
+        },
+        {
+          "current_feature_index": 89,
+          "current_name": "Bukwo",
+          "current_parent": "Eastern",
+          "source_area_covered_percent": 0.0098,
+          "current_area_covered_percent": 0.0282
+        }
+      ]
+    },
+    {
+      "csv_line": 44,
+      "map_code": "karamoja",
+      "source_fid": 37273,
+      "source_country": "South Sudan",
+      "source_parent": "Eastern Equatoria",
+      "source_name": "Kapoeta",
+      "source_area_km2": 34175.802158,
+      "source_covered_by_current_union_percent": 99.5242,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 75,
+          "current_name": "Kapoeta East",
+          "current_parent": "Eastern Equatoria",
+          "source_area_covered_percent": 72.8231,
+          "current_area_covered_percent": 93.9944
+        },
+        {
+          "current_feature_index": 76,
+          "current_name": "Kapoeta North",
+          "current_parent": "Eastern Equatoria",
+          "source_area_covered_percent": 16.425,
+          "current_area_covered_percent": 97.9098
+        },
+        {
+          "current_feature_index": 78,
+          "current_name": "Lafon",
+          "current_parent": "Eastern Equatoria",
+          "source_area_covered_percent": 9.0741,
+          "current_area_covered_percent": 19.0931
+        },
+        {
+          "current_feature_index": 77,
+          "current_name": "Kapoeta South",
+          "current_parent": "Eastern Equatoria",
+          "source_area_covered_percent": 1.1085,
+          "current_area_covered_percent": 31.5643
+        },
+        {
+          "current_feature_index": 82,
+          "current_name": "Pibor",
+          "current_parent": "Jonglei",
+          "source_area_covered_percent": 0.0733,
+          "current_area_covered_percent": 0.1217
+        }
+      ]
+    },
+    {
+      "csv_line": 45,
+      "map_code": "karamoja",
+      "source_fid": 37274,
+      "source_country": "South Sudan",
+      "source_parent": "Eastern Equatoria",
+      "source_name": "Magwi",
+      "source_area_km2": 5192.267014,
+      "source_covered_by_current_union_percent": 99.8096,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 79,
+          "current_name": "Magwi",
+          "current_parent": "Eastern Equatoria",
+          "source_area_covered_percent": 85.1502,
+          "current_area_covered_percent": 85.1224
+        },
+        {
+          "current_feature_index": 80,
+          "current_name": "Torit",
+          "current_parent": "Eastern Equatoria",
+          "source_area_covered_percent": 14.1408,
+          "current_area_covered_percent": 12.5755
+        },
+        {
+          "current_feature_index": 69,
+          "current_name": "Juba",
+          "current_parent": "Central Equatoria",
+          "source_area_covered_percent": 0.3081,
+          "current_area_covered_percent": 0.1423
+        },
+        {
+          "current_feature_index": 78,
+          "current_name": "Lafon",
+          "current_parent": "Eastern Equatoria",
+          "source_area_covered_percent": 0.1225,
+          "current_area_covered_percent": 0.0391
+        },
+        {
+          "current_feature_index": 70,
+          "current_name": "Kajo-keji",
+          "current_parent": "Central Equatoria",
+          "source_area_covered_percent": 0.088,
+          "current_area_covered_percent": 0.18
+        }
+      ]
+    },
+    {
+      "csv_line": 46,
+      "map_code": "karamoja",
+      "source_fid": 37275,
+      "source_country": "South Sudan",
+      "source_parent": "Eastern Equatoria",
+      "source_name": "Shokodom",
+      "source_area_km2": 8174.983476,
+      "source_covered_by_current_union_percent": 100.0,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 73,
+          "current_name": "Budi",
+          "current_parent": "Eastern Equatoria",
+          "source_area_covered_percent": 63.5372,
+          "current_area_covered_percent": 89.9625
+        },
+        {
+          "current_feature_index": 78,
+          "current_name": "Lafon",
+          "current_parent": "Eastern Equatoria",
+          "source_area_covered_percent": 13.6202,
+          "current_area_covered_percent": 6.8553
+        },
+        {
+          "current_feature_index": 75,
+          "current_name": "Kapoeta East",
+          "current_parent": "Eastern Equatoria",
+          "source_area_covered_percent": 11.6602,
+          "current_area_covered_percent": 3.6
+        },
+        {
+          "current_feature_index": 77,
+          "current_name": "Kapoeta South",
+          "current_parent": "Eastern Equatoria",
+          "source_area_covered_percent": 10.0472,
+          "current_area_covered_percent": 68.4357
+        },
+        {
+          "current_feature_index": 76,
+          "current_name": "Kapoeta North",
+          "current_parent": "Eastern Equatoria",
+          "source_area_covered_percent": 1.0816,
+          "current_area_covered_percent": 1.5423
+        }
+      ]
+    },
+    {
+      "csv_line": 47,
+      "map_code": "karamoja",
+      "source_fid": 14564,
+      "source_country": "Ethiopia",
+      "source_parent": "Southern Nations, Nationalities and Peoples",
+      "source_name": "Bench Maji",
+      "source_area_km2": 19086.050305,
+      "source_covered_by_current_union_percent": 99.0068,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 17,
+          "current_name": "Mirab Omo",
+          "current_parent": "South West Ethiopia",
+          "source_area_covered_percent": 75.0197,
+          "current_area_covered_percent": 98.8885
+        },
+        {
+          "current_feature_index": 13,
+          "current_name": "Bench Sheko",
+          "current_parent": "South West Ethiopia",
+          "source_area_covered_percent": 23.5921,
+          "current_area_covered_percent": 98.9075
+        },
+        {
+          "current_feature_index": 15,
+          "current_name": "Kefa",
+          "current_parent": "South West Ethiopia",
+          "source_area_covered_percent": 0.2566,
+          "current_area_covered_percent": 0.5277
+        },
+        {
+          "current_feature_index": 18,
+          "current_name": "Sheka",
+          "current_parent": "South West Ethiopia",
+          "source_area_covered_percent": 0.0706,
+          "current_area_covered_percent": 1.4911
+        },
+        {
+          "current_feature_index": 12,
+          "current_name": "South Omo",
+          "current_parent": "SNNP",
+          "source_area_covered_percent": 0.0679,
+          "current_area_covered_percent": 0.0568
+        }
+      ]
+    },
+    {
+      "csv_line": 48,
+      "map_code": "karamoja",
+      "source_fid": 14567,
+      "source_country": "Ethiopia",
+      "source_parent": "Southern Nations, Nationalities and Peoples",
+      "source_name": "Debub Omo",
+      "source_area_km2": 23033.225811,
+      "source_covered_by_current_union_percent": 98.5806,
+      "mutual_95pct_diagnostic_count": 1,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 12,
+          "current_name": "South Omo",
+          "current_parent": "SNNP",
+          "source_area_covered_percent": 97.937,
+          "current_area_covered_percent": 98.7845
+        },
+        {
+          "current_feature_index": 17,
+          "current_name": "Mirab Omo",
+          "current_parent": "South West Ethiopia",
+          "source_area_covered_percent": 0.5324,
+          "current_area_covered_percent": 0.847
+        },
+        {
+          "current_feature_index": 15,
+          "current_name": "Kefa",
+          "current_parent": "South West Ethiopia",
+          "source_area_covered_percent": 0.0652,
+          "current_area_covered_percent": 0.1618
+        },
+        {
+          "current_feature_index": 10,
+          "current_name": "Gofa",
+          "current_parent": "SNNP",
+          "source_area_covered_percent": 0.0127,
+          "current_area_covered_percent": 0.0644
+        },
+        {
+          "current_feature_index": 11,
+          "current_name": "Konso",
+          "current_parent": "SNNP",
+          "source_area_covered_percent": 0.012,
+          "current_area_covered_percent": 0.1184
+        }
+      ]
+    },
+    {
+      "csv_line": 49,
+      "map_code": "dikhil",
+      "source_fid": 11837,
+      "source_country": "Djibouti",
+      "source_parent": "Dikhil",
+      "source_name": "As Eyla",
+      "source_area_km2": 1843.777962,
+      "source_covered_by_current_union_percent": 94.4106,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 4,
+          "current_name": "As Eyla",
+          "current_parent": "Dikhil",
+          "source_area_covered_percent": 70.8151,
+          "current_area_covered_percent": 73.7201
+        },
+        {
+          "current_feature_index": 5,
+          "current_name": "Dikhil",
+          "current_parent": "Dikhil",
+          "source_area_covered_percent": 23.5955,
+          "current_area_covered_percent": 29.4959
+        }
+      ]
+    },
+    {
+      "csv_line": 50,
+      "map_code": "dikhil",
+      "source_fid": 11838,
+      "source_country": "Djibouti",
+      "source_parent": "Dikhil",
+      "source_name": "Dikhil",
+      "source_area_km2": 1850.374695,
+      "source_covered_by_current_union_percent": 99.4199,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 3,
+          "current_name": "Arta",
+          "current_parent": "Arta",
+          "source_area_covered_percent": 46.7959,
+          "current_area_covered_percent": 40.166
+        },
+        {
+          "current_feature_index": 5,
+          "current_name": "Dikhil",
+          "current_parent": "Dikhil",
+          "source_area_covered_percent": 43.5592,
+          "current_area_covered_percent": 54.6467
+        },
+        {
+          "current_feature_index": 1,
+          "current_name": "Ali Sabieh",
+          "current_parent": "Ali Sabieh",
+          "source_area_covered_percent": 9.0649,
+          "current_area_covered_percent": 24.8551
+        }
+      ]
+    },
+    {
+      "csv_line": 51,
+      "map_code": "dikhil",
+      "source_fid": 11839,
+      "source_country": "Djibouti",
+      "source_parent": "Dikhil",
+      "source_name": "Yoboki",
+      "source_area_km2": 4237.824758,
+      "source_covered_by_current_union_percent": 97.0374,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 7,
+          "current_name": "Yuboki",
+          "current_parent": "Dikhil",
+          "source_area_covered_percent": 56.5053,
+          "current_area_covered_percent": 96.6444
+        },
+        {
+          "current_feature_index": 3,
+          "current_name": "Arta",
+          "current_parent": "Arta",
+          "source_area_covered_percent": 13.7902,
+          "current_area_covered_percent": 27.1084
+        },
+        {
+          "current_feature_index": 6,
+          "current_name": "Galafi",
+          "current_parent": "Dikhil",
+          "source_area_covered_percent": 13.563,
+          "current_area_covered_percent": 98.5849
+        },
+        {
+          "current_feature_index": 4,
+          "current_name": "As Eyla",
+          "current_parent": "Dikhil",
+          "source_area_covered_percent": 8.582,
+          "current_area_covered_percent": 20.5344
+        },
+        {
+          "current_feature_index": 5,
+          "current_name": "Dikhil",
+          "current_parent": "Dikhil",
+          "source_area_covered_percent": 3.9963,
+          "current_area_covered_percent": 11.4822
+        }
+      ]
+    },
+    {
+      "csv_line": 52,
+      "map_code": "dikhil",
+      "source_fid": 11843,
+      "source_country": "Djibouti",
+      "source_parent": "Tadjourah",
+      "source_name": "Balha",
+      "source_area_km2": 1785.407079,
+      "source_covered_by_current_union_percent": 94.4561,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 14,
+          "current_name": "Balho",
+          "current_parent": "Tadjoura",
+          "source_area_covered_percent": 57.8441,
+          "current_area_covered_percent": 84.3455
+        },
+        {
+          "current_feature_index": 18,
+          "current_name": "Randa",
+          "current_parent": "Tadjoura",
+          "source_area_covered_percent": 13.7644,
+          "current_area_covered_percent": 14.5576
+        },
+        {
+          "current_feature_index": 16,
+          "current_name": "Lac 'Assal",
+          "current_parent": "Tadjoura",
+          "source_area_covered_percent": 10.7665,
+          "current_area_covered_percent": 85.2318
+        },
+        {
+          "current_feature_index": 7,
+          "current_name": "Yuboki",
+          "current_parent": "Dikhil",
+          "source_area_covered_percent": 4.6092,
+          "current_area_covered_percent": 3.3213
+        },
+        {
+          "current_feature_index": 15,
+          "current_name": "Dorra",
+          "current_parent": "Tadjoura",
+          "source_area_covered_percent": 4.3478,
+          "current_area_covered_percent": 3.9336
+        }
+      ]
+    },
+    {
+      "csv_line": 53,
+      "map_code": "dikhil",
+      "source_fid": 11844,
+      "source_country": "Djibouti",
+      "source_parent": "Tadjourah",
+      "source_name": "Dorra",
+      "source_area_km2": 2085.490652,
+      "source_covered_by_current_union_percent": 96.5699,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 15,
+          "current_name": "Dorra",
+          "current_parent": "Tadjoura",
+          "source_area_covered_percent": 76.5908,
+          "current_area_covered_percent": 80.9399
+        },
+        {
+          "current_feature_index": 17,
+          "current_name": "Mousa Ali",
+          "current_parent": "Tadjoura",
+          "source_area_covered_percent": 10.4746,
+          "current_area_covered_percent": 99.0434
+        },
+        {
+          "current_feature_index": 14,
+          "current_name": "Balho",
+          "current_parent": "Tadjoura",
+          "source_area_covered_percent": 8.8893,
+          "current_area_covered_percent": 15.1405
+        },
+        {
+          "current_feature_index": 10,
+          "current_name": "Dadda'to",
+          "current_parent": "Obock",
+          "source_area_covered_percent": 0.4279,
+          "current_area_covered_percent": 2.5678
+        },
+        {
+          "current_feature_index": 18,
+          "current_name": "Randa",
+          "current_parent": "Tadjoura",
+          "source_area_covered_percent": 0.1873,
+          "current_area_covered_percent": 0.2313
+        }
+      ]
+    },
+    {
+      "csv_line": 54,
+      "map_code": "dikhil",
+      "source_fid": 11845,
+      "source_country": "Djibouti",
+      "source_parent": "Tadjourah",
+      "source_name": "Randa",
+      "source_area_km2": 1775.896003,
+      "source_covered_by_current_union_percent": 99.997,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 18,
+          "current_name": "Randa",
+          "current_parent": "Tadjoura",
+          "source_area_covered_percent": 76.1828,
+          "current_area_covered_percent": 80.1439
+        },
+        {
+          "current_feature_index": 15,
+          "current_name": "Dorra",
+          "current_parent": "Tadjoura",
+          "source_area_covered_percent": 16.7246,
+          "current_area_covered_percent": 15.0505
+        },
+        {
+          "current_feature_index": 19,
+          "current_name": "Tadjoura",
+          "current_parent": "Tadjoura",
+          "source_area_covered_percent": 5.933,
+          "current_area_covered_percent": 9.1252
+        },
+        {
+          "current_feature_index": 10,
+          "current_name": "Dadda'to",
+          "current_parent": "Obock",
+          "source_area_covered_percent": 1.1515,
+          "current_area_covered_percent": 5.8833
+        },
+        {
+          "current_feature_index": 9,
+          "current_name": "Adailou",
+          "current_parent": "Obock",
+          "source_area_covered_percent": 0.0033,
+          "current_area_covered_percent": 0.0115
+        }
+      ]
+    },
+    {
+      "csv_line": 55,
+      "map_code": "dikhil",
+      "source_fid": 11846,
+      "source_country": "Djibouti",
+      "source_parent": "Tadjourah",
+      "source_name": "Tadjourah",
+      "source_area_km2": 979.812849,
+      "source_covered_by_current_union_percent": 99.8618,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 19,
+          "current_name": "Tadjoura",
+          "current_parent": "Tadjoura",
+          "source_area_covered_percent": 98.4292,
+          "current_area_covered_percent": 83.5247
+        },
+        {
+          "current_feature_index": 16,
+          "current_name": "Lac 'Assal",
+          "current_parent": "Tadjoura",
+          "source_area_covered_percent": 1.4326,
+          "current_area_covered_percent": 6.2238
+        }
+      ]
+    },
+    {
+      "csv_line": 56,
+      "map_code": "dikhil",
+      "source_fid": 37032,
+      "source_country": "Somalia",
+      "source_parent": "Awdal",
+      "source_name": "Boorama",
+      "source_area_km2": 2949.722224,
+      "source_covered_by_current_union_percent": 98.0453,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 32,
+          "current_name": "Borama",
+          "current_parent": "Awdal",
+          "source_area_covered_percent": 96.5595,
+          "current_area_covered_percent": 91.6473
+        },
+        {
+          "current_feature_index": 35,
+          "current_name": "Gebiley",
+          "current_parent": "Woqooyi Galbeed",
+          "source_area_covered_percent": 1.2814,
+          "current_area_covered_percent": 0.9114
+        },
+        {
+          "current_feature_index": 33,
+          "current_name": "Lughaye",
+          "current_parent": "Awdal",
+          "source_area_covered_percent": 0.1901,
+          "current_area_covered_percent": 0.1686
+        },
+        {
+          "current_feature_index": 34,
+          "current_name": "Zeylac",
+          "current_parent": "Awdal",
+          "source_area_covered_percent": 0.0137,
+          "current_area_covered_percent": 0.0067
+        },
+        {
+          "current_feature_index": 31,
+          "current_name": "Baki",
+          "current_parent": "Awdal",
+          "source_area_covered_percent": 0.0006,
+          "current_area_covered_percent": 0.0006
+        }
+      ]
+    },
+    {
+      "csv_line": 57,
+      "map_code": "dikhil",
+      "source_fid": 37034,
+      "source_country": "Somalia",
+      "source_parent": "Awdal",
+      "source_name": "Zeylac",
+      "source_area_km2": 6364.341813,
+      "source_covered_by_current_union_percent": 97.4397,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 34,
+          "current_name": "Zeylac",
+          "current_parent": "Awdal",
+          "source_area_covered_percent": 93.3229,
+          "current_area_covered_percent": 99.2374
+        },
+        {
+          "current_feature_index": 33,
+          "current_name": "Lughaye",
+          "current_parent": "Awdal",
+          "source_area_covered_percent": 2.0874,
+          "current_area_covered_percent": 3.9944
+        },
+        {
+          "current_feature_index": 32,
+          "current_name": "Borama",
+          "current_parent": "Awdal",
+          "source_area_covered_percent": 2.0293,
+          "current_area_covered_percent": 4.1558
+        }
+      ]
+    },
+    {
+      "csv_line": 58,
+      "map_code": "dikhil",
+      "source_fid": 14509,
+      "source_country": "Ethiopia",
+      "source_parent": "Afar",
+      "source_name": "Afar Zone 1",
+      "source_area_km2": 34175.795456,
+      "source_covered_by_current_union_percent": 85.4899,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 23,
+          "current_name": "Awsi /Zone 1",
+          "current_parent": "Afar",
+          "source_area_covered_percent": 77.7666,
+          "current_area_covered_percent": 95.2395
+        },
+        {
+          "current_feature_index": 26,
+          "current_name": "Kilbati /Zone2",
+          "current_parent": "Afar",
+          "source_area_covered_percent": 4.518,
+          "current_area_covered_percent": 18.7162
+        },
+        {
+          "current_feature_index": 24,
+          "current_name": "Fanti /Zone 4",
+          "current_parent": "Afar",
+          "source_area_covered_percent": 3.1812,
+          "current_area_covered_percent": 47.8772
+        },
+        {
+          "current_feature_index": 25,
+          "current_name": "Gabi /Zone 3",
+          "current_parent": "Afar",
+          "source_area_covered_percent": 0.0241,
+          "current_area_covered_percent": 0.7515
+        },
+        {
+          "current_feature_index": 30,
+          "current_name": "Siti",
+          "current_parent": "Somali",
+          "source_area_covered_percent": 0.0,
+          "current_area_covered_percent": 0.0
+        }
+      ]
+    },
+    {
+      "csv_line": 59,
+      "map_code": "dikhil",
+      "source_fid": 14559,
+      "source_country": "Ethiopia",
+      "source_parent": "Somali",
+      "source_name": "Siti",
+      "source_area_km2": 30374.518241,
+      "source_covered_by_current_union_percent": 64.2019,
+      "mutual_95pct_diagnostic_count": 0,
+      "largest_area_overlaps": [
+        {
+          "current_feature_index": 30,
+          "current_name": "Siti",
+          "current_parent": "Somali",
+          "source_area_covered_percent": 63.5552,
+          "current_area_covered_percent": 97.5728
+        },
+        {
+          "current_feature_index": 29,
+          "current_name": "Fafan",
+          "current_parent": "Somali",
+          "source_area_covered_percent": 0.6467,
+          "current_area_covered_percent": 2.5769
+        },
+        {
+          "current_feature_index": 23,
+          "current_name": "Awsi /Zone 1",
+          "current_parent": "Afar",
+          "source_area_covered_percent": 0.0,
+          "current_area_covered_percent": 0.0
+        },
+        {
+          "current_feature_index": 25,
+          "current_name": "Gabi /Zone 3",
+          "current_parent": "Afar",
+          "source_area_covered_percent": 0.0,
+          "current_area_covered_percent": 0.0001
+        },
+        {
+          "current_feature_index": 27,
+          "current_name": "Dire Dawa rural",
+          "current_parent": "Dire Dawa",
+          "source_area_covered_percent": 0.0,
+          "current_area_covered_percent": 0.0003
+        }
+      ]
+    }
+  ]
+}

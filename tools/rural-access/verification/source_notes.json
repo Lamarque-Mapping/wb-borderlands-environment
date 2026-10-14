@@ -1,0 +1,203 @@
+{
+  "source_files": {
+    "guide": "source/source_documentation/1_sdgi-2023-release-documentation.pdf",
+    "subnational_metadata": "source/source_documentation/16_sdgi_9_1_1_rai_2023_subnational.shp.xml",
+    "national_metadata": "source/source_documentation/8_sdgi_9_1_1_rai_2023_national.shp.xml",
+    "observed_data": "source/SEDAC_RAI_source_subset.gpkg"
+  },
+  "guide_page_numbering": "PDF page numbers equal printed page numbers; document last revised 20 July 2023.",
+  "verified_sources": [
+    {
+      "topic": "Administrative boundaries",
+      "finding": "GADM version 3.6, national and administrative level 2 boundaries. The guide lists 2020 in its input time-frame/downloaded column; do not describe this as a common 2020 boundary observation date.",
+      "guide_pages": [
+        4,
+        6
+      ],
+      "xml_evidence": "Process FeatureClassToFeatureClass input path ends with admin_bnds/GADM/gadm36.shp."
+    },
+    {
+      "topic": "Population",
+      "finding": "WorldPop Unconstrained Individual Countries 2020 UN Adjusted, 100 m, adjusted to UN World Population Prospects 2019 Revision country estimates.",
+      "guide_pages": [
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "topic": "Rural classification",
+      "finding": "GHSL GHS-SMOD R2019A, 2015 settlement grid, 1 km. Narrative page 4 abbreviates release as R2019; Table 1 gives R2019A.",
+      "guide_pages": [
+        4,
+        6
+      ],
+      "uncertainty": "The guide does not enumerate the individual GHS-SMOD classes used as rural; do not infer a national statutory rural definition."
+    },
+    {
+      "topic": "Road snapshot",
+      "finding": "OpenStreetMap data downloaded 31 March 2022 from osmdata.xyz.",
+      "guide_pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "topic": "All-season proxy",
+      "finding": "Road condition was inferred from OSM Highway, Access and Surface tags; this is a modelled proxy, not a field survey of seasonal road usability.",
+      "guide_pages": [
+        7,
+        8
+      ]
+    },
+    {
+      "topic": "Indicator formula and units",
+      "finding": "RAI = 100 × rural population within the 2 km road buffer / total rural population, calculated per source admin2 unit. Units percent (0–100). No further population weighting is required to display each district percentage.",
+      "guide_pages": [
+        7,
+        14,
+        15
+      ],
+      "source_field_names": {
+        "denominator": "Pop_A2_R",
+        "numerator": "Pop_A2_R2K",
+        "percentage": "SDG911pct"
+      },
+      "xml_evidence": "Process CalculateField sets adm2_pct_r using (!adm2_r_buf! / !adm2_rural!) * 100; later metadata renames adm2_pct_r to RAIpct and then SDG911pct.",
+      "codebook_mismatch": "Guide labels percentage RAI_Pct; shipped source shapefile field is SDG911pct."
+    },
+    {
+      "topic": "Distance interpretation",
+      "finding": "The source uses 2 km road buffers and intersects them with rural zones. This is geographic proximity rather than measured journey time or road-network walking distance.",
+      "guide_pages": [
+        7
+      ],
+      "inference": "The guide explicitly says buffers; interpreting them as proximity rather than route travel is an inference from that procedure."
+    },
+    {
+      "topic": "Data limitation",
+      "finding": "OSM mapping and classification/tag completeness vary within and between countries; GADM resolution varies by country.",
+      "guide_pages": [
+        19
+      ]
+    },
+    {
+      "topic": "Release dating",
+      "finding": "2023 is the dataset release label. It combines 2020 population, 2015 settlement classification and roads downloaded in March 2022, so it should not be called measured 2023 access.",
+      "guide_pages": [
+        4,
+        5,
+        6,
+        7
+      ]
+    }
+  ],
+  "zero_and_no_data": {
+    "official_error_codes": {
+      "-9997": {
+        "meaning": "Population percent error exceeds 5%; indicator not reported.",
+        "guide_page": 12
+      },
+      "-9998": {
+        "meaning": "Zero population denominator; indicator cannot be computed.",
+        "guide_page": 12
+      },
+      "-9999": {
+        "meaning": "Missing input data or inaccurate numerator; indicator cannot be computed.",
+        "guide_page": 12
+      }
+    },
+    "sole_guide_verbatim_snippet": {
+      "text": "population value of zero in the denominator",
+      "guide_page": 12,
+      "word_count": 8
+    },
+    "recommended_rules": [
+      "Keep sentinel codes and original source values in the audit table; render all negative error-code indicators as no data, not low access.",
+      "If denominator is null or zero, do not turn null population values into zero or treat an apparent percentage zero as valid access.",
+      "A percentage of zero is valid only where the indicator is nonnegative and the rural denominator is positive; a zero numerator then implies 0% within 2 km.",
+      "Use denominator population for aggregation only after confirming source scope and avoiding overlapping or duplicated units. Aggregate as sum(numerator)/sum(denominator), multiplied by 100; do not average the district percentages."
+    ],
+    "uploaded_source_observations": {
+      "subnational_record_count": 674,
+      "null_rural_denominators": 0,
+      "zero_rural_denominators": 13,
+      "negative_indicators": 13,
+      "all_zero_denominator_records_use_code": -9998,
+      "unknown_8": {
+        "country": "Kenya",
+        "admin1": "West Pokot",
+        "source_NAME_2": "unknown 8",
+        "source_fid": 21174,
+        "Pop_A2_R": 0,
+        "Pop_A2_R2K": 0,
+        "SDG911pct": -9998,
+        "interpretation": "Undefined rural access because the source rural population denominator is zero. The supplied spreadsheet blank populations and displayed zero must be replaced by a no-data classification, with provenance retained."
+      },
+      "max_absolute_percent_ratio_difference_for_valid_source_records": 7.112959110600059e-10,
+      "note": "These are direct read-only observations of the uploaded subset, not claims about every record in the global archive."
+    }
+  },
+  "xml_cautions": [
+    "Both shipped XML files retain internal 2022 dataset item/title/path names; national XML also retains an earlier count of 45,162 subnational units. The 2023 guide says 45,073 units. Treat those XML titles/counts as stale lineage metadata; they do not establish a different release or change the supplied 2023 archive identity.",
+    "Metadata indicates source field names can change across processing steps; use actual shipped schema and validated values rather than assuming guide aliases exactly match shapefile field names."
+  ],
+  "unknown_names": {
+    "finding": "The uploaded source already stores literal unknown 1 through unknown 8 labels in Kenya; these labels are source values, not names to be guessed.",
+    "relevant_records": [
+      {
+        "country": "Kenya",
+        "admin1": "Mandera",
+        "NAME_2": "unknown 1",
+        "source_fid": 21028,
+        "RAI_percent": 29.4734178316
+      },
+      {
+        "country": "Kenya",
+        "admin1": "Turkana",
+        "NAME_2": "unknown 2",
+        "source_fid": 21151,
+        "RAI_percent": 17.1200354659
+      },
+      {
+        "country": "Kenya",
+        "admin1": "West Pokot",
+        "NAME_2": "unknown 3",
+        "source_fid": 21173,
+        "RAI_percent": 21.1129643646
+      },
+      {
+        "country": "Kenya",
+        "admin1": "West Pokot",
+        "NAME_2": "unknown 8",
+        "source_fid": 21174,
+        "indicator_error_code": -9998
+      }
+    ],
+    "recommended_label": "Unnamed source unit (retain the original unknown label and source record ID in details); any identification against another boundary dataset requires a documented geometry match."
+  },
+  "recommended_user_facing_wording": {
+    "layer_name": "Rural access to all-season roads (%)",
+    "legend_detail": "Rural population within 2 km of a road classified as likely all-season",
+    "method_short": "NASA SEDAC Rural Access Index, 2023 release. District values use 2020 WorldPop rural population and OSM roads downloaded in March 2022, with GADM v3.6 source boundaries.",
+    "method_extended": "Share of the modelled rural population within 2 km of an OSM road classified as likely all-season, using WorldPop 2020 population, GHSL 2015 settlement classification and GADM v3.6 units. The 2023 release measures proximity; road tagging and coverage can affect estimates. Grey units have no computable value.",
+    "source_attribution": "CIESIN, Columbia University. 2023. SDG Indicator 9.1.1: Rural Access Index (RAI), 2023 Release. NASA SEDAC. DOI: 10.7927/fcre-m572.",
+    "do_not_say": [
+      "Observed access in 2023",
+      "Verified all-season roads",
+      "All figures refer to current administrative boundaries",
+      "0% rural access for unknown 8",
+      "10 km is a standard local catchment"
+    ]
+  },
+  "outstanding_uncertainties": [
+    "Source GADM v3.6 units do not automatically match the map’s OCHA admin2 polygons. Confirm geometry correspondence before colouring current units.",
+    "Exact/Partial/Proxy labels in the supplied spreadsheet have no accompanying codebook. Their intended treatment must not be invented.",
+    "The guide does not explain the substantive identity of literal unknown Kenyan unit labels.",
+    "The guide’s input table combines time frame and downloaded timing in one header; do not assign a single observation year to every boundary."
+  ],
+  "official_doi": "https://doi.org/10.7927/fcre-m572",
+  "source_archive_name": "sdgi-9-1-1-rai-2023-shp.zip",
+  "source_subset_sha256": "6bd08e442d22118c166aff435ea2665e203caa79b698d18b2f0ae41a1e904630"
+}
