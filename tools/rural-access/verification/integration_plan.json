@@ -1,9 +1,9 @@
 {
-  "status": "source_audited_and_qgis_review_launcher_prepared",
+  "status": "qgis_setup_verified_and_live_layer_prepared",
   "stages": {
     "data": "The supplied subset contains all 58 requested source records. 57 rates reconcile with the supplied figures. West Pokot unknown 8 is official no-data (-9998; zero rural denominator).",
-    "qgis": "Setup_SEDAC_Rural_Access.cmd builds four source-polygon layers and opens a separate review copy of Public Experiment.qgz. Return RAI_SETUP_REPORT.zip to establish the local project-creation result.",
-    "live_map": "Add a Rural road access choice under Travel time / access, using the audited SEDAC polygons with a common percentage scale in all four maps. Live activation is pending the local setup result."
+    "qgis": "Returned setup report confirms review project creation, preserved original project and no unavailable existing layers. All 58 full polygons and source fields were independently verified.",
+    "live_map": "Rural road access is integrated as a separate source-polygon view under Travel time / access in all four maps, with a common percentage scale and source-unit selection."
   },
   "geometry": {
     "display_basis": "GADM v3.6 source admin2 units from the SEDAC 2023 release",
@@ -12,10 +12,25 @@
     "diagnostic": "The overlap review compares current web display geometry, which may be simplified or clipped. Its 95% mutual-overlap threshold is exploratory and is not a compatibility standard or a join rule."
   },
   "display": {
-    "bands_percent": [0, 20, 40, 60, 80, 100],
+    "bands_percent": [
+      0,
+      20,
+      40,
+      60,
+      80,
+      100
+    ],
     "band_policy": "Lower bounds inclusive; upper bounds exclusive except the final 100% bound.",
     "missing": "Grey, with a no-computable-value label; preserve valid zero rates where the rural denominator is positive.",
-    "selected_source_unit_details": ["Source NAME_2", "Source NAME_1 and country", "Original source record ID", "Rural population within 2 km (%)", "Rural population numerator and denominator", "Source boundary and release", "Supplied selection tag, without interpreting it"],
+    "selected_source_unit_details": [
+      "Source NAME_2",
+      "Source NAME_1 and country",
+      "Original source record ID",
+      "Rural population within 2 km (%)",
+      "Rural population numerator and denominator",
+      "Source boundary and release",
+      "Supplied selection tag, without interpreting it"
+    ],
     "unnamed_units": "Retain the source's literal unknown labels and identify their source record IDs.",
     "interaction": "Render source polygons in the existing layer lifecycle. Clear them when changing views, update desktop/mobile legends, and keep unrelated travel controls out of the rural-access view."
   },

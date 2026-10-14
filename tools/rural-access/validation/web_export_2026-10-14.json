@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "source_records": 58,
+  "valid_rates": 57,
+  "no_data": 1,
+  "full_geometry_json_roundtrip_wkb_identical": true,
+  "maps": [
+    {
+      "code": "moyale_borana",
+      "records": 5,
+      "valid_values": 5,
+      "no_data": 0,
+      "json_bytes": 207177,
+      "gzip_bytes": 85538,
+      "sha256": "2b89a9403ae7109aeab15b36d4765578f3ec8a6426ba890672c4f951ee0a57eb"
+    },
+    {
+      "code": "mandera_triangle",
+      "records": 15,
+      "valid_values": 15,
+      "no_data": 0,
+      "json_bytes": 183435,
+      "gzip_bytes": 63140,
+      "sha256": "25c43859cb7e8ede20c5fd112ba65c45a5fb6bc2a8a3796bd799503dc8ea369c"
+    },
+    {
+      "code": "karamoja",
+      "records": 27,
+      "valid_values": 26,
+      "no_data": 1,
+      "json_bytes": 2836922,
+      "gzip_bytes": 1135672,
+      "sha256": "76bbcf5048781249339edb1310f7e320192081b76ebed04314b84835bef348b4"
+    },
+    {
+      "code": "dikhil",
+      "records": 11,
+      "valid_values": 11,
+      "no_data": 0,
+      "json_bytes": 379267,
+      "gzip_bytes": 92129,
+      "sha256": "1b05e16d9452fe8c50eff5193a7fcaac2f62965dd7462ef2d1de63da60a9c5d2"
+    }
+  ],
+  "processed_sha256": "9ceca45282d34f9b58c6ed2c02c263279676a760bab3f5193099df4a41beb387",
+  "source_report_sha256": "46e8c25782f7bdc862f79f37bebf4eba330e7938485da0399134e5f2e3053755"
+}

@@ -1,0 +1,91 @@
+{
+  "status": "passed",
+  "revision": "2026-10-14.rural-access.38",
+  "updated_pages": [
+    "page/map=dikhil",
+    "page/map=karamoja",
+    "page/map=mandera_triangle",
+    "page/map=moyale_borana"
+  ],
+  "added_data_groups": [
+    "dikhil/ruralAccess",
+    "karamoja/ruralAccess",
+    "mandera_triangle/ruralAccess",
+    "moyale_borana/ruralAccess"
+  ],
+  "other_manifest_entries_unchanged": true,
+  "assets": [
+    {
+      "asset": "moyale_borana/ruralAccess",
+      "clear_sha256": "2b89a9403ae7109aeab15b36d4765578f3ec8a6426ba890672c4f951ee0a57eb",
+      "clear_bytes": 207177,
+      "encrypted_bytes": 85554,
+      "parts": 2,
+      "encrypt_decrypt_roundtrip": true
+    },
+    {
+      "asset": "page/map=moyale_borana",
+      "clear_sha256": "84833b81d0b6f4a64fd009aec958ddc0ba3f186b220fb45258c9f3987d55c833",
+      "clear_bytes": 225376,
+      "encrypted_bytes": 61406,
+      "parts": 2,
+      "encrypt_decrypt_roundtrip": true
+    },
+    {
+      "asset": "mandera_triangle/ruralAccess",
+      "clear_sha256": "25c43859cb7e8ede20c5fd112ba65c45a5fb6bc2a8a3796bd799503dc8ea369c",
+      "clear_bytes": 183435,
+      "encrypted_bytes": 63156,
+      "parts": 2,
+      "encrypt_decrypt_roundtrip": true
+    },
+    {
+      "asset": "page/map=mandera_triangle",
+      "clear_sha256": "fc463b92b809465f184b69ec652ee77619a3751e44eb977987ec1871613ecba9",
+      "clear_bytes": 225381,
+      "encrypted_bytes": 61401,
+      "parts": 2,
+      "encrypt_decrypt_roundtrip": true
+    },
+    {
+      "asset": "karamoja/ruralAccess",
+      "clear_sha256": "76bbcf5048781249339edb1310f7e320192081b76ebed04314b84835bef348b4",
+      "clear_bytes": 2836922,
+      "encrypted_bytes": 1135688,
+      "parts": 24,
+      "encrypt_decrypt_roundtrip": true
+    },
+    {
+      "asset": "page/map=karamoja",
+      "clear_sha256": "25c3d4505062e214e3dea612b19f5cb05ec4aac8783e7b198f2049ec10192abc",
+      "clear_bytes": 225357,
+      "encrypted_bytes": 61393,
+      "parts": 2,
+      "encrypt_decrypt_roundtrip": true
+    },
+    {
+      "asset": "dikhil/ruralAccess",
+      "clear_sha256": "1b05e16d9452fe8c50eff5193a7fcaac2f62965dd7462ef2d1de63da60a9c5d2",
+      "clear_bytes": 379267,
+      "encrypted_bytes": 92145,
+      "parts": 2,
+      "encrypt_decrypt_roundtrip": true
+    },
+    {
+      "asset": "page/map=dikhil",
+      "clear_sha256": "8239c86fccf207fe9c09267a7a57d37e52cf838df762e4120a268b46dade2809",
+      "clear_bytes": 225351,
+      "encrypted_bytes": 61389,
+      "parts": 2,
+      "encrypt_decrypt_roundtrip": true
+    },
+    {
+      "asset": "manifest",
+      "clear_sha256": "a2b9527278408b5bb356c97dc74ac836aacfdb80deeb303ade8c458bf06a8160",
+      "clear_bytes": 22917,
+      "encrypted_bytes": 6238,
+      "parts": 1,
+      "encrypt_decrypt_roundtrip": true
+    }
+  ]
+}

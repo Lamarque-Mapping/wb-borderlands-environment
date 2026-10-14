@@ -1,0 +1,15 @@
+{
+  "result": "no_remaining_concrete_issue",
+  "reviewed_files": [
+    "patch_current_pages.py",
+    "working/page_map_mandera_triangle.html",
+    "all four outputs compared to deterministic patch"
+  ],
+  "findings_fixed": [
+    "Source/key rows shrink and expanded map menu has viewport-aware height limits.",
+    "Mobile keyboard selection focuses visible Clear control; mobile source Zoom restores focus to Map."
+  ],
+  "limitations": [
+    "Read-only code review; real desktop/mobile preview verification remains required."
+  ]
+}

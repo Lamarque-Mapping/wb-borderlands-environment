@@ -1,0 +1,25 @@
+{
+  "pages": [
+    {
+      "code": "moyale_borana",
+      "behavioral_assertions": "pass"
+    },
+    {
+      "code": "mandera_triangle",
+      "behavioral_assertions": "pass"
+    },
+    {
+      "code": "karamoja",
+      "behavioral_assertions": "pass"
+    },
+    {
+      "code": "dikhil",
+      "behavioral_assertions": "pass"
+    }
+  ],
+  "assertions": 180,
+  "result": "pass",
+  "limitations": [
+    "Synthetic DOM and Leaflet fixtures exercise injected helpers and asset contract. Live Leaflet rendering and desktop/mobile visual QA remain necessary."
+  ]
+}

@@ -1,0 +1,687 @@
+{
+  "status": "verified",
+  "audit_runtime": {
+    "gdal_version": "3080400",
+    "python_runtime": "system Python with GDAL/OGR"
+  },
+  "input_filenames": {
+    "source": "SEDAC_RAI_source_subset.gpkg",
+    "processed": "Rural_Access_SEDAC_source_units.gpkg",
+    "setup_package": "RAI_SETUP_REPORT.zip"
+  },
+  "verified_sha256": {
+    "input_extract_archive": "e845a9d6dd85c9300f3fb83c19d96fd43687acd2cbdd27d9d112ea93b82336e9",
+    "source_geopackage": "6bd08e442d22118c166aff435ea2665e203caa79b698d18b2f0ae41a1e904630",
+    "processed_geopackage": "9ceca45282d34f9b58c6ed2c02c263279676a760bab3f5193099df4a41beb387"
+  },
+  "checks": {
+    "reported_input_file_hashes_match": true,
+    "source_and_processed_files_unchanged_after_read_only_audit": true,
+    "standalone_and_zipped_processed_data_reports_identical": true,
+    "all_58_exact_original_source_rows": true,
+    "all_original_source_fields_and_types_preserved": true,
+    "all_original_source_ids_preserved": true,
+    "all_full_source_geometries_wkb_identical": true,
+    "all_geometry_hashes_match_report": true,
+    "all_geometries_valid_and_nonempty": true,
+    "original_crs_epsg4326_preserved": true,
+    "57_rates_equal_source_exactly": true,
+    "one_source_no_data_kept_null": true,
+    "zero_source_id_duplicates_within_or_across_clusters": true,
+    "no_source_units_joined_or_assigned_to_current_admin2": true
+  },
+  "setup_flags": {
+    "complete": true,
+    "original_project_preserved": true,
+    "unavailable_existing_layer_count": 0,
+    "review_project_created": true,
+    "qgis_gui_launch_requested": true
+  },
+  "report_package_members": [
+    "RAI_SETUP_REPORT.json"
+  ],
+  "counts": {
+    "source_subset_subnational_records": 674,
+    "processed_records": 58,
+    "valid_rates": 57,
+    "no_data": 1,
+    "source_country_records": {
+      "Kenya": 24,
+      "Somalia": 8,
+      "Ethiopia": 7,
+      "Uganda": 9,
+      "South Sudan": 3,
+      "Djibouti": 7
+    },
+    "country_side_records": {
+      "Kenya": 24,
+      "Somalia": 6,
+      "Ethiopia": 7,
+      "Uganda": 9,
+      "South Sudan": 3,
+      "Djibouti": 7,
+      "Somaliland": 2
+    },
+    "supplied_coverage_labels": {
+      "Partial": 13,
+      "Exact": 32,
+      "Proxy": 13
+    }
+  },
+  "maximum_rural_population_ratio_error_percentage_points": 3.3527669529576087e-10,
+  "source_no_data_records": [
+    {
+      "cluster": "Karamoja",
+      "source_fid": 21174,
+      "source_country": "Kenya",
+      "name_1": "West Pokot",
+      "name_2": "unknown 8",
+      "raw_rate": -9998.0,
+      "rural_denominator": 0.0,
+      "rural_within_2km": 0.0,
+      "mapping_rate": null
+    }
+  ],
+  "source_boundary_intersections": {
+    "method": "Pairwise intersection of full EPSG:4326 source geometries; areas measured after EPSG:6933 equal-area transformation. Shared edges have zero area.",
+    "positive_area_pair_count": 0,
+    "greater_than_0_1_percent_smaller_unit_pair_count": 0,
+    "pairs": []
+  },
+  "layers": [
+    {
+      "cluster": "Mandera Triangle",
+      "layer": "rai_mandera_triangle",
+      "records": 15,
+      "valid_values": 15,
+      "no_data": 0,
+      "countries": {
+        "Kenya": 7,
+        "Somalia": 6,
+        "Ethiopia": 2
+      },
+      "country_sides": {
+        "Kenya": 7,
+        "Somalia": 6,
+        "Ethiopia": 2
+      },
+      "supplied_coverage_labels": {
+        "Partial": 9,
+        "Exact": 6
+      },
+      "total_vertices": 4411,
+      "maximum_feature_vertices": 682,
+      "bounds_wgs84_lonlat": [
+        39.09286499042702,
+        1.2307709454228188,
+        45.00166702301476,
+        6.694327831264445
+      ],
+      "compact_full_geojson_bytes": 177863,
+      "features": [
+        {
+          "source_fid": 21022,
+          "source_country": "Kenya",
+          "name_1": "Mandera",
+          "name_2": "Banissa",
+          "vertices": 535,
+          "area_km2": 2969.3178496495816
+        },
+        {
+          "source_fid": 21023,
+          "source_country": "Kenya",
+          "name_1": "Mandera",
+          "name_2": "Lafey",
+          "vertices": 506,
+          "area_km2": 3190.082306108632
+        },
+        {
+          "source_fid": 21024,
+          "source_country": "Kenya",
+          "name_1": "Mandera",
+          "name_2": "Mandera East",
+          "vertices": 306,
+          "area_km2": 2898.4341041458038
+        },
+        {
+          "source_fid": 21025,
+          "source_country": "Kenya",
+          "name_1": "Mandera",
+          "name_2": "Mandera North",
+          "vertices": 682,
+          "area_km2": 6040.786352960743
+        },
+        {
+          "source_fid": 21026,
+          "source_country": "Kenya",
+          "name_1": "Mandera",
+          "name_2": "Mandera South",
+          "vertices": 531,
+          "area_km2": 4108.8136727021665
+        },
+        {
+          "source_fid": 21027,
+          "source_country": "Kenya",
+          "name_1": "Mandera",
+          "name_2": "Mandera West",
+          "vertices": 593,
+          "area_km2": 5190.191800708499
+        },
+        {
+          "source_fid": 21028,
+          "source_country": "Kenya",
+          "name_1": "Mandera",
+          "name_2": "unknown 1",
+          "vertices": 322,
+          "area_km2": 1374.5239290065824
+        },
+        {
+          "source_fid": 37056,
+          "source_country": "Somalia",
+          "name_1": "Gedo",
+          "name_2": "Baar-Dheere",
+          "vertices": 53,
+          "area_km2": 14788.033671667929
+        },
+        {
+          "source_fid": 37057,
+          "source_country": "Somalia",
+          "name_1": "Gedo",
+          "name_2": "Beled Xaawo",
+          "vertices": 36,
+          "area_km2": 4106.998545715648
+        },
+        {
+          "source_fid": 37058,
+          "source_country": "Somalia",
+          "name_1": "Gedo",
+          "name_2": "Ceel Waaq",
+          "vertices": 50,
+          "area_km2": 8248.622429184892
+        },
+        {
+          "source_fid": 37059,
+          "source_country": "Somalia",
+          "name_1": "Gedo",
+          "name_2": "Dolow",
+          "vertices": 39,
+          "area_km2": 1634.1107388298587
+        },
+        {
+          "source_fid": 37060,
+          "source_country": "Somalia",
+          "name_1": "Gedo",
+          "name_2": "Garbahaaray",
+          "vertices": 12,
+          "area_km2": 8010.223065324837
+        },
+        {
+          "source_fid": 37061,
+          "source_country": "Somalia",
+          "name_1": "Gedo",
+          "name_2": "Luuk",
+          "vertices": 34,
+          "area_km2": 8247.863381176918
+        },
+        {
+          "source_fid": 14551,
+          "source_country": "Ethiopia",
+          "name_1": "Somali",
+          "name_2": "Afder",
+          "vertices": 404,
+          "area_km2": 62048.46553352749
+        },
+        {
+          "source_fid": 14556,
+          "source_country": "Ethiopia",
+          "name_1": "Somali",
+          "name_2": "Liben",
+          "vertices": 308,
+          "area_km2": 36202.31691637713
+        }
+      ]
+    },
+    {
+      "cluster": "Moyale/Borana",
+      "layer": "rai_moyale_borana",
+      "records": 5,
+      "valid_values": 5,
+      "no_data": 0,
+      "countries": {
+        "Kenya": 4,
+        "Ethiopia": 1
+      },
+      "country_sides": {
+        "Kenya": 4,
+        "Ethiopia": 1
+      },
+      "supplied_coverage_labels": {
+        "Exact": 4,
+        "Partial": 1
+      },
+      "total_vertices": 5218,
+      "maximum_feature_vertices": 3162,
+      "bounds_wgs84_lonlat": [
+        36.04948425319577,
+        1.2635954617612128,
+        39.74589920008805,
+        6.596070766152991
+      ],
+      "compact_full_geojson_bytes": 202032,
+      "features": [
+        {
+          "source_fid": 21029,
+          "source_country": "Kenya",
+          "name_1": "Marsabit",
+          "name_2": "Laisamis",
+          "vertices": 3162,
+          "area_km2": 24062.734651126782
+        },
+        {
+          "source_fid": 21030,
+          "source_country": "Kenya",
+          "name_1": "Marsabit",
+          "name_2": "Moyale",
+          "vertices": 645,
+          "area_km2": 9283.047075683164
+        },
+        {
+          "source_fid": 21031,
+          "source_country": "Kenya",
+          "name_1": "Marsabit",
+          "name_2": "North Horr",
+          "vertices": 675,
+          "area_km2": 40384.60291317332
+        },
+        {
+          "source_fid": 21032,
+          "source_country": "Kenya",
+          "name_1": "Marsabit",
+          "name_2": "Saku",
+          "vertices": 41,
+          "area_km2": 2044.8816091054503
+        },
+        {
+          "source_fid": 14536,
+          "source_country": "Ethiopia",
+          "name_1": "Oromia",
+          "name_2": "Borena",
+          "vertices": 695,
+          "area_km2": 52440.353464211934
+        }
+      ]
+    },
+    {
+      "cluster": "Karamoja",
+      "layer": "rai_karamoja",
+      "records": 27,
+      "valid_values": 26,
+      "no_data": 1,
+      "countries": {
+        "Kenya": 13,
+        "Uganda": 9,
+        "South Sudan": 3,
+        "Ethiopia": 2
+      },
+      "country_sides": {
+        "Kenya": 13,
+        "Uganda": 9,
+        "South Sudan": 3,
+        "Ethiopia": 2
+      },
+      "supplied_coverage_labels": {
+        "Exact": 13,
+        "Proxy": 11,
+        "Partial": 3
+      },
+      "total_vertices": 72485,
+      "maximum_feature_vertices": 8639,
+      "bounds_wgs84_lonlat": [
+        31.72121047958001,
+        0.9162899257395338,
+        37.0629310610197,
+        7.2340283390366835
+      ],
+      "compact_full_geojson_bytes": 2779187,
+      "features": [
+        {
+          "source_fid": 21145,
+          "source_country": "Kenya",
+          "name_1": "Turkana",
+          "name_2": "Loima",
+          "vertices": 3271,
+          "area_km2": 9769.119235056734
+        },
+        {
+          "source_fid": 21146,
+          "source_country": "Kenya",
+          "name_1": "Turkana",
+          "name_2": "Turkana Central",
+          "vertices": 2633,
+          "area_km2": 6606.46521297221
+        },
+        {
+          "source_fid": 21147,
+          "source_country": "Kenya",
+          "name_1": "Turkana",
+          "name_2": "Turkana East",
+          "vertices": 5764,
+          "area_km2": 8019.711799382744
+        },
+        {
+          "source_fid": 21148,
+          "source_country": "Kenya",
+          "name_1": "Turkana",
+          "name_2": "Turkana North",
+          "vertices": 3687,
+          "area_km2": 14609.670498142943
+        },
+        {
+          "source_fid": 21149,
+          "source_country": "Kenya",
+          "name_1": "Turkana",
+          "name_2": "Turkana South",
+          "vertices": 4149,
+          "area_km2": 7410.685593257115
+        },
+        {
+          "source_fid": 21150,
+          "source_country": "Kenya",
+          "name_1": "Turkana",
+          "name_2": "Turkana West",
+          "vertices": 3037,
+          "area_km2": 14109.047575522514
+        },
+        {
+          "source_fid": 21151,
+          "source_country": "Kenya",
+          "name_1": "Turkana",
+          "name_2": "unknown 2",
+          "vertices": 2412,
+          "area_km2": 3196.1347543030583
+        },
+        {
+          "source_fid": 21169,
+          "source_country": "Kenya",
+          "name_1": "West Pokot",
+          "name_2": "Kacheliba",
+          "vertices": 5076,
+          "area_km2": 4112.9446598227
+        },
+        {
+          "source_fid": 21170,
+          "source_country": "Kenya",
+          "name_1": "West Pokot",
+          "name_2": "Kapenguria",
+          "vertices": 8639,
+          "area_km2": 1468.9464081242718
+        },
+        {
+          "source_fid": 21171,
+          "source_country": "Kenya",
+          "name_1": "West Pokot",
+          "name_2": "Pokot South",
+          "vertices": 5492,
+          "area_km2": 1475.0336833129963
+        },
+        {
+          "source_fid": 21172,
+          "source_country": "Kenya",
+          "name_1": "West Pokot",
+          "name_2": "Sigor",
+          "vertices": 4842,
+          "area_km2": 2151.3721475347566
+        },
+        {
+          "source_fid": 21173,
+          "source_country": "Kenya",
+          "name_1": "West Pokot",
+          "name_2": "unknown 3",
+          "vertices": 2124,
+          "area_km2": 302.44920212052693
+        },
+        {
+          "source_fid": 21174,
+          "source_country": "Kenya",
+          "name_1": "West Pokot",
+          "name_2": "unknown 8",
+          "vertices": 6,
+          "area_km2": 0.0014614918615594506
+        },
+        {
+          "source_fid": 40708,
+          "source_country": "Uganda",
+          "name_1": "Kotido",
+          "name_2": "Dodoth",
+          "vertices": 876,
+          "area_km2": 7223.811841648397
+        },
+        {
+          "source_fid": 40709,
+          "source_country": "Uganda",
+          "name_1": "Kotido",
+          "name_2": "Jie",
+          "vertices": 1522,
+          "area_km2": 3702.650058411186
+        },
+        {
+          "source_fid": 40710,
+          "source_country": "Uganda",
+          "name_1": "Kotido",
+          "name_2": "Labwor",
+          "vertices": 2223,
+          "area_km2": 2353.5112466385967
+        },
+        {
+          "source_fid": 40746,
+          "source_country": "Uganda",
+          "name_1": "Moroto",
+          "name_2": "Bokora",
+          "vertices": 1800,
+          "area_km2": 4978.760118764305
+        },
+        {
+          "source_fid": 40747,
+          "source_country": "Uganda",
+          "name_1": "Moroto",
+          "name_2": "Matheniko",
+          "vertices": 2562,
+          "area_km2": 3533.109388194533
+        },
+        {
+          "source_fid": 40748,
+          "source_country": "Uganda",
+          "name_1": "Moroto",
+          "name_2": "Moroto",
+          "vertices": 86,
+          "area_km2": 4.783161264385283
+        },
+        {
+          "source_fid": 40762,
+          "source_country": "Uganda",
+          "name_1": "Nakapiripirit",
+          "name_2": "Chekwii",
+          "vertices": 4669,
+          "area_km2": 2956.7377021081843
+        },
+        {
+          "source_fid": 40763,
+          "source_country": "Uganda",
+          "name_1": "Nakapiripirit",
+          "name_2": "Pian",
+          "vertices": 1805,
+          "area_km2": 1245.2246680064807
+        },
+        {
+          "source_fid": 40764,
+          "source_country": "Uganda",
+          "name_1": "Nakapiripirit",
+          "name_2": "Pokot",
+          "vertices": 3755,
+          "area_km2": 1615.5534461078698
+        },
+        {
+          "source_fid": 37273,
+          "source_country": "South Sudan",
+          "name_1": "Eastern Equatoria",
+          "name_2": "Kapoeta",
+          "vertices": 389,
+          "area_km2": 34175.802157914986
+        },
+        {
+          "source_fid": 37274,
+          "source_country": "South Sudan",
+          "name_1": "Eastern Equatoria",
+          "name_2": "Magwi",
+          "vertices": 701,
+          "area_km2": 5192.267013559895
+        },
+        {
+          "source_fid": 37275,
+          "source_country": "South Sudan",
+          "name_1": "Eastern Equatoria",
+          "name_2": "Shokodom",
+          "vertices": 53,
+          "area_km2": 8174.98347610265
+        },
+        {
+          "source_fid": 14564,
+          "source_country": "Ethiopia",
+          "name_1": "Southern Nations, Nationalities and Peoples",
+          "name_2": "Bench Maji",
+          "vertices": 464,
+          "area_km2": 19086.050304944343
+        },
+        {
+          "source_fid": 14567,
+          "source_country": "Ethiopia",
+          "name_1": "Southern Nations, Nationalities and Peoples",
+          "name_2": "Debub Omo",
+          "vertices": 448,
+          "area_km2": 23033.22581088639
+        }
+      ]
+    },
+    {
+      "cluster": "Dikhil",
+      "layer": "rai_dikhil",
+      "records": 11,
+      "valid_values": 11,
+      "no_data": 0,
+      "countries": {
+        "Djibouti": 7,
+        "Somalia": 2,
+        "Ethiopia": 2
+      },
+      "country_sides": {
+        "Djibouti": 7,
+        "Somaliland": 2,
+        "Ethiopia": 2
+      },
+      "supplied_coverage_labels": {
+        "Exact": 9,
+        "Proxy": 2
+      },
+      "total_vertices": 9473,
+      "maximum_feature_vertices": 4229,
+      "bounds_wgs84_lonlat": [
+        39.99254608183628,
+        9.304797172151837,
+        43.715694427855624,
+        13.083203315380729
+      ],
+      "compact_full_geojson_bytes": 376524,
+      "features": [
+        {
+          "source_fid": 11837,
+          "source_country": "Djibouti",
+          "name_1": "Dikhil",
+          "name_2": "As Eyla",
+          "vertices": 28,
+          "area_km2": 1843.777961943964
+        },
+        {
+          "source_fid": 11838,
+          "source_country": "Djibouti",
+          "name_1": "Dikhil",
+          "name_2": "Dikhil",
+          "vertices": 1092,
+          "area_km2": 1850.3746954431247
+        },
+        {
+          "source_fid": 11839,
+          "source_country": "Djibouti",
+          "name_1": "Dikhil",
+          "name_2": "Yoboki",
+          "vertices": 681,
+          "area_km2": 4237.824758273206
+        },
+        {
+          "source_fid": 11843,
+          "source_country": "Djibouti",
+          "name_1": "Tadjourah",
+          "name_2": "Balha",
+          "vertices": 35,
+          "area_km2": 1785.4070787213307
+        },
+        {
+          "source_fid": 11844,
+          "source_country": "Djibouti",
+          "name_1": "Tadjourah",
+          "name_2": "Dorra",
+          "vertices": 134,
+          "area_km2": 2085.490651701169
+        },
+        {
+          "source_fid": 11845,
+          "source_country": "Djibouti",
+          "name_1": "Tadjourah",
+          "name_2": "Randa",
+          "vertices": 16,
+          "area_km2": 1775.8960028751392
+        },
+        {
+          "source_fid": 11846,
+          "source_country": "Djibouti",
+          "name_1": "Tadjourah",
+          "name_2": "Tadjourah",
+          "vertices": 2689,
+          "area_km2": 979.8128486475715
+        },
+        {
+          "source_fid": 37032,
+          "source_country": "Somalia",
+          "name_1": "Awdal",
+          "name_2": "Boorama",
+          "vertices": 67,
+          "area_km2": 2949.7222242176304
+        },
+        {
+          "source_fid": 37034,
+          "source_country": "Somalia",
+          "name_1": "Awdal",
+          "name_2": "Zeylac",
+          "vertices": 4229,
+          "area_km2": 6364.3418134050735
+        },
+        {
+          "source_fid": 14509,
+          "source_country": "Ethiopia",
+          "name_1": "Afar",
+          "name_2": "Afar Zone 1",
+          "vertices": 241,
+          "area_km2": 34175.79545570159
+        },
+        {
+          "source_fid": 14559,
+          "source_country": "Ethiopia",
+          "name_1": "Somali",
+          "name_2": "Siti",
+          "vertices": 261,
+          "area_km2": 30374.51824135295
+        }
+      ]
+    }
+  ],
+  "display_policy": "Preserve full source geometry and source rates. Extents and counts describe older source admin2 units, including broad proxy units; no current administrative boundary join is validated or performed. Supplied Exact/Partial/Proxy labels remain provenance without inferred weighting or clipping."
+}
