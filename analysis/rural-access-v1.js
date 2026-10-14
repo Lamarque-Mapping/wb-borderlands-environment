@@ -18,6 +18,7 @@ function fillCountries(){const countries=[...new Set(data.rows.filter(r=>r.clust
 function render(){
  renderCards();const selected=rows(),s=summary(selected),name=data.clusters.find(c=>c.code===cluster).name,sorted=ordered(selected,$('raiSort').value);
  $('raiSelectionTitle').textContent=name+(country?' · '+country:'');
+ $('raiOpenMap').href='?view=ruralAccess#map='+encodeURIComponent(cluster);
  $('raiCount').textContent=s.valid+' of '+s.count+' source units have valid access values.'+(s.missing?' '+s.missing+' remains listed as no data.':'');
  const low=ordered(selected.filter(valid),'low')[0],high=ordered(selected.filter(valid),'high')[0];
  $('raiInsight').textContent=low&&high&&s.valid>1?'Among these source units, access ranges from '+fmt(low.access_pct,1)+'% in '+low.name+' to '+fmt(high.access_pct,1)+'% in '+high.name+' — a '+fmt(high.access_pct-low.access_pct,1)+' percentage-point gap.':low?'This selection contains one source unit with a valid access value.':'This selection has no valid access percentage.';

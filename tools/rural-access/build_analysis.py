@@ -19,7 +19,7 @@ OUT=args.output.resolve()
 WORK=OUT.parent/'working'
 ASSETS=ROOT if (ROOT/'rural-access-v1.js').exists() else ROOT.parent.parent/'analysis'
 CODES={'moyale_borana':'Moyale–Borana','mandera_triangle':'Mandera Triangle','karamoja':'Karamoja','dikhil':'Dikhil'}
-REVISION='2026-10-14.rural-analysis.39'
+REVISION='2026-10-14.rural-analysis.40'
 NOTE='''The analysis page ranks all 58 supplied source units, of which 57 have valid percentages. Group summaries equal 100 × summed rural population within 2 km divided by summed rural population across valid selected units; no unweighted averaging, area-overlap weighting or selection-tag weighting is used. These are summaries of whole source-unit selections, including territory outside the cluster boundaries, not access estimates for clipped clusters. WorldPop 2020 source denominators are used, separately from the WorldPop 2025 population charts. West Pokot “unknown 8” has a zero rural-population denominator and remains no data; other original unknown names are retained.'''
 for p in (OUT,WORK,OUT/'assets',OUT/'analysis',OUT/'tools/rural-access'):
  p.mkdir(parents=True,exist_ok=True)
@@ -43,16 +43,18 @@ page=(SOURCE/'analysis.html').read_text()
 assert 'id="rural-access"' not in page, 'Use the documented pre-analysis baseline to avoid duplicate sections.'
 scope=re.search(r'<div class="scope-bar".*?<p id="scopeNote" class="scope-note"></p>\n',page,re.S).group()
 page=page.replace(scope,'',1)
+maplink=re.search(r'<a id="openMap".*?</a>',page).group()
+page=page.replace(maplink,'',1)
 section=(ROOT/'analysis_section.html').read_text()
-page=page.replace('</style></head>','</style><link rel="stylesheet" href="analysis/rural-access-v1.css"></head>',1)
+page=page.replace('</style></head>','</style><link rel="stylesheet" href="analysis/rural-access-v1.css?v='+REVISION+'"></head>',1)
 page=page.replace('<a href="#violence">Violence</a>','<a href="#rural-access">Rural access</a><a href="#violence">Violence</a>',1)
 page=page.replace('<a href="#portfolio">Projects</a>','<a href="#portfolio">Projects</a><a href="#data-sources">Sources &amp; limitations</a>',1)
 for old,new in [('06 /','07 /'),('05 /','06 /'),('04 /','05 /'),('03 /','04 /'),('02 /','03 /'),('01 /','02 /')]:page=page.replace(old,new)
-page=page.replace('<section id="violence"',section+'\n<p class="rai-geography-label">Geography for the remaining charts</p>\n'+scope+'<section id="violence"',1)
+page=page.replace('<section id="violence"',section+'\n<div class="rai-geography-label"><span>Geography for the remaining charts</span>'+maplink+'</div>\n'+scope+'<section id="violence"',1)
 table=re.search(r'<table class="wb-sources-table">.*?</table>',current,re.S).group().replace('class="wb-sources-table"','class="analysis-sources-table"').replace(oldrow,newrow)
 sources='<section id="data-sources" class="analysis-card"><div class="analysis-head"><div><p class="section-kicker">08 / Sources</p><h2>Data sources and limitations</h2></div></div><p class="rai-intro">Sources used across the maps and analysis. Rural road access uses whole SEDAC source units; the other population, landscape and healthcare charts use the stated study-area boundaries.</p><details class="method-note"><summary>Open source and licence table</summary><div class="analysis-sources-scroll" tabindex="0" role="region" aria-label="Data sources and limitations table">'+table+'</div></details><p class="chart-foot">Source dates, definitions and geographical units differ. Road proximity, road-network connectivity and modelled healthcare travel time measure different aspects of access. Their percentages should not be treated as interchangeable or as evidence of a causal relationship.</p></section>\n'
 page=page.replace('<footer class="page-foot">',sources+'<footer class="page-foot">',1)
-page=page.replace('</main><script>','</main><script src="analysis/rural-access-v1.js"></script><script>',1)
+page=page.replace('</main><script>','</main><script src="analysis/rural-access-v1.js?v='+REVISION+'"></script><script>',1)
 (WORK/'analysis.html').write_text(page)
 for code in CODES:
  p=(SOURCE/f'page_map_{code}.html').read_text();assert p.count(oldrow)==1
