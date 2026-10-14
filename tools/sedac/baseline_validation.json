@@ -1,0 +1,27 @@
+[
+  {
+    "asset": "page/map=mandera_triangle",
+    "baseline_matches": true,
+    "sha256": "f8a1368620d9fab111e21a813f33daf9f50bb8c37abda1d122a1774a749acad3"
+  },
+  {
+    "asset": "page/map=moyale_borana",
+    "baseline_matches": true,
+    "sha256": "19b74003833e194a0d98343c76fd1b584ad7eb2917027ceabcd78a65feb62a93"
+  },
+  {
+    "asset": "page/map=karamoja",
+    "baseline_matches": true,
+    "sha256": "d9f04cca7e3fd2e52fc6c69d4cbdccc27ace381c7f5a39d0fb7d10c7e29848fd"
+  },
+  {
+    "asset": "page/map=dikhil",
+    "baseline_matches": true,
+    "sha256": "a75dfc01bd88e37660b3dfe40567820c89a886a00ad33752251d1c9aea16e20a"
+  },
+  {
+    "asset": "page/analysis",
+    "baseline_matches": true,
+    "sha256": "7250ba46e43032a60bc6b81ea55842523fe37df30365ba397035c748d2f5ca82"
+  }
+]

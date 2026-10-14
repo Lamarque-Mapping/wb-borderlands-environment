@@ -1,0 +1,104 @@
+{
+  "status": "passed",
+  "baseline_commit": "7b6f221c2960e1ad9217be8733212104bf6e1a59",
+  "revision": "2026-10-15.sedac.45",
+  "updated_pages": [
+    "page/analysis",
+    "page/map=dikhil",
+    "page/map=karamoja",
+    "page/map=mandera_triangle",
+    "page/map=moyale_borana"
+  ],
+  "other_manifest_entries_unchanged": true,
+  "existing_access_configuration_unchanged": true,
+  "assets": [
+    {
+      "asset": "mandera_triangle/sedac",
+      "sha256": "4a87a60e4c9b4d27c4e44903eaf8cb8252c81fbbb3b2ccb65c8ae042ba79bd89",
+      "bytes": 1339042,
+      "encrypted_bytes": 271022,
+      "parts": 6,
+      "roundtrip_identical": true
+    },
+    {
+      "asset": "page/map=mandera_triangle",
+      "sha256": "54e62c10aeaad47064e28ab53d06f57d82074950a3879e498e0417664c13fb35",
+      "bytes": 233738,
+      "encrypted_bytes": 63900,
+      "parts": 2,
+      "roundtrip_identical": true
+    },
+    {
+      "asset": "moyale_borana/sedac",
+      "sha256": "f0cbe555a485457013674121d9d19ec9e06efb586c7360dc24d4674fe4d0ef38",
+      "bytes": 913297,
+      "encrypted_bytes": 211097,
+      "parts": 5,
+      "roundtrip_identical": true
+    },
+    {
+      "asset": "page/map=moyale_borana",
+      "sha256": "6caafe98da5a395823a85d01439d232577ed06e3f842c53c1ab6a84c69e5f9e2",
+      "bytes": 233733,
+      "encrypted_bytes": 63904,
+      "parts": 2,
+      "roundtrip_identical": true
+    },
+    {
+      "asset": "karamoja/sedac",
+      "sha256": "d7691104f446433c6a111991f67b6bc11e36fd6db2eb77b2d4fc4a80ff9a8a28",
+      "bytes": 1280355,
+      "encrypted_bytes": 328792,
+      "parts": 7,
+      "roundtrip_identical": true
+    },
+    {
+      "asset": "page/map=karamoja",
+      "sha256": "fb12a58223e1a9940b9d7abe1b070e0898fe7fd504ed970933256c2659ea1451",
+      "bytes": 233714,
+      "encrypted_bytes": 63894,
+      "parts": 2,
+      "roundtrip_identical": true
+    },
+    {
+      "asset": "dikhil/sedac",
+      "sha256": "9b79022b4e110865f212781e99ad7ce7dc0cbdcc7fc2687e5a9e18f77d0a0bac",
+      "bytes": 308456,
+      "encrypted_bytes": 74691,
+      "parts": 2,
+      "roundtrip_identical": true
+    },
+    {
+      "asset": "page/map=dikhil",
+      "sha256": "9462d2281cf00b2e844c2fdbe385b742fb2de0dc7b5a2df08e43015a3e70ebdc",
+      "bytes": 233708,
+      "encrypted_bytes": 63887,
+      "parts": 2,
+      "roundtrip_identical": true
+    },
+    {
+      "asset": "analysis/sedac",
+      "sha256": "020a20da62d80945da03bd806d1353cedaf6ad822e69a581312cc66a10775e4f",
+      "bytes": 81908,
+      "encrypted_bytes": 19000,
+      "parts": 1,
+      "roundtrip_identical": true
+    },
+    {
+      "asset": "page/analysis",
+      "sha256": "27738ccc3451aa884b1c72ebc5ea61f2dcdec5c8ac93434f3ac5466e779e690d",
+      "bytes": 67042,
+      "encrypted_bytes": 21195,
+      "parts": 1,
+      "roundtrip_identical": true
+    },
+    {
+      "asset": "manifest",
+      "sha256": "665b3a2ae130fce1f8ec2b8ac03faff589f049c686834e09b23e7f6da35f6e08",
+      "bytes": 24082,
+      "encrypted_bytes": 6547,
+      "parts": 1,
+      "roundtrip_identical": true
+    }
+  ]
+}

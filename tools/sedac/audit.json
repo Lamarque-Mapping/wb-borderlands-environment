@@ -1,0 +1,123 @@
+{
+  "status": "passed",
+  "input_zip_sha256": "d4f2a32c460d9bd71c2844c7fff65c7b979a8dda1479f5d1e3cbfdedbb51e871",
+  "source_setup_complete": true,
+  "vector_hashes_verified": [
+    "33783e43bfa532d311670725de9077f7f9a51a7e2cf9ac79c882230813d35042",
+    "317f14e7f56a684e465ef11e3e9c3ab6eccc33220d308bef03cfb7e2e340f9ae",
+    "539a3866072190953da03645024e42e1576f22ab242841825200283c2700409c",
+    "1a5c5107dea5a73a524d17ea2e29c50d39dd08a1c22209ad6e9d2f6225eedcc8",
+    "d457bd9ec659fb7a5ed2302d9bdbfd9c2332e609c10d24f4a4415ba440ec1edc",
+    "71d9124022790b61957dfe6573b8ad28863c6ae8f174e1bdf5962c5062ebc1da",
+    "298b84e65b5d813ff41c708a00798a63c3e94fa7ef9ecf00e181491f1fda0a0f",
+    "50062eee9f492c9f9018c1fe33f4c9e9b56cd55b2773455688e3c902c434b5b5"
+  ],
+  "heat_means_verified": [
+    {
+      "cluster": "mandera_triangle",
+      "threshold": 28,
+      "years": 34,
+      "values_exact": true
+    },
+    {
+      "cluster": "mandera_triangle",
+      "threshold": 30,
+      "years": 34,
+      "values_exact": true
+    },
+    {
+      "cluster": "mandera_triangle",
+      "threshold": 32,
+      "years": 34,
+      "values_exact": true
+    },
+    {
+      "cluster": "moyale_borana",
+      "threshold": 28,
+      "years": 34,
+      "values_exact": true
+    },
+    {
+      "cluster": "moyale_borana",
+      "threshold": 30,
+      "years": 34,
+      "values_exact": true
+    },
+    {
+      "cluster": "moyale_borana",
+      "threshold": 32,
+      "years": 34,
+      "values_exact": true
+    },
+    {
+      "cluster": "karamoja",
+      "threshold": 28,
+      "years": 34,
+      "values_exact": true
+    },
+    {
+      "cluster": "karamoja",
+      "threshold": 30,
+      "years": 34,
+      "values_exact": true
+    },
+    {
+      "cluster": "karamoja",
+      "threshold": 32,
+      "years": 34,
+      "values_exact": true
+    },
+    {
+      "cluster": "dikhil",
+      "threshold": 28,
+      "years": 34,
+      "values_exact": true
+    },
+    {
+      "cluster": "dikhil",
+      "threshold": 30,
+      "years": 34,
+      "values_exact": true
+    },
+    {
+      "cluster": "dikhil",
+      "threshold": 32,
+      "years": 34,
+      "values_exact": true
+    }
+  ],
+  "maps": [
+    {
+      "code": "mandera_triangle",
+      "settlements": 77,
+      "polygons": 77,
+      "grdi_coverage_share": 0.16247694903190055,
+      "heat_coverage_share": 1.0,
+      "web_json_bytes": 1339042
+    },
+    {
+      "code": "moyale_borana",
+      "settlements": 49,
+      "polygons": 49,
+      "grdi_coverage_share": 0.10379657335477115,
+      "heat_coverage_share": 1.0,
+      "web_json_bytes": 913297
+    },
+    {
+      "code": "karamoja",
+      "settlements": 98,
+      "polygons": 98,
+      "grdi_coverage_share": 0.11725300827542025,
+      "heat_coverage_share": 1.0,
+      "web_json_bytes": 1280355
+    },
+    {
+      "code": "dikhil",
+      "settlements": 18,
+      "polygons": 18,
+      "grdi_coverage_share": 0.13086925314411027,
+      "heat_coverage_share": 1.0,
+      "web_json_bytes": 308456
+    }
+  ]
+}
