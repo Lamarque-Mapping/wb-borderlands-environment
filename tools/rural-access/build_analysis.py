@@ -59,6 +59,10 @@ page=page.replace('</main><script>','</main><script src="analysis/rural-access-v
 for code in CODES:
  p=(SOURCE/f'page_map_{code}.html').read_text();assert p.count(oldrow)==1
  p=p.replace(oldrow,newrow)
+ p=p.replace('Select a shaded source unit or choose one below.','').replace('road. </p>','road.</p>')
+ selector_end='<option value="">Select a source unit…</option></select></label>'
+ assert p.count(selector_end)==1
+ p=p.replace(selector_end,selector_end+'<p class="rural-access-click-note">Click a district on the map to see its rural-access percentage here.</p>')
  marker="await setPreset(startView==='ruralAccess'?'access':['connectivity','fews','projects'].includes(startView)?startView:'clean');"
  assert p.count(marker)==1
  p=p.replace(marker,marker+"\nif(startView==='ruralAccess'){const unit=new URLSearchParams(parent.location.search).get('unit');if(unit&&ruralAccessFeatures().some(f=>ruralAccessId(f.properties)===unit)){selectRuralAccessUnit(unit);locateRuralAccessUnit();}}")
