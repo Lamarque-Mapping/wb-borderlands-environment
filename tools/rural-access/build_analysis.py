@@ -19,7 +19,7 @@ OUT=args.output.resolve()
 WORK=OUT.parent/'working'
 ASSETS=ROOT if (ROOT/'rural-access-v1.js').exists() else ROOT.parent.parent/'analysis'
 CODES={'moyale_borana':'Moyale–Borana','mandera_triangle':'Mandera Triangle','karamoja':'Karamoja','dikhil':'Dikhil'}
-REVISION='2026-10-14.rural-analysis.40'
+REVISION='2026-10-14.rural-access-default.44'
 NOTE='''The analysis page ranks all 58 supplied source units, of which 57 have valid percentages. Group summaries equal 100 × summed rural population within 2 km divided by summed rural population across valid selected units; no unweighted averaging, area-overlap weighting or selection-tag weighting is used. These are summaries of whole source-unit selections, including territory outside the cluster boundaries, not access estimates for clipped clusters. WorldPop 2020 source denominators are used, separately from the WorldPop 2025 population charts. West Pokot “unknown 8” has a zero rural-population denominator and remains no data; other original unknown names are retained.'''
 for p in (OUT,WORK,OUT/'assets',OUT/'analysis',OUT/'tools/rural-access'):
  p.mkdir(parents=True,exist_ok=True)
@@ -62,6 +62,7 @@ page=page.replace('</main><script>','</main><script src="analysis/rural-access-v
 (WORK/'analysis.html').write_text(page)
 for code in CODES:
  p=current_connectivity_notes((SOURCE/f'page_map_{code}.html').read_text());assert p.count(oldrow)==1
+ p=p.replace("access:'travel'","access:'ruralAccess'").replace("access:[['travel','Mean travel times'],['coverage','Population access to healthcare'],['ruralAccess','Rural road access']]","access:[['ruralAccess','Rural road access'],['travel','Mean travel times'],['coverage','Population access to healthcare']]")
  p=p.replace(oldrow,newrow)
  p=p.replace('<h3>Development projects</h3>',source_note+'<h3>Development projects</h3>',1)
  p=p.replace('Select a shaded source unit or choose one below.','').replace('road. </p>','road.</p>')
