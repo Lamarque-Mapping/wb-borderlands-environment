@@ -74,5 +74,20 @@
     "Urban settlement footprints and population \u00b7 NASA SEDAC GUPPD v1",
     "Water points"
   ],
-  "data_assets_unchanged": true
+  "data_assets_unchanged": true,
+  "tests": [
+    "All inline and shared JavaScript parses",
+    "Prior view retained during loading",
+    "Latest request wins when loads finish out of order",
+    "Failed load retains previous map and supports retry",
+    "Every original GRDI image colour matches recolouring lookup in all four maps"
+  ],
+  "live_checks": {
+    "published_revision": "2026-10-15.views.49",
+    "pages_deployment": "success",
+    "map_views_menu": "remains a direct panel child in deprivation, rural access, towns/transport and connectivity",
+    "sidebar_position": "unchanged when switching views",
+    "source_table": "29 equally styled rows; no featured callouts",
+    "screenshot": "tools/source-presentation/deprivation-map-update.jpg"
+  }
 }
