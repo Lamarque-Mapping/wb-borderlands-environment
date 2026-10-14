@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "interpreter": "/usr/bin/python3",
+  "gdal_version": "3.8.4",
+  "launcher_sha256": "84a58ecaf47f52a1a9e550d66a404d3680a7f7727c10e249f89577b3faa78755",
+  "embedded_python_sha256": "83c731acb3a1bd1750b03ad01e6b02014753158a3d2f65bd1575b2503fb41a09",
+  "synthetic_tests": {
+    "country_subset_and_preservation": {
+      "pass": true,
+      "selected_features": 6,
+      "excluded_non_target": "Sudan inside regional envelope",
+      "checks": [
+        "nested ZIP paths and spaces/Unicode",
+        "all six target countries",
+        "original fid and output-row-id collision",
+        "NULL geometry",
+        "NULL versus zero, integer64, unknown names and Unicode custom values",
+        "source field names/types/values",
+        "byte-identical geometry WKB",
+        "source ZIP unchanged",
+        "output hash and ZIP contents"
+      ]
+    },
+    "projected_geographic_fallback": {
+      "pass": true,
+      "selected_features": 1,
+      "checks": [
+        "EPSG:3857 filter transformation",
+        "outside feature excluded",
+        "full polygon beyond envelope preserved without clipping",
+        "source CRS/WKB/attributes retained",
+        "source ZIP unchanged"
+      ]
+    },
+    "no_shapefile_report": {
+      "pass": true,
+      "checks": [
+        "report-only ZIP produced",
+        "absent shapefiles identified",
+        "source unchanged"
+      ]
+    },
+    "missing_crs_report": {
+      "pass": true,
+      "checks": [
+        "missing CRS and country field reported",
+        "no inferred geography",
+        "report-only review package produced",
+        "source unchanged"
+      ]
+    }
+  },
+  "limitations": [
+    "Windows CMD/PowerShell bootstrap and installed QGIS runner were not executed.",
+    "The original 600 MB SEDAC archive was not available and was not tested.",
+    "Synthetic tests do not verify source-year interpretation, admin-level alignment or map joins.",
+    "Output size for the original archive remains unknown."
+  ]
+}
