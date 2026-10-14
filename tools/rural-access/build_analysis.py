@@ -35,10 +35,13 @@ for r in rows:
  else:assert abs(r['access_pct']-100*r['within_2km']/r['rural_population'])<1e-5
 data=dict(format='wb-rural-access-analysis-v1',clusters=[dict(code=k,name=v) for k,v in CODES.items()],rows=rows)
 (WORK/'rural_access_analysis.json').write_text(json.dumps(data,ensure_ascii=False,separators=(',',':'),allow_nan=False))
-current=(SOURCE/'page_map_mandera_triangle.html').read_text()
+def current_connectivity_notes(html):
+ return html.replace('local-path thresholds are 2, 5 and 10 km with a 15 km halo.','the local-path threshold is 10 km with a 15 km halo.').replace('The 10 km grid is a chosen starting scale for exploratory comparison, not an operational catchment standard.','The 10 km path limit and 10 km grid are chosen starting points for exploratory comparison, not operational catchment standards.').replace('corridors/corridor-integration-v9.js?v=2026-10-14.9','corridors/corridor-integration-v10.js?v=2026-10-14.10')
+current=current_connectivity_notes((SOURCE/'page_map_mandera_triangle.html').read_text())
 pattern=r'<tr><td>Rural road access · source admin 2 units</td>.*?</tr>'
 oldrow=re.search(pattern,current).group()
-newrow=oldrow.replace('<tr>','<tr class="rai-source-row">',1).replace('</td></tr>',' '+NOTE+'</td></tr>')
+newrow=oldrow.replace('<tr>','<tr class="rai-source-row">',1).replace('Rural road access · source admin 2 units','Rural road access · NASA SEDAC 2023').replace('</td></tr>',' '+NOTE+'</td></tr>')
+source_note=(ROOT/'source_note.html').read_text()
 page=(SOURCE/'analysis.html').read_text()
 assert 'id="rural-access"' not in page, 'Use the documented pre-analysis baseline to avoid duplicate sections.'
 scope=re.search(r'<div class="scope-bar".*?<p id="scopeNote" class="scope-note"></p>\n',page,re.S).group()
@@ -54,11 +57,13 @@ page=page.replace('<section id="violence"',section+'\n<div class="rai-geography-
 table=re.search(r'<table class="wb-sources-table">.*?</table>',current,re.S).group().replace('class="wb-sources-table"','class="analysis-sources-table"').replace(oldrow,newrow)
 sources='<section id="data-sources" class="analysis-card"><div class="analysis-head"><div><p class="section-kicker">08 / Sources</p><h2>Data sources and limitations</h2></div></div><p class="rai-intro">Sources used across the maps and analysis. Rural road access uses whole SEDAC source units; the other population, landscape and healthcare charts use the stated study-area boundaries.</p><details class="method-note"><summary>Open source and licence table</summary><div class="analysis-sources-scroll" tabindex="0" role="region" aria-label="Data sources and limitations table">'+table+'</div></details><p class="chart-foot">Source dates, definitions and geographical units differ. Road proximity, road-network connectivity and modelled healthcare travel time measure different aspects of access. Their percentages should not be treated as interchangeable or as evidence of a causal relationship.</p></section>\n'
 page=page.replace('<footer class="page-foot">',sources+'<footer class="page-foot">',1)
+page=page.replace('<details class="method-note"><summary>Open source and licence table</summary>',source_note+'<details class="method-note"><summary>Open source and licence table</summary>',1)
 page=page.replace('</main><script>','</main><script src="analysis/rural-access-v1.js?v='+REVISION+'"></script><script>',1)
 (WORK/'analysis.html').write_text(page)
 for code in CODES:
- p=(SOURCE/f'page_map_{code}.html').read_text();assert p.count(oldrow)==1
+ p=current_connectivity_notes((SOURCE/f'page_map_{code}.html').read_text());assert p.count(oldrow)==1
  p=p.replace(oldrow,newrow)
+ p=p.replace('<h3>Development projects</h3>',source_note+'<h3>Development projects</h3>',1)
  p=p.replace('Select a shaded source unit or choose one below.','').replace('road. </p>','road.</p>')
  selector_end='<option value="">Select a source unit…</option></select></label>'
  assert p.count(selector_end)==1
@@ -86,7 +91,7 @@ boot['manifest']=asset(json.dumps(manifest,separators=(',',':')).encode(),'appli
 (OUT/'boot.json').write_text(json.dumps(boot,separators=(',',':'))+'\n');changes.append('boot.json')
 for src,dest in [('rural-access-v1.js','analysis/rural-access-v1.js'),('rural-access-v1.css','analysis/rural-access-v1.css')]:
  shutil.copyfile(ASSETS/src,OUT/dest);changes.append(dest)
-for src in ['analysis_section.html','build_analysis.py']:
+for src in ['analysis_section.html','source_note.html','build_analysis.py']:
  dest='tools/rural-access/'+src;shutil.copyfile(ROOT/src,OUT/dest);changes.append(dest)
 validation={'status':'passed','records':58,'valid_values':57,'missing_values':1,'changed_manifest_entries':sorted(expected),'added_manifest_entries':['analysis/ruralAccess'],'source_fields_preserved':True,'source_geometries_unchanged':True,'revision':REVISION}
 dest='tools/rural-access/validation/analysis_package_2026-10-14.json';(OUT/dest).parent.mkdir(exist_ok=True);(OUT/dest).write_text(json.dumps(validation,indent=2)+'\n');changes.append(dest)

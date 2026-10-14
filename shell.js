@@ -183,6 +183,7 @@
     const name=(location.hash.slice(1)||boot.default_route||'home');
     const allowed=boot.routes||['home','analysis','map=moyale_borana','map=mandera_triangle','map=karamoja','map=dikhil'];
     if(!allowed.includes(name)){location.hash=boot.default_route||'home';return;}
+    const isMap=name.startsWith('map=');el('routeLabel').hidden=isMap;el('mapSwitcher').hidden=!isMap;if(isMap)el('mapSwitcher').value=name.slice(4);
     const hideToolbar=!!boot.standalone||name==='home';
     el('toolbar').hidden=hideToolbar;el('workspace').classList.toggle('standalone',hideToolbar);
     el('previewAccess').hidden=true;el('view').hidden=false;el('previewPassword').value='';el('previewMessage').textContent='';
@@ -231,6 +232,7 @@
     el('toolbar').hidden=!!boot.standalone;el('workspace').classList.toggle('standalone',!!boot.standalone);
     await route();
   }
+  el('mapSwitcher').addEventListener('change',event=>{const url=new URL(location.href);for(const param of ['view','unit','raiCluster'])url.searchParams.delete(param);history.replaceState(null,'',url);window.WBVault.go('map='+event.target.value);});
   window.addEventListener('hashchange',route);
   el('previewUnlock').addEventListener('submit',async event=>{
     event.preventDefault();const serial=routeSerial,accessEpoch=previewEpoch;el('previewMessage').textContent='';el('previewUnlockButton').disabled=true;
@@ -266,3 +268,4 @@
   }
   start();
 })();
+
