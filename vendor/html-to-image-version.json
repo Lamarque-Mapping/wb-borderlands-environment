@@ -1,0 +1,9 @@
+{
+  "package": "html-to-image",
+  "version": "1.11.13",
+  "license": "MIT",
+  "repository": {
+    "url": "git+https://github.com/bubkoo/html-to-image.git",
+    "type": "git"
+  }
+}
