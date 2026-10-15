@@ -1,0 +1,26 @@
+[
+  {
+    "code": "karamoja",
+    "exact_shared_country_segments": 1310,
+    "source_polygons_unchanged": true,
+    "all_output_segments_belong_to_different_source_countries": true
+  },
+  {
+    "code": "mandera_triangle",
+    "exact_shared_country_segments": 219,
+    "source_polygons_unchanged": true,
+    "all_output_segments_belong_to_different_source_countries": true
+  },
+  {
+    "code": "moyale_borana",
+    "exact_shared_country_segments": 325,
+    "source_polygons_unchanged": true,
+    "all_output_segments_belong_to_different_source_countries": true
+  },
+  {
+    "code": "dikhil",
+    "exact_shared_country_segments": 110,
+    "source_polygons_unchanged": true,
+    "all_output_segments_belong_to_different_source_countries": true
+  }
+]
