@@ -1,0 +1,18 @@
+{
+  "revision": "2026-10-15.save-view.56",
+  "all_four_map_hooks_present": true,
+  "inline_javascript_syntax_checks": "passed",
+  "data_assets_and_analysis_unchanged": true,
+  "live_export_test": {
+    "map": "karamoja",
+    "view": "ruralAccess",
+    "status": "Map ready",
+    "png_pixels": [
+      4800,
+      4107
+    ],
+    "download_link_visible": true,
+    "preview_link_visible": true
+  },
+  "limitations": "Browser protocol restrictions prevented visual inspection of the generated blob preview. The live map screenshot confirms the UI and PNG generation status, not the exported image content."
+}
