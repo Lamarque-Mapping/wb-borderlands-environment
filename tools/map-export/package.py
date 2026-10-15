@@ -3,7 +3,7 @@ import base64, gzip, hashlib, json, os, re, shutil, subprocess
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 
 ROOT = Path(__file__).resolve().parent
-BASE = ROOT.parent / 'map_save_view'
+BASE = ROOT.parent / 'map_export_finish'
 SITE = ROOT / 'site'
 WORK = ROOT / 'working'
 boot = json.loads((BASE / 'site/boot.json').read_text())
@@ -48,11 +48,11 @@ for code in codes:
 
 assert all(manifest[k] == v for k, v in original.items() if not k.startswith('page/map='))
 boot['manifest'] = asset(json.dumps(manifest, separators=(',', ':')).encode(), 'application/json')
-boot['ui_revision'] = '2026-10-15.save-view.54'
+boot['ui_revision'] = '2026-10-15.save-view.55'
 (SITE / 'boot.json').write_text(json.dumps(boot, separators=(',', ':')) + '\n')
 (WORK / 'manifest.json').write_text(json.dumps(manifest, indent=2) + '\n')
-changes += ['boot.json', 'export/save-view-v2.js']
-subprocess.run(['node', '--check', str(SITE / 'export/save-view-v2.js')], check=True, capture_output=True)
+changes += ['boot.json', 'export/save-view-v3.js']
+subprocess.run(['node', '--check', str(SITE / 'export/save-view-v3.js')], check=True, capture_output=True)
 out = SITE / 'tools/map-export'
 out.mkdir(parents=True, exist_ok=True)
 for filename in ['patch.py', 'package.py']:
