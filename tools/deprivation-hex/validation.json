@@ -1,0 +1,82 @@
+{
+  "method": "Exact intersection-area-weighted mean of valid source pixels; EPSG:6933; no population weighting",
+  "maps": [
+    {
+      "code": "mandera_triangle",
+      "hexes": 2638,
+      "with_data": 2238,
+      "without_data": 400,
+      "mapped_area_share": 0.1621506218965762,
+      "area_mean": 95.0002339508411,
+      "source_sha256": "4a87a60e4c9b4d27c4e44903eaf8cb8252c81fbbb3b2ccb65c8ae042ba79bd89",
+      "hex_input_sha256": "ae915f4933bd35ddddfb127eb7b403d8c08861cc7db9723363f3cb25277e52f9",
+      "geometry_identical": true,
+      "invalid_hexes_repaired_for_area_calculation": 5,
+      "zero_filled": false,
+      "coverage_bounds_checked": true,
+      "pixel_area_conservation_checked": true,
+      "means_within_contributing_values": true,
+      "source_mean_comparison_error": 0.004089002647276629,
+      "coverage_comparison_error": 0.0003263271353243502
+    },
+    {
+      "code": "moyale_borana",
+      "hexes": 2694,
+      "with_data": 1727,
+      "without_data": 967,
+      "mapped_area_share": 0.10344873051129537,
+      "area_mean": 94.71719347965984,
+      "source_sha256": "f0cbe555a485457013674121d9d19ec9e06efb586c7360dc24d4674fe4d0ef38",
+      "hex_input_sha256": "f89723cb7b7ab6fd409a7b580169a6ad75dfe41e953864d2b3979e20a8f3ceac",
+      "geometry_identical": true,
+      "invalid_hexes_repaired_for_area_calculation": 0,
+      "zero_filled": false,
+      "coverage_bounds_checked": true,
+      "pixel_area_conservation_checked": true,
+      "means_within_contributing_values": true,
+      "source_mean_comparison_error": 0.0009059486108782266,
+      "coverage_comparison_error": 0.0003478428434757763
+    },
+    {
+      "code": "karamoja",
+      "hexes": 3415,
+      "with_data": 2110,
+      "without_data": 1305,
+      "mapped_area_share": 0.11694154386832213,
+      "area_mean": 91.10591625902623,
+      "source_sha256": "d7691104f446433c6a111991f67b6bc11e36fd6db2eb77b2d4fc4a80ff9a8a28",
+      "hex_input_sha256": "99033477bc51f7b457dcdd77ba4415a7c0eeef0caf48dbc30af6025b94b11903",
+      "geometry_identical": true,
+      "invalid_hexes_repaired_for_area_calculation": 11,
+      "zero_filled": false,
+      "coverage_bounds_checked": true,
+      "pixel_area_conservation_checked": true,
+      "means_within_contributing_values": true,
+      "source_mean_comparison_error": 0.003698601811692015,
+      "coverage_comparison_error": 0.0003114644070981165
+    },
+    {
+      "code": "dikhil",
+      "hexes": 753,
+      "with_data": 595,
+      "without_data": 158,
+      "mapped_area_share": 0.13018446476806803,
+      "area_mean": 89.52393264868641,
+      "source_sha256": "9b79022b4e110865f212781e99ad7ce7dc0cbdcc7fc2687e5a9e18f77d0a0bac",
+      "hex_input_sha256": "fcaf2490018d4da1da9169f5cfbe0bc92b86a4f872730282315c355d0aa12fa7",
+      "geometry_identical": true,
+      "invalid_hexes_repaired_for_area_calculation": 2,
+      "zero_filled": false,
+      "coverage_bounds_checked": true,
+      "pixel_area_conservation_checked": true,
+      "means_within_contributing_values": true,
+      "source_mean_comparison_error": 0.004082965263947358,
+      "coverage_comparison_error": 0.0006847883760422446
+    }
+  ],
+  "notes": [
+    "Comparisons to native whole-pixel summaries differ slightly because hexes clip pixels at the cluster edge and use EPSG:6933 areas.",
+    "Source geometry is retained in the display. Invalid polygon rings are repaired for area calculation only.",
+    "No original data asset was changed. All five source tables retain equal row styling."
+  ]
+}
