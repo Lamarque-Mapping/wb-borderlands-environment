@@ -3,7 +3,7 @@ import base64, gzip, hashlib, json, os, re, shutil, subprocess
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 
 ROOT = Path(__file__).resolve().parent
-BASE = ROOT.parent / 'rai_border_ui'
+BASE = ROOT.parent / 'map_save_view'
 SITE = ROOT / 'site'
 WORK = ROOT / 'working'
 boot = json.loads((BASE / 'site/boot.json').read_text())
@@ -48,11 +48,11 @@ for code in codes:
 
 assert all(manifest[k] == v for k, v in original.items() if not k.startswith('page/map='))
 boot['manifest'] = asset(json.dumps(manifest, separators=(',', ':')).encode(), 'application/json')
-boot['ui_revision'] = '2026-10-15.save-view.53'
+boot['ui_revision'] = '2026-10-15.save-view.54'
 (SITE / 'boot.json').write_text(json.dumps(boot, separators=(',', ':')) + '\n')
 (WORK / 'manifest.json').write_text(json.dumps(manifest, indent=2) + '\n')
-changes += ['boot.json', 'export/save-view-v1.js', 'export/save-view-v1.css', 'vendor/html-to-image.js', 'vendor/html-to-image-LICENSE', 'vendor/html-to-image-version.json']
-subprocess.run(['node', '--check', str(SITE / 'export/save-view-v1.js')], check=True, capture_output=True)
+changes += ['boot.json', 'export/save-view-v2.js']
+subprocess.run(['node', '--check', str(SITE / 'export/save-view-v2.js')], check=True, capture_output=True)
 out = SITE / 'tools/map-export'
 out.mkdir(parents=True, exist_ok=True)
 for filename in ['patch.py', 'package.py']:

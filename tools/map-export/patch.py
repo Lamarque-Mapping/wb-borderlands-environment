@@ -1,12 +1,17 @@
 from pathlib import Path
-ROOT=Path(__file__).resolve().parent;BASE=ROOT.parent/'rai_border_ui';WORK=ROOT/'working'
-WORK.mkdir(parents=True,exist_ok=True)
-def replace(text,old,new):
- assert text.count(old)==1,(old[:100],text.count(old));return text.replace(old,new)
-for code in ['mandera_triangle','moyale_borana','karamoja','dikhil']:
- page=(BASE/'working'/f'page_map_{code}.html').read_text()
- page=replace(page,'</script></head>','</script><link rel="stylesheet" href="export/save-view-v1.css?v=2026-10-15.save-view.53"><script src="export/save-view-v1.js?v=2026-10-15.save-view.53"></script></head>')
- page=replace(page,'<button id="wbOpenSourcesButton" type="button">Data sources &amp; limitations</button></div>','<button id="wbOpenSourcesButton" type="button">Data sources &amp; limitations</button><button id="wbSaveView" type="button" title="Download a high-resolution framed PNG of the current map, with legend and source credits">Save view</button></div>')
- page=replace(page,"if(startView==='urban'){const id=", "window.setupWBMapExport({map,DATA,isReady:()=>viewReady});\nif(startView==='urban'){const id=")
- (WORK/f'page_map_{code}.html').write_text(page)
-print('Added Save view to all four map pages.')
+import shutil
+
+ROOT = Path(__file__).resolve().parent
+BASE = ROOT.parent / 'map_save_view'
+(ROOT / 'working').mkdir(parents=True, exist_ok=True)
+(ROOT / 'site/export').mkdir(parents=True, exist_ok=True)
+for path in (BASE / 'working').glob('page_map_*.html'):
+    page = path.read_text().replace('export/save-view-v1.js?v=2026-10-15.save-view.53', 'export/save-view-v2.js?v=2026-10-15.save-view.54')
+    (ROOT / 'working' / path.name).write_text(page)
+js = (BASE / 'site/export/save-view-v1.js').read_text()
+js = js.replace("a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),60000);", "a.click();a.textContent='Download PNG';a.style.cssText='display:inline-block;margin-left:14px;color:#244e46;font-weight:600';")
+js = js.replace("status.textContent='Map downloaded · '+output.width.toLocaleString()+' × '+output.height.toLocaleString()+' pixels';setTimeout(()=>status.remove(),8000);", "status.textContent='Map ready · '+output.width.toLocaleString()+' × '+output.height.toLocaleString()+' pixels';status.appendChild(a);const close=element('button','','Close');close.type='button';close.onclick=()=>status.remove();status.appendChild(close);setTimeout(()=>{status.remove();URL.revokeObjectURL(url);},120000);")
+(ROOT / 'site/export/save-view-v2.js').write_text(js)
+package = (BASE / 'package.py').read_text().replace("'rai_border_ui'", "'map_save_view'").replace('2026-10-15.save-view.53','2026-10-15.save-view.54').replace('save-view-v1.js','save-view-v2.js')
+package = package.replace(", 'export/save-view-v1.css', 'vendor/html-to-image.js', 'vendor/html-to-image-LICENSE', 'vendor/html-to-image-version.json'", '')
+(ROOT / 'package.py').write_text(package)
