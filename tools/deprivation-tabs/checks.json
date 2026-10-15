@@ -1,0 +1,34 @@
+{
+  "revision": "2026-10-15.deprivation-tabs.51",
+  "maps": [
+    "mandera_triangle",
+    "moyale_borana",
+    "karamoja",
+    "dikhil"
+  ],
+  "checks": {
+    "all_changed_javascript_parses": true,
+    "encrypted_assets_decrypt_to_source": true,
+    "all_original_data_descriptors_unchanged": true,
+    "analysis_page_descriptor_unchanged": true
+  },
+  "interpretation": "Hex means describe only valid source pixels, weighted by overlap area, not the entire hex or its population. Raster and hex summaries have separate Population sub-tabs.",
+  "live_checks": {
+    "deployment": "success",
+    "raster": {
+      "raster_images": 1,
+      "hex_paths": 0
+    },
+    "hex": {
+      "raster_images": 0,
+      "hex_paths": 3415
+    },
+    "selected_hex": {
+      "cell_id": 237,
+      "mean": 93.4,
+      "coverage_pct": 12.7
+    },
+    "return_to_raster_clears_hexes": true,
+    "direct_hex_link_opens_correct_subtab": true
+  }
+}
