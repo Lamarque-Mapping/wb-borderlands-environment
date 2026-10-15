@@ -1,0 +1,16 @@
+{
+  "revision": "2026-10-15.grdi-hex.50",
+  "live_checks": [
+    "Karamoja renders all 3415 analysis hexes",
+    "Selecting hex 237 shows mean 93.4, coverage 12.7%, 12 contributing source pixels",
+    "Source-grid and hex dropdown switch in both directions",
+    "Map views stays expanded",
+    "Analysis geography controls precede the first section",
+    "Urban settlements, deprivation and historical heat are separate cards",
+    "Their selectors independently show Mandera Triangle, Dikhil and Moyale / Borana",
+    "Heat threshold 32 updates the map link",
+    "All sections load without an error message"
+  ],
+  "source_mean_max_difference": 0.0044,
+  "note": "Native and hex means differ slightly because hex polygons clip source pixels at the cluster edge."
+}
