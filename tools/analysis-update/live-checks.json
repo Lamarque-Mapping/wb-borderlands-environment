@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-16",
+  "code_commit": "41fb83b9eef8cc36699676af3156f918d3e3a139",
+  "deployment": "GitHub Pages workflow 38884175521 succeeded",
+  "live_url": "https://hughlamarque-dev.github.io/wb-borderlands-environment/#analysis",
+  "order": [
+    "population",
+    "urban-settlements",
+    "settlement",
+    "landcover",
+    "deprivation",
+    "rural-access",
+    "healthcare",
+    "violence",
+    "historical-heat",
+    "portfolio",
+    "data-sources"
+  ],
+  "live_controls": {
+    "csv": 11,
+    "png": 10
+  },
+  "live_csv_check": "All-cluster population selection generated 4 rows; full source values and filtering also checked in functional harness",
+  "png_previews_visually_inspected": [
+    {
+      "view": "Population, all four clusters",
+      "width": 2372,
+      "height": 1356,
+      "result": "Framed chart, all four rows, source and geography labels visible"
+    },
+    {
+      "view": "Population, all 92 Karamoja sub-district portions",
+      "width": 1876,
+      "height": 12787,
+      "result": "Scrolled to end of image; final rows and full source footer present"
+    },
+    {
+      "view": "Historical heat, 32 C WBGT",
+      "width": 2372,
+      "height": 4932,
+      "result": "Selected threshold, four overview cards, SVG time series and expanded annual values rendered"
+    }
+  ],
+  "data_and_map_assets": "unchanged",
+  "functional_checks": {
+    "sections": 10,
+    "data_exports": 11,
+    "chart_buttons_ready": 10,
+    "checks": [
+      "Exact population value and displayed ranking",
+      "Country and all-cluster filters",
+      "Walking healthcare mode and denominator",
+      "Partial-month ACLED metadata",
+      "Project filters, family IDs and empty selections",
+      "Deprivation selected cluster plus four summaries",
+      "Heat threshold plus 34 annual values",
+      "Urban footprint cohort",
+      "Rural filtered records plus four weighted summaries; zero denominator remains missing",
+      "29 source rows",
+      "CSV quoting, formula protection, UTF-8 BOM, zero and missing values"
+    ]
+  }
+}
