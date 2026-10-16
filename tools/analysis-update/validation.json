@@ -1,0 +1,18 @@
+{
+  "sections": 10,
+  "data_exports": 11,
+  "chart_buttons_ready": 10,
+  "checks": [
+    "Exact population value and displayed ranking",
+    "Country and all-cluster filters",
+    "Walking healthcare mode and denominator",
+    "Partial-month ACLED metadata",
+    "Project filters, family IDs and empty selections",
+    "Deprivation selected cluster plus four summaries",
+    "Heat threshold plus 34 annual values",
+    "Urban footprint cohort",
+    "Rural filtered records plus four weighted summaries; zero denominator remains missing",
+    "29 source rows",
+    "CSV quoting, formula protection, UTF-8 BOM, zero and missing values"
+  ]
+}
