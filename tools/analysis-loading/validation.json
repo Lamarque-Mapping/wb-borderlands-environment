@@ -1,0 +1,36 @@
+{
+  "revision": "2026-10-16.analysis-loading.58",
+  "commit": "e96e95d84c6f969700ce428057e79529ce00cc41",
+  "checks": [
+    "Analysis remains hidden through delayed SEDAC, rural-access and font completion",
+    "Ready signal occurs once after all sections settle",
+    "Core, SEDAC and rural data failures reveal useful error states",
+    "Missing external SEDAC script reveals useful error state",
+    "Stale route and stale document cannot reveal new route",
+    "Page fetch failure reveals retry UI",
+    "Other routes remain visible",
+    "Fast font load and slow-font fallback both settle",
+    "All eleven CSV exports and ten PNG buttons still function",
+    "All map pages and data descriptors unchanged"
+  ],
+  "status": "Published and verified live",
+  "deployment": {
+    "run": 38886216503,
+    "conclusion": "success"
+  },
+  "live": {
+    "url": "https://hughlamarque-dev.github.io/wb-borderlands-environment/#analysis",
+    "observed_loading": {
+      "iframe_visibility": "hidden",
+      "aria_busy": "true",
+      "status": "Opening analysis\u2026"
+    },
+    "observed_ready": {
+      "iframe_visibility": "visible",
+      "aria_busy": "false",
+      "all_four_module_loading_indicators_hidden": true,
+      "csv_buttons_enabled": 11
+    },
+    "direct_reload": "passed"
+  }
+}
