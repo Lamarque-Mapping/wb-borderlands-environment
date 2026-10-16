@@ -18,7 +18,7 @@
    const layer=L.geoJSON(feature,{style:{color:colour,weight:1.8,fillColor:colour,fillOpacity:.23},onEachFeature:(f,p)=>{p.bindTooltip(feature.properties.name+' · Open map',{className:'cluster-tooltip',sticky:true});p.on({mouseover:()=>highlight(code),mouseout:()=>highlight(null),click:()=>open(code)});}}).addTo(map);layers[code]=layer;
    const long=document.body.classList.contains('theme-immersive')&&matchMedia('(min-width:761px)').matches;
    const number=String(i+1).padStart(2,'0');
-   const marker=L.marker(layer.getBounds().getCenter(),{title:feature.properties.name+' · Open map',alt:feature.properties.name+' cluster',icon:L.divIcon({className:'cluster-map-label'+(long?' long':''),html:'<span style="--cluster:'+colour+'">'+(long?'<b>'+number+'</b>'+feature.properties.name:number)+'</span>',iconSize:long?[140,34]:[30,30],iconAnchor:long?[70,17]:[15,15]})}).addTo(map);
+   const marker=L.marker(layer.getBounds().getCenter(),{title:feature.properties.name+' · Open map',alt:feature.properties.name+' cluster',icon:L.divIcon({className:'cluster-map-label'+(long?' long':''),html:'<span style="--cluster:'+colour+'">'+(long?'<b>'+number+'</b>'+feature.properties.name:number)+'</span>',iconSize:long?[140,34]:[30,30],iconAnchor:long?(code==='moyale_borana'?[70,-10]:code==='mandera_triangle'?[70,45]:[70,17]):[15,15]})}).addTo(map);
    marker.on({mouseover:()=>highlight(code),mouseout:()=>highlight(null),click:()=>open(code)});
   });
   const extent=L.featureGroup(Object.values(layers)).getBounds();
