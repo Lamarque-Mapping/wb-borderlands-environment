@@ -176,6 +176,13 @@
     text:async name=>dec.decode(await asset(name)),
     blob:async name=>{const data=await asset(name);const u=URL.createObjectURL(new Blob([data],{type:manifest[name].mime}));urls.add(u);return u;},
     go:target=>{if(location.hash.slice(1)===target)return route();location.hash=target;},
+    ready:(doc,serial)=>{
+      // An earlier iframe must not reveal a newer route or clear its status.
+      const view=el('view');
+      if(!key||serial!==routeSerial||doc!==view.contentDocument)return;
+      view.removeAttribute('data-loading');view.setAttribute('aria-busy','false');
+      window.WBVault.status('');
+    },
     status:message=>{el('status').textContent=message||'';el('status').style.display=message?'block':'none';}
   };
   async function route(){
@@ -187,6 +194,9 @@
     const hideToolbar=!!boot.standalone||name==='home';
     el('toolbar').hidden=hideToolbar;el('workspace').classList.toggle('standalone',hideToolbar);
     el('previewAccess').hidden=true;el('view').hidden=false;el('previewPassword').value='';el('previewMessage').textContent='';
+    el('workspace').classList.toggle('analysis-route',name==='analysis');
+    el('view').toggleAttribute('data-loading',name==='analysis');
+    el('view').setAttribute('aria-busy',String(name==='analysis'));
     // Destroy the previous map before releasing its image URLs and data cache.
     el('view').srcdoc='<!doctype html><p style="font:15px Arial;padding:24px">Opening…</p>';release();
     if(boot.preview_access&&previewRoute(name)&&!previewKey){
@@ -204,12 +214,13 @@
       const mobileStyle="<style id=\"mobile-views-layout-24\">/* Mobile: one continuous panel, never a clipped, independently scrolling view list. */\n@media(max-width:1024px){\n .panel.mobile-open{display:flex;flex-direction:column;gap:12px;overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;background:#fff;scroll-padding-top:64px;-webkit-overflow-scrolling:touch}\n .panel>.panel-heading{position:sticky;top:0;z-index:6;flex:0 0 auto;min-height:44px;padding-bottom:8px;background:#fff;box-shadow:0 -16px 0 0 #fff}\n .panel>.preset-grid{flex:0 0 auto;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:minmax(44px,auto);overflow:visible;max-height:none;scrollbar-gutter:auto;padding-right:0;gap:6px}\n .panel>.preset-grid button{height:auto;min-height:44px}\n .panel>.view-options,.panel>.map-key,.panel>.panel-footer{flex:0 0 auto;overflow:visible;max-height:none;scrollbar-gutter:auto;padding-right:0}\n}\n</style>";
       const mobileNavigation="<script>document.getElementById('mobileLayers').addEventListener('click',()=>{const panel=document.querySelector('.panel');if(panel.classList.contains('mobile-open'))panel.scrollTop=0;});</script>";
       const displayPage=name.startsWith('map=')&&page.includes('id="mobileLayers"')?page.replace('</head>',mobileStyle+'</head>').replace('</body>',mobileNavigation+'</body>'):page;
-      el('view').srcdoc=displayPage.replace('<head>','<head><base href="'+base.href.replace(/&/g,'&amp;').replace(/"/g,'&quot;')+'">');
+      el('view').srcdoc=displayPage.replace('<head>','<head><meta name="wb-route-serial" content="'+serial+'"><base href="'+base.href.replace(/&/g,'&amp;').replace(/"/g,'&quot;')+'">');
       const routeTitles={'map=moyale_borana':'Moyale–Borana','map=mandera_triangle':'Mandera Triangle','map=karamoja':'Karamoja','map=dikhil':'Dikhil',analysis:'Analysis'};
       el('routeLabel').textContent=routeTitles[name]||'';
       document.title=routeTitles[name]?routeTitles[name]+' · Borderland maps':'Borderland maps';
-      window.WBVault.status('');
+      if(name!=='analysis')window.WBVault.status('');
     }catch(e){if(serial===routeSerial){
+      el('view').removeAttribute('data-loading');el('view').setAttribute('aria-busy','false');
       console.error('The requested view could not be opened.',{route:name,error:e});window.WBVault.status('');
       const escape=value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
       const text=value=>String(value??'').replace(/https?:\/\/[^\s<>"']+/gi,'[URL omitted]').slice(0,400);
@@ -268,4 +279,3 @@
   }
   start();
 })();
-
