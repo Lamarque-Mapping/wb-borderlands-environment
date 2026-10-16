@@ -1,0 +1,39 @@
+{
+  "source_home": "assets/78a52578a3b474bf01362de765e4b57b.bin",
+  "source_revision": "2026-10-16.analysis-loading.58",
+  "commit": "db483f188972f5a714f8a3dd1a2423248ef3366e",
+  "scope": "New design-previews directory only",
+  "designs": [
+    "atlas",
+    "editorial",
+    "immersive",
+    "gallery",
+    "directory"
+  ],
+  "preserved": [
+    "All four cluster routes",
+    "Analysis route",
+    "Current public cluster geometries",
+    "Contact attribution",
+    "Existing preview access on destination maps"
+  ],
+  "local_checks": [
+    "HTML route validation",
+    "No duplicate HTML ids",
+    "All preview navigation destinations exist",
+    "JavaScript syntax check"
+  ],
+  "live_checks": [
+    "All five layouts inspected at 1363 by 936",
+    "No horizontal page overflow in the inspected desktop layouts",
+    "Interactive overview maps loaded with current four cluster outlines",
+    "Overview marker click opened live Karamoja map",
+    "Analysis link opened the populated live analysis page",
+    "Overlapping map-room labels separated",
+    "Raster tile seams corrected and verified",
+    "Gallery header and footer spacing refined",
+    "Screenshots captured from the live previews"
+  ],
+  "last_design_commit": "f265c5dba4a9583711d612e4d597e0a9eabfeccc",
+  "responsive_note": "Responsive CSS included; phone browser testing not performed in this session."
+}
