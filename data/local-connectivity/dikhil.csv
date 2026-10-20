@@ -1,0 +1,24 @@
+﻿cluster,level,id,name,country,admin1,junctions,town_reached,town_share,place_reached,place_share,boundary_fragment,source,path_limit_km,coverage
+Dikhil,cluster,cluster,Dikhil,,,633,164,0.25908372827804105,336,0.5308056872037915,,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Dikhil,country,country:Djibouti,Djibouti,Djibouti,,184,65,0.3532608695652174,96,0.5217391304347826,,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Dikhil,country,country:Ethiopia,Ethiopia,Ethiopia,,114,16,0.14035087719298245,22,0.19298245614035087,,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Dikhil,country,country:Somalia,Somalia,Somalia,,335,83,0.24776119402985075,218,0.6507462686567164,,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Dikhil,district,dd7945544133eec10,Ali Adde,Djibouti,Ali Sabieh,0,0,,0,,True,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Dikhil,district,d89b4f60e6c952dd0,Ali Sabieh,Djibouti,Ali Sabieh,0,0,,0,,True,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Dikhil,district,de23baee9eb67b19d,As Eyla,Djibouti,Dikhil,0,0,,0,,False,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Dikhil,district,d5ba4703c4bf55c1a,Dikhil,Djibouti,Dikhil,48,27,0.5625,34,0.7083333333333334,False,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Dikhil,district,d28b57a8d324d58c4,Galafi,Djibouti,Dikhil,5,0,0.0,4,0.8,False,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Dikhil,district,dff9abd36ae32356f,Yuboki,Djibouti,Dikhil,12,7,0.5833333333333334,7,0.5833333333333334,False,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Dikhil,district,d651acfebddb78031,Balho,Djibouti,Tadjoura,4,1,0.25,1,0.25,False,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Dikhil,district,d275a3637f6b3fbef,Dorra,Djibouti,Tadjoura,13,3,0.23076923076923078,3,0.23076923076923078,False,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Dikhil,district,dae171694049f71e3,Lac 'Assal,Djibouti,Tadjoura,3,0,0.0,0,0.0,False,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Dikhil,district,da033d37a40a7c9dc,Mousa Ali,Djibouti,Tadjoura,0,0,,0,,False,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Dikhil,district,d93410ee94b8b01f7,Randa,Djibouti,Tadjoura,14,0,0.0,10,0.7142857142857143,False,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Dikhil,district,d24765851c53ce477,Tadjoura,Djibouti,Tadjoura,85,27,0.3176470588235294,37,0.43529411764705883,False,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Dikhil,district,d939b4aa655a1913c,Awsi /Zone 1,Ethiopia,Afar,42,4,0.09523809523809523,8,0.19047619047619047,False,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Dikhil,district,d3ce824b96253ba01,Kilbati /Zone2,Ethiopia,Afar,0,0,,0,,True,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Dikhil,district,d6b1bf483f3f548d6,Fafan,Ethiopia,Somali,0,0,,0,,True,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Dikhil,district,d932870b4a3a28f46,Siti,Ethiopia,Somali,72,12,0.16666666666666666,14,0.19444444444444445,False,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Dikhil,district,d829143dabc24bac3,Baki,Somalia,Awdal,0,0,,0,,True,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Dikhil,district,dc16ebaf6dc6c11af,Borama,Somalia,Awdal,210,76,0.3619047619047619,157,0.7476190476190476,False,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Dikhil,district,de66a9d9aa9e44662,Zeylac,Somalia,Awdal,125,7,0.056,61,0.488,False,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed

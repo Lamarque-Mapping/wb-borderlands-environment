@@ -1,0 +1,30 @@
+﻿cluster,level,id,name,country,admin1,junctions,town_reached,town_share,place_reached,place_share,boundary_fragment,source,path_limit_km,coverage
+Moyale–Borana,cluster,cluster,Moyale–Borana,,,1126,231,0.20515097690941386,551,0.48934280639431615,,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Moyale–Borana,country,country:Ethiopia,Ethiopia,Ethiopia,,591,145,0.24534686971235195,356,0.6023688663282571,,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Moyale–Borana,country,country:Kenya,Kenya,Kenya,,535,86,0.16074766355140188,195,0.3644859813084112,,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Moyale–Borana,district,d2bea2b358363fc39,Borena,Ethiopia,Oromia,508,93,0.1830708661417323,278,0.547244094488189,False,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Moyale–Borana,district,d3bb373a1904bedb3,Guji,Ethiopia,Oromia,0,0,,0,,True,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Moyale–Borana,district,da3e32164f67a6070,West Guji,Ethiopia,Oromia,0,0,,0,,True,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Moyale–Borana,district,d7e0615e9ec030de9,Burji,Ethiopia,SNNP,0,0,,0,,True,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Moyale–Borana,district,dc6a1f4d8cb61e5bd,Konso,Ethiopia,SNNP,0,0,,0,,True,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Moyale–Borana,district,dece5eb9947f736ee,South Omo,Ethiopia,SNNP,0,0,,0,,True,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Moyale–Borana,district,dd067d2cae454e879,Daawa,Ethiopia,Somali,0,0,,0,,False,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Moyale–Borana,district,d623b8a4019674e12,Liban,Ethiopia,Somali,83,52,0.6265060240963856,78,0.9397590361445783,False,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Moyale–Borana,district,df0e657e5debc4c35,Isiolo North,Kenya,Isiolo,0,0,,0,,True,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Moyale–Borana,district,d337c58750e4419ff,Banissa,Kenya,Mandera,0,0,,0,,True,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Moyale–Borana,district,dad91dd4d16ef25e6,Lafey,Kenya,Mandera,0,0,,0,,True,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Moyale–Borana,district,d972c2f7fe5f5a8e0,Mandera East,Kenya,Mandera,0,0,,0,,True,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Moyale–Borana,district,d46f660e1f0dcf6e5,Mandera North,Kenya,Mandera,0,0,,0,,True,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Moyale–Borana,district,d876d27aeb5781c28,Mandera West,Kenya,Mandera,0,0,,0,,True,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Moyale–Borana,district,d114fdad8586b549f,Laisamis,Kenya,Marsabit,161,21,0.13043478260869565,43,0.2670807453416149,False,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Moyale–Borana,district,dc8795d7f921417ee,Moyale,Kenya,Marsabit,144,6,0.041666666666666664,44,0.3055555555555556,False,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Moyale–Borana,district,da21516ac7ba8ecae,North Horr,Kenya,Marsabit,125,4,0.032,35,0.28,False,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Moyale–Borana,district,d4169c2164c16198f,Saku,Kenya,Marsabit,105,55,0.5238095238095238,73,0.6952380952380952,False,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Moyale–Borana,district,d5cbe120d7fd20776,Samburu East,Kenya,Samburu,0,0,,0,,True,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Moyale–Borana,district,d2f271f760a081323,Samburu North,Kenya,Samburu,0,0,,0,,True,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Moyale–Borana,district,d9f21e540fbf6e136,Turkana Central,Kenya,Turkana,0,0,,0,,True,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Moyale–Borana,district,d30645060fcf2acb8,Turkana East,Kenya,Turkana,0,0,,0,,True,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Moyale–Borana,district,d1558476f6e8a6af7,Turkana North,Kenya,Turkana,0,0,,0,,True,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Moyale–Borana,district,d21b44457366f3615,Eldas,Kenya,Wajir,0,0,,0,,True,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Moyale–Borana,district,d9dd650f360476ffb,Wajir North,Kenya,Wajir,0,0,,0,,True,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
+Moyale–Borana,district,d29d7c0ec06b71c39,Doolow,Somalia,Gedo,0,0,,0,,True,"© OpenStreetMap contributors / Geofabrik, 8 October 2026; ODbL 1.0",10,OSM completeness not independently assessed
