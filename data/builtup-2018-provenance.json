@@ -1,0 +1,122 @@
+{
+  "source": {
+    "source": "JRC GHS-BUILT-S R2023A, E2018, native 10 m Mollweide",
+    "value": "Built-up surface percent per 100 m cell",
+    "aggregation": "Arithmetic mean of valid native 10 m values. Native values are m\u00b2 built-up surface per 100 m\u00b2 cell, numerically percent. No overview or temporal interpolation used. Zero is valid; 255 is no data. Output mask uses the 100 m cell centre.",
+    "sources": [
+      {
+        "filename": "GHS_BUILT_S_E2018_GLOBE_R2023A_54009_10_V1_0_R8_C23.zip",
+        "bytes": 71904397,
+        "sha256": "026b2df3a386d4d1206e8d101df194cf72f37e4aa00b7c9db0691238019ec498"
+      },
+      {
+        "filename": "GHS_BUILT_S_E2018_GLOBE_R2023A_54009_10_V1_0_R9_C22.zip",
+        "bytes": 390356946,
+        "sha256": "2d33e00d9be7da0fa56668dc24bf49411340e6ddde045ff459a6320b8855e8a5"
+      },
+      {
+        "filename": "GHS_BUILT_S_E2018_GLOBE_R2023A_54009_10_V1_0_R9_C23.zip",
+        "bytes": 41349915,
+        "sha256": "2bb0887c54d9a8424c96b91f83060c53cfc27cb5597e4b13254db138f5417855"
+      }
+    ],
+    "clusters": {
+      "karamoja": {
+        "file": "karamoja_built_up_2018_100m.tif",
+        "width": 5304,
+        "height": 7664,
+        "valid_cells": 20915930,
+        "missing_cells_inside_mask": 0,
+        "max_percent": 66.2699966430664,
+        "geometry_repairs_before_union": 1,
+        "bytes": 4044875,
+        "sha256": "d6af47f30342fbd9978ab3b684aa6f359225dbd6c15818630a9942662e1eb647"
+      },
+      "mandera_triangle": {
+        "file": "mandera_triangle_built_up_2018_100m.tif",
+        "width": 4374,
+        "height": 6746,
+        "valid_cells": 16252262,
+        "missing_cells_inside_mask": 0,
+        "max_percent": 66.66000366210938,
+        "geometry_repairs_before_union": 1,
+        "bytes": 1698423,
+        "sha256": "b03fe9001462a9f4e2a45c88a3becc00b83e4988bac2332faa630430318280bc"
+      },
+      "moyale_borana": {
+        "file": "moyale_borana_built_up_2018_100m.tif",
+        "width": 6044,
+        "height": 6708,
+        "valid_cells": 16496421,
+        "missing_cells_inside_mask": 0,
+        "max_percent": 64.4000015258789,
+        "geometry_repairs_before_union": 1,
+        "bytes": 1770307,
+        "sha256": "3e8e9d508bac5dca3225ac133afddc6c35cabe4a5a0b1f8772ad49b9640b0db5"
+      },
+      "dikhil": {
+        "file": "dikhil_built_up_2018_100m.tif",
+        "width": 2654,
+        "height": 3924,
+        "valid_cells": 4205990,
+        "missing_cells_inside_mask": 0,
+        "max_percent": 62.27000045776367,
+        "geometry_repairs_before_union": 1,
+        "bytes": 739393,
+        "sha256": "12f234294dc338e77bbb9768d251608b87ee069a0f8e70ddeb26f979fd8609d0"
+      }
+    }
+  },
+  "web_processing": {
+    "moyale_borana": {
+      "hexes": 2694,
+      "hexes_with_valid_data": 2693,
+      "hex_min": 0.0,
+      "hex_max": 6.489773,
+      "zero_hexes": 791,
+      "unassigned_valid_raster_cells": 87,
+      "image_dimensions": [
+        1800,
+        1580
+      ]
+    },
+    "mandera_triangle": {
+      "hexes": 2638,
+      "hexes_with_valid_data": 2638,
+      "hex_min": 0.0,
+      "hex_max": 8.583417,
+      "zero_hexes": 485,
+      "unassigned_valid_raster_cells": 55,
+      "image_dimensions": [
+        1800,
+        2170
+      ]
+    },
+    "karamoja": {
+      "hexes": 3415,
+      "hexes_with_valid_data": 3414,
+      "hex_min": 0.0,
+      "hex_max": 7.583253,
+      "zero_hexes": 1035,
+      "unassigned_valid_raster_cells": 475,
+      "image_dimensions": [
+        1800,
+        2049
+      ]
+    },
+    "dikhil": {
+      "hexes": 753,
+      "hexes_with_valid_data": 753,
+      "hex_min": 0.0,
+      "hex_max": 2.614044,
+      "zero_hexes": 68,
+      "unassigned_valid_raster_cells": 171,
+      "image_dimensions": [
+        1800,
+        1975
+      ]
+    },
+    "method": "Mean of valid 100 m GHSL 2018 built-up percentages assigned by pixel centre to the clipped 10 km cell; zero is valid. Native 10 m values were averaged to 100 m without intermediate rounding.",
+    "unchanged": "All other metrics, geometries, night-light data and the 2000\u20132020 change series."
+  }
+}
