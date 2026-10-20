@@ -1,0 +1,22 @@
+{
+  "country_minus_cluster": {
+    "inside_population": -0.0009791910415515304,
+    "outside_population": -0.001164979301393032,
+    "valid_area_m2": -13.849029541015625,
+    "missing_area_m2": -13.904251098632812
+  },
+  "raster_grid_area_minus_cluster_m2": 11.728912353515625,
+  "max_cell_overlay_roundoff_m2": 0.2018039986724034,
+  "geometries_valid": true,
+  "country_area_sum_minus_cluster_m2": -6.3065185546875,
+  "inside_plus_outside_area_minus_cluster_m2": -0.021575927734375,
+  "checks": "Original-cell overlaps; independent Cluster and country allocation; unassigned gaps/overlaps retained; nodata excluded and reported. Shared 1 mm coordinate precision for stable polygon overlays; source cell values are not resampled.",
+  "status": "PASSED",
+  "comparison_to_existing_healthcare_total": {
+    "existing_total": 3513508.843,
+    "new_total": 3514502.9230211796,
+    "difference_percent": 0.028293084366648458,
+    "note": "Independent original-cell allocation; not forced to match the existing summary."
+  },
+  "independent_centre_cell_total": 3520223.192708062
+}

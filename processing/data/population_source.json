@@ -1,0 +1,22 @@
+{
+  "file": "global_pop_2025_CN_1km_R2025A_UA_v1.tif",
+  "sha256": "5e98fe745e262ce0fbfd25ac09bea0215ed4bc1d262428ca99c4052c1a725464",
+  "url": "https://data.worldpop.org/GIS/Population/Global_2015_2030/R2025A/2025/0_Mosaicked/v1/1km_ua/constrained/global_pop_2025_CN_1km_R2025A_UA_v1.tif",
+  "year": 2025,
+  "product": "WorldPop R2025A, constrained, UN-adjusted, 1 km, v1",
+  "nodata": -99999.0,
+  "source_window": [
+    26291,
+    9276,
+    531,
+    657
+  ],
+  "crs": "EPSG:4326",
+  "cell_size_degrees": [
+    0.0083333333,
+    0.0083333333
+  ],
+  "window_file": "mandera_worldpop2025_source_window.tif",
+  "window_sha256": "199984bb25313c15bbf16e69ed17f857a7024e9087d4dcdb3348898addae0a15",
+  "method": "Integer pixel window copied without resampling. Original Float32 count values, no-data and grid alignment retained."
+}
