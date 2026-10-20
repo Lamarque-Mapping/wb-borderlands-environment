@@ -15,21 +15,33 @@
   const url=URL.createObjectURL(new Blob([text],{type:'text/csv;charset=utf-8'})),a=document.createElement('a');a.href=url;a.download=d.code+'-'+r.geography.toLowerCase().replace(/[^a-z]+/g,'-')+'-primary-road-population.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),60000);
  }
  window.createWBCorridorBand=function({map,DATA,svgRenderer,refreshLegend}){
-  let loaded,group,selected='Cluster',initial=true,active=false;
+  let loaded,group,selected='Cluster',initial=true,active=false,extentControl;
   function row(){return loaded.summary.rows.find(r=>r.geography===selected)||loaded.summary.rows[0];}
   document.addEventListener('click',e=>{if(active&&loaded&&e.target.closest('[data-network-download]'))downloadRow(loaded.summary,row());});
   function select(country,zoom=true){
    if(!active||!loaded.summary.rows.some(r=>r.geography===country))return;
    selected=country;draw('corridorBand');refreshLegend('corridorBand');
    const control=document.getElementById('networkCountry');if(control)control.value=selected;
-   const reset=document.getElementById('networkReset');if(reset)reset.disabled=selected==='Cluster';
    if(zoom){const territory=loaded.territories.features.find(f=>f.properties.geography===selected);if(territory){map.stop();map.fitBounds(L.geoJSON(territory).getBounds(),{paddingTopLeft:[24,24],paddingBottomRight:[window.innerWidth>1024?370:24,30],maxZoom:10,animate:false});}}
   }
   function draw(name){
    if(group){map.removeLayer(group);group=null;}
    active=name==='corridorBand';
-   if(!active){selected='Cluster';return;}
+   if(!active){selected='Cluster';if(extentControl)extentControl.remove();return;}
    if(!loaded)return;
+   if(!extentControl){
+    extentControl=L.control({position:'topleft'});
+    extentControl.onAdd=function(){
+     const container=L.DomUtil.create('div','nr-map-reset leaflet-bar');
+     L.DomEvent.disableClickPropagation(container);L.DomEvent.disableScrollPropagation(container);
+     const button=document.createElement('button');button.type='button';
+     button.textContent='Show whole cluster';
+     button.title='Zoom out to the whole cluster and restore all primary roads and population totals';
+     button.setAttribute('aria-label','Show whole cluster');
+     button.onclick=()=>select('Cluster');container.appendChild(button);return container;
+    };
+   }
+   if(!extentControl.getContainer()||!extentControl.getContainer().isConnected)extentControl.addTo(map);
    group=L.layerGroup().addTo(map);
    const territory=loaded.territories.features.find(f=>f.properties.geography===selected);
    const band=loaded.bands.features.find(f=>f.properties.geography===selected);
@@ -62,7 +74,7 @@
     const chooser=document.createElement('select');chooser.id='networkCountry';
     for(const r of displayRows(loaded.summary)){const opt=document.createElement('option');opt.value=r.geography;opt.textContent=r.scope==='cluster'?'Whole cluster':r.geography+' · within cluster';chooser.appendChild(opt);}
     chooser.value=selected;chooser.onchange=()=>select(chooser.value);
-    const reset=document.createElement('button');reset.type='button';reset.id='networkReset';reset.className='nr-reset';reset.textContent='Show whole cluster';reset.disabled=selected==='Cluster';reset.onclick=()=>select('Cluster');
+    const reset=document.createElement('button');reset.type='button';reset.id='networkReset';reset.className='nr-reset';reset.textContent='Show whole cluster';reset.onclick=()=>select('Cluster');
     const note=document.createElement('p');note.className='theme-note';note.textContent='Click any primary road to focus on that country’s network and its 10 km buffer. The country total covers only territory inside this cluster.';
     controls.append(label,chooser,reset,note);box.appendChild(controls);
    },
@@ -96,3 +108,4 @@
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',analysis);else analysis();
 })();
+
