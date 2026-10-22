@@ -1,0 +1,32 @@
+/* Keep the map and its controls inside the available browser viewport. */
+html,body{overflow:hidden;max-width:100%;min-width:0}
+.panel,#projectPanel,#eventPanel{position:fixed;max-width:calc(100% - 28px);min-width:0}
+.panel{grid-template-columns:minmax(0,1fr)}
+.panel>*{min-width:0}
+.panel .title{min-width:0;white-space:normal;overflow-wrap:break-word}
+.panel :is(.view-options,.map-key){overflow-x:hidden}
+.panel :is(select,input){max-width:100%;box-sizing:border-box}
+.panel :is(.theme-choices,.choice-buttons,.environment-choices){grid-template-columns:repeat(2,minmax(0,1fr))}
+.panel :is(.theme-choices,.choice-buttons,.environment-choices) button{min-width:0;overflow-wrap:break-word}
+
+/* A selected incident gets the panel's full reading area. */
+#eventPanel.event-detail-open #eventFilters,
+#eventPanel.event-detail-open .event-summary,
+#eventPanel.event-detail-open .event-period,
+#eventPanel.event-detail-open .event-foot{display:none}
+#eventPanel.event-detail-open .event-head{border-bottom:1px solid #e3e7eb;padding-bottom:12px}
+#eventPanel.event-detail-open .event-content{padding:0 20px 20px;scroll-padding-top:64px}
+.event-detail-actions{position:sticky;top:0;z-index:2;background:#fff;margin:0 0 12px;padding:12px 0;border-bottom:1px solid #e3e7eb}
+#eventPanel :is(.event-detail-notes,.event-detail-value){font-size:16px;line-height:1.65;color:#263743}
+#eventPanel .event-detail-label{font-size:13px;color:#50616c}
+@media(min-width:1025px){
+ body.event-detail-reading{--directory-width:410px}
+ #eventPanel.event-detail-open{width:var(--directory-width)}
+}
+@media(max-width:1024px){
+ .panel,#projectPanel,#eventPanel{max-width:calc(100% - 20px)}
+}
+
+/* Compact settlement counts: details stay in the tooltip and selection panel. */
+.sedac-cluster{display:grid;place-items:center;padding:0;background:#f1f7f3;border:1.5px solid #24745f;box-shadow:0 1px 3px #0002;font:600 10px/1 Arial,sans-serif;color:#164c40}
+.sedac-cluster:focus-visible{outline:3px solid #e6ad45;outline-offset:3px}

@@ -175,7 +175,8 @@
     json:async name=>JSON.parse(dec.decode(await asset(name))),
     text:async name=>dec.decode(await asset(name)),
     blob:async name=>{const data=await asset(name);const u=URL.createObjectURL(new Blob([data],{type:manifest[name].mime}));urls.add(u);return u;},
-    go:target=>{if(location.hash.slice(1)===target)return route();location.hash=target;},
+    clearViewParameters:()=>{const url=new URL(location.href);for(const name of ['view','unit','raiCluster','settlement','heatThreshold','district','connectivityCountry','connectivityCluster','places','country'])url.searchParams.delete(name);history.replaceState(null,'',url);},
+    go:target=>{window.WBVault.clearViewParameters();if(location.hash.slice(1)===target)return route();location.hash=target;},
     ready:(doc,serial)=>{
       // An earlier iframe must not reveal a newer route or clear its status.
       const view=el('view');
