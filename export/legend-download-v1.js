@@ -12,6 +12,7 @@
    if(m.noData)out.push({section:m.label,label:m.noData.label||'No data',kind:'fill',colour:m.noData.colour,opacity:m.noData.opacity??m.opacity});
   }
   for(const r of spec.context||[])out.push({section:'Context',kind:'line',...r});
+  for(const r of spec.contextReference||[])if(!(spec.context||[]).some(x=>x.label===r.label))out.push({section:'Context reference (not shown)',kind:'line',...r});
   for(const r of spec.other||[])out.push({section:'Other legend symbols',...r});
   return out.map(r=>({...r,colour:hex(r.colour),rgb:rgb(r.colour),transparency:r.opacity==null?null:Math.round((1-r.opacity)*10000)/100}));
  }
@@ -27,7 +28,7 @@
   text(spec.cluster,20,700);text(spec.view,16,600);y+=8;
   const m=spec.metric;if(m){text(m.label,16,600);
    if(m.stops){parts.push('<defs><linearGradient id="ramp">'+m.stops.map((c,i)=>'<stop offset="'+(100*i/(m.stops.length-1))+'%" stop-color="'+hex(c)+'"/>').join('')+'</linearGradient></defs><rect x="20" y="'+y+'" width="580" height="18" fill="url(#ramp)" fill-opacity="'+(m.opacity??1)+'"/>');y+=38;parts.push('<text x="20" y="'+y+'" font-size="14">'+esc(m.low+' '+m.unit)+'</text><text x="600" y="'+y+'" text-anchor="end" font-size="14">'+esc(m.high+' '+m.unit)+'</text>');y+=26;}
-   for(const r of rows({...spec,context:[],other:[]}).filter(r=>r.kind!=='gradient')){parts.push('<rect x="20" y="'+(y-13)+'" width="28" height="16" fill="'+r.colour+'" fill-opacity="'+(r.opacity??1)+'"/><text x="60" y="'+y+'" font-size="15">'+esc(r.label)+'</text>');y+=26;}
+   for(const r of rows({...spec,context:[],contextReference:[],other:[]}).filter(r=>r.kind!=='gradient')){parts.push('<rect x="20" y="'+(y-13)+'" width="28" height="16" fill="'+r.colour+'" fill-opacity="'+(r.opacity??1)+'"/><text x="60" y="'+y+'" font-size="15">'+esc(r.label)+'</text>');y+=26;}
   }
   if(spec.context?.length){y+=8;text('Context',16,600);for(const r of spec.context){parts.push('<line x1="20" x2="48" y1="'+(y-5)+'" y2="'+(y-5)+'" stroke="'+hex(r.colour)+'" stroke-width="'+(r.weight||2)+'" stroke-opacity="'+(r.opacity??1)+'"'+(r.dashArray?' stroke-dasharray="'+esc(r.dashArray)+'"':'')+'/><text x="60" y="'+y+'" font-size="15">'+esc(r.label)+'</text>');y+=26;}}
   if(spec.other?.length){y+=8;for(const r of spec.other){parts.push('<rect x="20" y="'+(y-13)+'" width="28" height="16" fill="'+hex(r.colour)+'"/><text x="60" y="'+y+'" font-size="15">'+esc(r.label)+'</text>');y+=26;}}

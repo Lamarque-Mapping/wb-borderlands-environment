@@ -3,7 +3,7 @@ import pathlib, re
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 WORK = ROOT / '.work'
-REV = '2026-10-29.panel-export.82'
+REV = '2026-10-29.panel-export.83'
 
 EXPORT_STATE = r'''
 function mapExportState(){
@@ -14,6 +14,7 @@ function mapExportState(){
  };
  const lineNames={borders:'International borders',cluster:'Cluster boundary',ruralCountryBorders:'Country divisions · SEDAC source',admin2:'District / zone boundaries',admin3:'Sub-district boundaries',primaryRoads:'Primary roads',secondaryRoads:'Secondary roads',tertiaryRoads:'Tertiary roads',tracks:'Tracks',paths:'Paths',railways:'Railways',powerTransmission:'Power transmission',pipelines:'Oil / gas pipelines'};
  const context=Object.entries(lineNames).filter(([key])=>active[key]).map(([key,label])=>{const s=firstStyle(active[key])||{};return {label,colour:s.color,opacity:s.opacity??1,weight:s.weight,dashArray:s.dashArray||''};}).filter(s=>s.colour);
+ const contextReference=Object.entries(lineNames).map(([key,label])=>{const s=mapContextLineStyles()[key];return {label,colour:s.color,opacity:s.opacity??1,weight:s.weight,dashArray:s.dashArray||'',visible:!!active[key]};});
  let metric=sedac.exportMetric(),meta=null,layer=null;
  if(!metric&&ruralAccessActive()){
   const s=firstStyle(active.ruralAccess)||ruralAccessStyle({properties:{}});
@@ -34,7 +35,7 @@ function mapExportState(){
    if(meta.transform&&meta.transform!=='linear')metric.transform=meta.transform;
   }
  }
- return {metric,context};
+ return {metric,context,contextReference};
 }
 '''
 
@@ -42,6 +43,14 @@ def patch_pages():
  for code in ['karamoja','dikhil','moyale_borana','mandera_triangle']:
   p=WORK/(code+'.html');s=p.read_text()
   if 'function mapExportState()' in s:continue
+  names=['borders','cluster','ruralCountryBorders','admin2','admin3','primaryRoads','secondaryRoads','tertiaryRoads','tracks','paths','railways','powerTransmission','pipelines']
+  entries=[]
+  for name in names:
+   match=re.search(r'  '+name+r':\(\)=>geo\((.*?),\{([^\n]+?)\},',s)
+   if not match:raise ValueError('Missing context style: '+name)
+   entries.append(name+':{'+match.group(2)+'}')
+   old=match.group(0);s=s.replace(old,old[:old.index(',{')]+',mapContextLineStyles().'+name+',',1)
+  s=s.replace('const defs={\n','function mapContextLineStyles(){return {'+','.join(entries)+'};}\nconst defs={\n')
   s=re.sub(r'sedac/sedac-v7.js\?v=[^"<]+',f'sedac/sedac-v8.js?v={REV}',s)
   s=re.sub(r'export/save-view-v5.css\?v=[^"<]+',f'export/save-view-v6.css?v={REV}',s)
   s=re.sub(r'<script src="export/save-view-v7.js\?v=[^"]+"></script>',f'<script src="export/legend-download-v1.js?v={REV}"></script><script src="export/save-view-v8.js?v={REV}"></script>',s)
