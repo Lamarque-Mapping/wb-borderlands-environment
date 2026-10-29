@@ -188,7 +188,7 @@ window.setupWBMapExport=function({map,DATA,isReady,getState}){
   busy=true;button.disabled=true;button.textContent='Saving…';map.stop();
   const cover=element('div','wb-export-cover');document.body.append(cover);
   const mapNode=map.getContainer(),oldStyle=mapNode.getAttribute('style'),oldCentre=map.getCenter(),oldZoom=map.getZoom();
-  const originalCrop=cropFor(mapNode),bounds=area==='cluster'?L.latLngBounds(DATA.bounds):L.latLngBounds(map.containerPointToLatLng([originalCrop.left,0]),map.containerPointToLatLng([originalCrop.left+originalCrop.width,originalCrop.height]));
+  const originalCrop=cropFor(mapNode),bounds=area==='cluster'?L.geoJSON(DATA.cluster).getBounds():L.latLngBounds(map.containerPointToLatLng([originalCrop.left,0]),map.containerPointToLatLng([originalCrop.left+originalCrop.width,originalCrop.height]));
   const landscape=orientation==='landscape',width=landscape?1280:900,height=landscape?720:1200;
   let restoreLabels,result;
   try{
