@@ -1,0 +1,16 @@
+const assert=require('node:assert/strict');
+const legend=require('../../export/legend-download-v1.js');
+const spec={cluster:'Dikhil & neighbours',view:'Deprivation',metric:{label:'Mean index',unit:'index',low:0,opacity:.9,classes:[{max:50,label:'0–50',colour:'#f2f0f7'},{max:75,label:'>50–75',colour:'#cbc9e2'}],noData:{colour:'#d1d5db'}},context:[{label:'Railways',colour:'#111827',opacity:.9,weight:2,dashArray:'7 5'}],notes:['Not a poverty percentage.']};
+const rows=legend.rows(spec);
+assert.deepEqual(rows[0].rgb,[242,240,247]);assert.equal(rows[0].transparency,10);
+assert.equal(rows[0].lower_inclusive,true);assert.equal(rows[1].lower_inclusive,false);assert.equal(rows[1].lower,50);
+assert.equal(rows[2].colour,'#D1D5DB');assert.equal(rows[3].dashArray,'7 5');
+const rural=legend.rows({metric:{label:'RAI',classes:[{max:20,label:'0–<20%',colour:'#ffffcc',upper_inclusive:false,lower_inclusive:true},{max:40,label:'20–<40%',colour:'#c2e699',upper_inclusive:false,lower_inclusive:true}]}});
+assert.equal(rural[0].upper_inclusive,false);assert.equal(rural[1].lower,20);assert.equal(rural[1].lower_inclusive,true);
+const ramp=legend.rows({metric:{label:'Time',unit:'minutes',low:10,high:210,stops:['#000000','#777777','#ffffff']}});
+assert.equal(ramp[1].value,110);assert.equal(ramp[2].value,210);
+const sqrt=legend.rows({metric:{label:'Count',low:0,high:100,transform:'sqrt',stops:['#000000','#777777','#ffffff']}});assert.equal(sqrt[1].value,25);
+const csv=legend.csv(spec);assert(csv.startsWith('\ufeff'));assert(csv.includes('"transparency_percent"'));assert(csv.includes('"#F2F0F7","242","240","247","0.9","10"'));
+const svg=legend.svg(spec);assert(svg.includes('Dikhil &amp; neighbours'));assert(svg.includes('fill-opacity="0.9"'));assert(svg.includes('stroke-dasharray="7 5"'));assert(svg.includes('No data'));
+assert(legend.credits(spec).includes('slide or figure caption'));
+console.log('PASS: exact RGB, opacity/transparency, class boundaries, no-data, gradient values, CSV and SVG.');
