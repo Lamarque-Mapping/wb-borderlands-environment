@@ -3,7 +3,7 @@ import pathlib, re
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 WORK = ROOT / '.work'
-REV = '2026-10-29.panel-export.84'
+REV = '2026-10-29.panel-export.85'
 
 EXPORT_STATE = r'''
 function mapExportState(){

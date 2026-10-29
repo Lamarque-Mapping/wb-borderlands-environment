@@ -187,11 +187,13 @@ window.setupWBMapExport=function({map,DATA,isReady,getState}){
   if(!isReady()){status.textContent='Wait for this view to finish loading, then try again.';setTimeout(()=>status.remove(),7000);return;}
   busy=true;button.disabled=true;button.textContent='Saving…';map.stop();
   const cover=element('div','wb-export-cover');document.body.append(cover);
+  const tileStyle=element('style');tileStyle.textContent='#map.wb-panel-capture .leaflet-tile-loaded{opacity:1!important}';document.head.append(tileStyle);
   const mapNode=map.getContainer(),oldStyle=mapNode.getAttribute('style'),oldCentre=map.getCenter(),oldZoom=map.getZoom();
   const originalCrop=cropFor(mapNode),bounds=area==='cluster'?L.geoJSON(DATA.cluster).getBounds():L.latLngBounds(map.containerPointToLatLng([originalCrop.left,0]),map.containerPointToLatLng([originalCrop.left+originalCrop.width,originalCrop.height]));
   const landscape=orientation==='landscape',width=landscape?1280:900,height=landscape?720:1200;
   let restoreLabels,result;
   try{
+   mapNode.classList.add('wb-panel-capture');
    const spec=legendDocument(),capture=await library();
    mapNode.style.cssText='position:fixed!important;left:0!important;top:0!important;right:auto!important;bottom:auto!important;width:'+width+'px!important;height:'+height+'px!important;';
    map.invalidateSize({pan:false,animate:false});map.fitBounds(bounds,{padding:area==='cluster'?[24,24]:[8,8],animate:false});
@@ -205,7 +207,7 @@ window.setupWBMapExport=function({map,DATA,isReady,getState}){
    result={blob,spec,width:canvas.width,height:canvas.height};
   }catch(error){console.error('Map panel export failed',error);status.textContent=error.message||'The map could not be saved.';const close=element('button','','Close');close.onclick=()=>status.remove();status.append(close);}
   finally{
-   restoreLabels?.();oldStyle===null?mapNode.removeAttribute('style'):mapNode.setAttribute('style',oldStyle);
+   restoreLabels?.();mapNode.classList.remove('wb-panel-capture');tileStyle.remove();oldStyle===null?mapNode.removeAttribute('style'):mapNode.setAttribute('style',oldStyle);
    map.invalidateSize({pan:false,animate:false});map.setView(oldCentre,oldZoom,{animate:false});
    cover.remove();busy=false;button.disabled=false;button.textContent='Save view';
   }
