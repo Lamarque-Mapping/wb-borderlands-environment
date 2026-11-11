@@ -36,10 +36,10 @@ row=('<tr><td>Drought hazard (SPEI)</td><td><strong>Weller &amp; Mann (2022), Gl
      '<td>CC BY 4.0. Also listed in the '+link(WB,'World Bank Data Catalog')+'.</td>'
      '<td>Selected resource: <strong>SPEI ≤ −2.0; 25-year return period</strong>. Values are modelled months at or below the threshold, '
      'averaged within each 10 km hexagon. They are not observations or predictions of a continuous drought spell. Grey means no valid data, not zero. '
-     '<strong>The publisher advises against local or regional applications.</strong> The input climate grid is approximately 0.5°; '
+     'The input climate grid is approximately 0.5°; '
      'interpolation and 10 km hexagons do not add local climate detail. This is a global screening product, not a current drought monitor or climate-change projection.</td></tr>')
 old_note=' Global Drought Hazard based on SPEI: modelled months at SPEI ≤ −2.0, 25-year return period, aggregated to 10 km hexes. Grey cells have no valid sampled value.'
-new_note=' Source: Weller & Mann (2022), IFHV / Ruhr University Bochum, via HDX. Based on CSIC Global SPEI, 1902–2018. Modelled months at SPEI ≤ −2.0; 25-year return period; 10 km hex means. Grey = no valid data, not zero. Global screening product: publisher advises against local/regional applications. Links and full details: Sources and Limitations.'
+new_note=' Source: Weller & Mann (2022), IFHV / Ruhr University Bochum, via HDX. Based on CSIC Global SPEI, 1902–2018. Modelled months at SPEI ≤ −2.0; 25-year return period; 10 km hex means. Grey = no valid data, not zero. Global screening product. Links and full details: Sources and Limitations.'
 changed=[];page_dir=ROOT/'tools/regional-maps/live-pages';page_dir.mkdir(exist_ok=True)
 for key in ['page/map=karamoja','page/map=moyale_borana','page/map=mandera_triangle','page/map=dikhil','page/analysis']:
  page=read(manifest[key]).decode()
@@ -57,7 +57,7 @@ for code in ['karamoja','moyale_borana','mandera_triangle','dikhil']:
  metric=core['climateHexMetrics']['drought']
  metric['label']='Modelled months at SPEI ≤ −2.0 — 25-year return period'
  metric['shortLabel']='Drought hazard'
- metric['source']={'citation':'Weller & Mann (2022), Global Drought Hazard','producer':'IFHV, Ruhr University Bochum','distributor':'Humanitarian Data Exchange (HDX)','url':HDX,'resource_id':'3d067bc4-e6bd-413e-a490-2010aa842a63','input':'CSIC Global SPEI Database, six-month SPEI','input_period':'1902–2018','input_url':CSIC,'limitation':'Global screening product; publisher advises against local or regional applications.'}
+ metric['source']={'citation':'Weller & Mann (2022), Global Drought Hazard','producer':'IFHV, Ruhr University Bochum','distributor':'Humanitarian Data Exchange (HDX)','url':HDX,'resource_id':'3d067bc4-e6bd-413e-a490-2010aa842a63','input':'CSIC Global SPEI Database, six-month SPEI','input_period':'1902–2018','input_url':CSIC,'limitation':'Global screening product.'}
  for field in ['property','low','high','unit','summaryMethod']:
   assert metric[field]==before['climateHexMetrics']['drought'][field]
  for field in core:
@@ -65,14 +65,7 @@ for code in ['karamoja','moyale_borana','mandera_triangle','dikhil']:
  manifest[key]=put(json.dumps(core,separators=(',',':')).encode(),'application/json');changed.append(key)
 
 page=(ROOT/'regional-maps/page.html').read_text()
-note=('<p><strong>Drought source:</strong> Weller &amp; Mann (2022), <em>Global Drought Hazard</em>, IFHV / Ruhr University Bochum, distributed through '+link(HDX,'HDX')+'. '
-      'Uses '+link(CSIC,'CSIC’s Global SPEI Database')+' for 1902–2018: six-month SPEI, threshold ≤ −2.0, 25-year return period. '
-      'Modelled months are averaged within 10 km hexagons; they do not describe a predicted continuous spell. '
-      '<strong>The publisher advises against local or regional applications.</strong> This global screening layer has an underlying climate grid of approximately 0.5°. '
-      +link(WB,'World Bank catalogue listing')+'.</p>')
-notes_tag='<section class="notes" aria-label="Interpretation and sources">'
-assert page.count(notes_tag)==1
-page=page.replace(notes_tag,notes_tag+note)
+# Detailed drought notes are maintained in Sources and Limitations.
 # New asset URLs avoid stale browser/CDN image and ZIP caches.
 page=re.sub(r'((?:src|href)="regional-maps/(?:previews|files)/[^"?]+)(")',rf'\1?v={REVISION}\2',page)
 (ROOT/'regional-maps/page.html').write_text(page)

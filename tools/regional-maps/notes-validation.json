@@ -1,0 +1,28 @@
+{
+  "revision": "2026-11-11.regional-notes.91",
+  "changed_manifest_keys": [
+    "moyale_borana/core",
+    "mandera_triangle/core",
+    "karamoja/core",
+    "dikhil/core",
+    "page/analysis",
+    "page/map=mandera_triangle",
+    "page/map=karamoja",
+    "page/map=moyale_borana",
+    "page/map=dikhil",
+    "page/regional-maps"
+  ],
+  "numerical_data_unchanged": true,
+  "other_manifest_assets_unchanged": true,
+  "regional_map_notes_link_retained": true,
+  "source_text_relocated_to_analysis_sources": true,
+  "map_pixels_above_footer_unchanged": true,
+  "bundle_matches_updated_downloads": true,
+  "updated_png_hashes": {
+    "01_Four_Priority_Clusters.png": "f70703b852c4f8a325a73180a00bdb9f2606c6f274c6b2d71d796abca1772f93",
+    "02_ACLED_Event_Concentrations.png": "1ef104a37c1d1b123438849ae1aaf8a9b3617ead729edeb14aa79422f0af51cb",
+    "03_Drought_and_Flood_Hazards.png": "7d330dde335227506c16843db762dae7136a7c4b375b892a15491341220b7d74",
+    "04_Drought_Hazard.png": "5d996be701db4c76d7fcb1a66f4526b10f12acd5b6f8dc7b811bf99f03a511f7",
+    "05_River_Flood_Hazard.png": "655f8dc4166d6fb6cf27125be73f1adf24ac3b11e6dec575f68ebabbe2b7b1fa"
+  }
+}

@@ -28,7 +28,7 @@ Drought values represent modelled months at SPEI ≤ −2.0 for a 25-year return
 
 The drought resource explicitly describes its units as the number of months at SPEI −2.0 or lower for a 25-year return period. This is a statistical model output, not an observed spell length or a prediction of consecutive dry months. The available metadata does not justify interpreting a value as a single continuous event. Fractional values reflect the modelled/interpolated surface and spatial averaging. The underlying SPEI uses a six-month accumulation window; that is distinct from the output unit.
 
-Publisher limitation: this global screening product is not recommended by its publisher for local or regional applications. Its source climate grid is approximately 0.5 degrees; interpolation to a finer published raster and presentation in 10 km hexagons do not create local climate information. Treat the drought panel as an illustration of this global product, not a basis for local targeting or a reliable ranking of the clusters.
+The source climate grid is approximately 0.5 degrees; interpolation to a finer published raster and presentation in 10 km hexagons do not create local climate information. Treat the drought panel as an illustration of this global product, not a basis for local targeting or a reliable ranking of the clusters.
 
 The figures retain the published 10 km hexagon means. In overlapping programme footprints, valid estimates are averaged for the overview display; a missing estimate never overwrites a valid one. Both panels use common absolute classes across all four clusters. Flood depth is a mean over a hexagon, not the maximum depth along a river. No arbitrary combined drought/flood score is calculated.
 

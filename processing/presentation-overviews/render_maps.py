@@ -249,7 +249,7 @@ for prop,drought,num in [('wb_hex_drought',True,'04'),('wb_hex_river_flood',Fals
  fig.text(.69,.709,'Mean within each 10 km hexagon',fontsize=11.5,color=MUTED)
  hazard_legend(fig,[.69,.32,.25,.33],drought)
  fig.text(.69,.25,'Grey means no valid data.\nIt does not mean zero hazard.',fontsize=11.5,color=MUTED,linespacing=1.5)
- footer(fig,('Source: Weller & Mann (2022), Global Drought Hazard, IFHV / HDX; climate inputs: CSIC SPEI, 1902–2018.' if drought else 'Source: World Resources Institute, Aqueduct Floods. Historical river-flood hazard; no flood-protection adjustment.'),('Values are averages for 10 km hexagons; grey indicates no valid data. Publisher advises against local or regional applications.' if drought else 'Values are mean modelled water depths within 10 km hexagons. Grey indicates no valid data; this is not a current flood warning.'))
+ footer(fig,('Source: Weller & Mann (2022), Global Drought Hazard, IFHV / HDX; climate inputs: CSIC SPEI, 1902–2018.' if drought else 'Source: World Resources Institute, Aqueduct Floods. Historical river-flood hazard; no flood-protection adjustment.'),('Values are averages for 10 km hexagons; grey indicates no valid data.' if drought else 'Values are mean modelled water depths within 10 km hexagons. Grey indicates no valid data; this is not a current flood warning.'))
  save(fig,num+('_Drought_Hazard.png' if drought else '_River_Flood_Hazard.png'))
 
 fig=frame('Drought and flood hazards across the four clusters','Historical/modelled hazards · 25-year return periods · shared scales within each panel')
@@ -257,7 +257,7 @@ for left,prop,title,sub in [(.045,'wb_hex_drought','Drought hazard','Modelled mo
  fig.text(left,.825,title,fontsize=16,weight='bold');fig.text(left,.793,sub,fontsize=10,color=MUTED)
  ax=base(fig.add_axes([left,.238,.43,.54]),small=True);hazard(ax,prop);cluster_labels(ax,True);scales(ax,True)
  hazard_legend(fig,[left+.015,.12,.40,.09],prop=='wb_hex_drought',True)
-footer(fig,'Sources: Weller & Mann (2022), Global Drought Hazard (IFHV / HDX; CSIC SPEI, 1902–2018); WRI Aqueduct Floods.','Values are 10 km hexagon averages; grey indicates no valid data. Drought publisher advises against local or regional applications.')
+footer(fig,'Sources: Weller & Mann (2022), Global Drought Hazard (IFHV / HDX; CSIC SPEI, 1902–2018); WRI Aqueduct Floods.','Values are 10 km hexagon averages; grey indicates no valid data.')
 save(fig,'03_Drought_and_Flood_Hazards.png')
 
 meta={'site':'https://lamarque-mapping.github.io/wb-borderlands-environment/','site_commit':subprocess.check_output(['git','-C',str(ROOT.parent/'live_repo'),'rev-parse','HEAD'],text=True).strip(),'build_id':cores['karamoja']['build_id'],'data_period':cores['karamoja']['acledYearRange'],'acled':{'unique_events':len(records),'duplicate_records_removed':dups,'deduplication':'Exact full exported record including geometry and notes; maximum within-cluster multiplicity retained. Published exports do not retain ACLED event IDs.','event_types':dict(typecounts),'bandwidth_km':25,'cell_km':2,'normalization':'events per 1000 square kilometres, accumulated over the source period','outside_cluster_events':'not included; surface masked to union of four clusters'},'clusters':AUDIT,'drought_classes':DBINS,'flood_classes':FBINS,'display_overlap':'Valid per-cluster hex means averaged where footprints overlap; a missing observation never overwrites a valid one. No filling outside valid hex coverage.','projection':CRS_MAP.to_string(),'grey':'No valid exported numeric value; distinct from zero.'}
