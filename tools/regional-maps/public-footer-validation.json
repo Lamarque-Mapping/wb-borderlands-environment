@@ -1,0 +1,14 @@
+{
+  "revision": "2026-11-11.public-footers.90",
+  "map_files": 5,
+  "source_png_hashes": {
+    "01_Four_Priority_Clusters.png": "f70703b852c4f8a325a73180a00bdb9f2606c6f274c6b2d71d796abca1772f93",
+    "02_ACLED_Event_Concentrations.png": "1ef104a37c1d1b123438849ae1aaf8a9b3617ead729edeb14aa79422f0af51cb",
+    "03_Drought_and_Flood_Hazards.png": "0c5b35327dee5f6bd5d91ad351f0235e309f317f7404709b0df78c124bfdc86a",
+    "04_Drought_Hazard.png": "801345909240ff17acf84606908535ce6786515b199db7d22937a845406df9fc",
+    "05_River_Flood_Hazard.png": "655f8dc4166d6fb6cf27125be73f1adf24ac3b11e6dec575f68ebabbe2b7b1fa"
+  },
+  "bundle_matches_pngs": true,
+  "other_manifest_assets_unchanged": true,
+  "data_and_audits_unchanged": true
+}

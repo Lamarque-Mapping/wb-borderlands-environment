@@ -181,7 +181,7 @@ def save(fig,name):
 def single_map(title,subtitle):
  fig=frame(title,subtitle);ax=base(fig.add_axes([.032,.105,.63,.745]));return fig,ax
 
-fig,ax=single_map('Four priority borderland clusters','Regional overview · existing programme footprints')
+fig,ax=single_map('Four priority borderland clusters','Regional overview · cross-border programme areas')
 for c,g in G.items():draw_polys(ax,g,CLUSTER_COLOURS[c][0],z=4)
 overlap=G['moyale_borana'].intersection(G['mandera_triangle'])
 shared=draw_polys(ax,overlap,'#d4d3be',edge='#7c8378',lw=0,z=4.5)
@@ -196,7 +196,7 @@ for i,c in enumerate(CODES):
  legax.text(.13,y,NAMES[c],fontsize=12.5,va='center',color=edge)
 fig.text(.69,.34,'Cluster footprints overlap in parts\nof Moyale–Borana and Mandera.',fontsize=11.5,color=MUTED,linespacing=1.5)
 ax2=fig.add_axes([.69,.23,.25,.06]);ax2.axis('off');ax2.add_patch(plt.Rectangle((0,.3),.10,.3,facecolor='#d4d3be',edgecolor='#7c8378',hatch='////',lw=.5));ax2.text(.15,.45,'Shared footprint',va='center',fontsize=11.5)
-footer(fig,'Cluster boundaries: existing World Bank borderlands maps, derived from OCHA COD-AB. Regional context: Natural Earth.','Same programme footprints and geographic extent used across the overview series.')
+footer(fig,'Cluster outlines assembled from OCHA Common Operational Datasets (administrative boundaries). Basemap: Natural Earth.','Hatching marks areas shared by the Moyale–Borana and Mandera Triangle clusters.')
 save(fig,'01_Four_Priority_Clusters.png')
 
 fig,ax=single_map('Concentrations of recorded ACLED events','1 August 2020–1 August 2025 · all four priority clusters')
@@ -214,7 +214,7 @@ for i,(color,lab) in enumerate(zip(cmap.colors,labels)):
  y=.92-i*.135;legax.add_patch(plt.Rectangle((0,y-.035),.07,.075,facecolor=color,edgecolor='#d1d5db',lw=.4));legax.text(.11,y,lab,fontsize=11.5,va='center')
 fig.text(.69,.27,f'{len(records):,} unique recorded events',fontsize=12,weight='bold')
 fig.text(.69,.225,'Includes violence, riots and protests.\nOne shared scale across all clusters.',fontsize=11,color=MUTED,linespacing=1.5)
-footer(fig,'Source: ACLED; existing project extract. Events counted equally and duplicate copies removed across overlapping cluster exports.','Gaussian smoothing (25 km bandwidth); only in-cluster records contribute. Reporting and location precision vary; this is not a risk forecast.')
+footer(fig,'Source: ACLED, 1 August 2020–1 August 2025. Events counted equally; duplicate records removed where cluster boundaries overlap.','Event concentrations smoothed over 25 km; records outside the four clusters excluded. Reporting and location precision vary; not a risk forecast.')
 save(fig,'02_ACLED_Event_Concentrations.png')
 
 DROUGHT_COL=['#fff9d0','#ffe398','#fec064','#f58b43','#d9532c','#952032']
@@ -249,7 +249,7 @@ for prop,drought,num in [('wb_hex_drought',True,'04'),('wb_hex_river_flood',Fals
  fig.text(.69,.709,'Mean within each 10 km hexagon',fontsize=11.5,color=MUTED)
  hazard_legend(fig,[.69,.32,.25,.33],drought)
  fig.text(.69,.25,'Grey means no valid data.\nIt does not mean zero hazard.',fontsize=11.5,color=MUTED,linespacing=1.5)
- footer(fig,('Source: Weller & Mann (2022), IFHV / Ruhr University Bochum, via HDX; based on CSIC SPEI, 1902–2018.' if drought else 'Source: WRI Aqueduct Floods, historical river-inundation hazard; no flood-protection adjustment.'),('Global screening product; publisher advises against local/regional applications. Hex means; grey: no valid data.' if drought else 'Existing 10 km hex means; one shared scale. Historical/modelled hazard, not a climate-change projection or a current warning.'))
+ footer(fig,('Source: Weller & Mann (2022), Global Drought Hazard, IFHV / HDX; climate inputs: CSIC SPEI, 1902–2018.' if drought else 'Source: World Resources Institute, Aqueduct Floods. Historical river-flood hazard; no flood-protection adjustment.'),('Values are averages for 10 km hexagons; grey indicates no valid data. Publisher advises against local or regional applications.' if drought else 'Values are mean modelled water depths within 10 km hexagons. Grey indicates no valid data; this is not a current flood warning.'))
  save(fig,num+('_Drought_Hazard.png' if drought else '_River_Flood_Hazard.png'))
 
 fig=frame('Drought and flood hazards across the four clusters','Historical/modelled hazards · 25-year return periods · shared scales within each panel')
@@ -257,7 +257,7 @@ for left,prop,title,sub in [(.045,'wb_hex_drought','Drought hazard','Modelled mo
  fig.text(left,.825,title,fontsize=16,weight='bold');fig.text(left,.793,sub,fontsize=10,color=MUTED)
  ax=base(fig.add_axes([left,.238,.43,.54]),small=True);hazard(ax,prop);cluster_labels(ax,True);scales(ax,True)
  hazard_legend(fig,[left+.015,.12,.40,.09],prop=='wb_hex_drought',True)
-footer(fig,'Sources: Weller & Mann (2022), IFHV / HDX, based on CSIC SPEI (1902–2018); WRI Aqueduct Floods historical river hazard.','Hexagon means; grey: no valid data. Drought: global screening product; publisher advises against local/regional applications.')
+footer(fig,'Sources: Weller & Mann (2022), Global Drought Hazard (IFHV / HDX; CSIC SPEI, 1902–2018); WRI Aqueduct Floods.','Values are 10 km hexagon averages; grey indicates no valid data. Drought publisher advises against local or regional applications.')
 save(fig,'03_Drought_and_Flood_Hazards.png')
 
 meta={'site':'https://lamarque-mapping.github.io/wb-borderlands-environment/','site_commit':subprocess.check_output(['git','-C',str(ROOT.parent/'live_repo'),'rev-parse','HEAD'],text=True).strip(),'build_id':cores['karamoja']['build_id'],'data_period':cores['karamoja']['acledYearRange'],'acled':{'unique_events':len(records),'duplicate_records_removed':dups,'deduplication':'Exact full exported record including geometry and notes; maximum within-cluster multiplicity retained. Published exports do not retain ACLED event IDs.','event_types':dict(typecounts),'bandwidth_km':25,'cell_km':2,'normalization':'events per 1000 square kilometres, accumulated over the source period','outside_cluster_events':'not included; surface masked to union of four clusters'},'clusters':AUDIT,'drought_classes':DBINS,'flood_classes':FBINS,'display_overlap':'Valid per-cluster hex means averaged where footprints overlap; a missing observation never overwrites a valid one. No filling outside valid hex coverage.','projection':CRS_MAP.to_string(),'grey':'No valid exported numeric value; distinct from zero.'}
