@@ -1,0 +1,22 @@
+{
+  "revision": "2026-11-11.regional-maps.87",
+  "route": "regional-maps",
+  "map_files": 5,
+  "home_links": 2,
+  "download_links_resolve": true,
+  "existing_map_and_analysis_assets_unchanged": true,
+  "source_png_hashes": {
+    "01_Four_Priority_Clusters.png": "7f6f915166c729a4a57efe8c6faa05976346650cef3778aa9e654c7291e9c493",
+    "02_ACLED_Event_Concentrations.png": "1456e1741bcc414f7442ae18f2667a0dae5fdef1a0cc198478f8a7956521d399",
+    "04_Drought_Hazard.png": "ed68755ae1824d1b4ba4178241ec4affd6e4c8fa6ee3f894f70e6b316eb94370",
+    "05_River_Flood_Hazard.png": "c5dca5a221878229b0f8cf526f364e6525a5ff2aeb81caf97c281cd6f2a2c8fb",
+    "03_Drought_and_Flood_Hazards.png": "f27165f00032b244580ce84a43007d653ee46d699316258d1dd0d0ec428ccde2"
+  },
+  "browser_checks": {
+    "desktop_home_and_regional_view": "passed",
+    "phone_width_390px": "passed; no horizontal overflow in either page",
+    "all_five_previews_loaded": true,
+    "zip_download": "completed",
+    "mandera_drought_legend": "No valid data; units in months"
+  }
+}

@@ -189,7 +189,7 @@
   async function route(){
     if(!key)return;const serial=++routeSerial;
     const name=(location.hash.slice(1)||boot.default_route||'home');
-    const allowed=boot.routes||['home','analysis','map=moyale_borana','map=mandera_triangle','map=karamoja','map=dikhil'];
+    const allowed=boot.routes||['home','regional-maps','analysis','map=moyale_borana','map=mandera_triangle','map=karamoja','map=dikhil'];
     if(!allowed.includes(name)){location.hash=boot.default_route||'home';return;}
     const isMap=name.startsWith('map=');el('routeLabel').hidden=isMap;el('mapSwitcher').hidden=!isMap;if(isMap)el('mapSwitcher').value=name.slice(4);
     const hideToolbar=!!boot.standalone||name==='home';
@@ -206,7 +206,7 @@
       el('previewTitle').textContent=labels[name]+' Cluster';el('previewNotice').textContent=previewConfig().message||'This cluster is still under development. Explore the Mandera and Karamoja clusters below.';
       el('routeLabel').textContent=labels[name];window.WBVault.status('');el('previewPassword').focus();return;
     }
-    window.WBVault.status('Opening '+(name.startsWith('map=')?'map':name==='analysis'?'analysis':'maps')+'…');
+    window.WBVault.status('Opening '+(name.startsWith('map=')?'map':name==='analysis'?'analysis':name==='regional-maps'?'regional maps':'maps')+'…');
     try{
       const page=await window.WBVault.text('page/'+name);
       if(serial!==routeSerial||!key)return;
@@ -216,7 +216,7 @@
       const mobileNavigation="<script>document.getElementById('mobileLayers').addEventListener('click',()=>{const panel=document.querySelector('.panel');if(panel.classList.contains('mobile-open'))panel.scrollTop=0;});</script>";
       const displayPage=name.startsWith('map=')&&page.includes('id="mobileLayers"')?page.replace('</head>',mobileStyle+'</head>').replace('</body>',mobileNavigation+'</body>'):page;
       el('view').srcdoc=displayPage.replace('<head>','<head><meta name="wb-route-serial" content="'+serial+'"><base href="'+base.href.replace(/&/g,'&amp;').replace(/"/g,'&quot;')+'">');
-      const routeTitles={'map=moyale_borana':'Moyale–Borana','map=mandera_triangle':'Mandera Triangle','map=karamoja':'Karamoja','map=dikhil':'Dikhil',analysis:'Analysis'};
+      const routeTitles={'map=moyale_borana':'Moyale–Borana','map=mandera_triangle':'Mandera Triangle','map=karamoja':'Karamoja','map=dikhil':'Dikhil',analysis:'Analysis','regional-maps':'Regional maps'};
       el('routeLabel').textContent=routeTitles[name]||'';
       document.title=routeTitles[name]?routeTitles[name]+' · Borderland maps':'Borderland maps';
       if(name!=='analysis')window.WBVault.status('');

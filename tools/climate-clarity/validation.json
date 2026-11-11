@@ -1,0 +1,60 @@
+{
+  "revision": "2026-11-11.climate-clarity.86",
+  "changed_assets": [
+    "page/map=karamoja",
+    "karamoja/core",
+    "page/map=moyale_borana",
+    "moyale_borana/core",
+    "page/map=mandera_triangle",
+    "mandera_triangle/core",
+    "page/map=dikhil",
+    "dikhil/core"
+  ],
+  "unchanged_data": true,
+  "checks": [
+    {
+      "cluster": "karamoja",
+      "javascript_syntax": "passed",
+      "climate_units": [
+        "months",
+        "metres"
+      ],
+      "missing_legend": "No valid data",
+      "hex_asset_unchanged": true,
+      "acled_asset_unchanged": true
+    },
+    {
+      "cluster": "moyale_borana",
+      "javascript_syntax": "passed",
+      "climate_units": [
+        "months",
+        "metres"
+      ],
+      "missing_legend": "No valid data",
+      "hex_asset_unchanged": true,
+      "acled_asset_unchanged": true
+    },
+    {
+      "cluster": "mandera_triangle",
+      "javascript_syntax": "passed",
+      "climate_units": [
+        "months",
+        "metres"
+      ],
+      "missing_legend": "No valid data",
+      "hex_asset_unchanged": true,
+      "acled_asset_unchanged": true
+    },
+    {
+      "cluster": "dikhil",
+      "javascript_syntax": "passed",
+      "climate_units": [
+        "months",
+        "metres"
+      ],
+      "missing_legend": "No valid data",
+      "hex_asset_unchanged": true,
+      "acled_asset_unchanged": true
+    }
+  ]
+}
