@@ -1,0 +1,28 @@
+{
+  "revision": "2026-11-11.drought-provenance.88",
+  "changed_manifest_keys": [
+    "page/map=karamoja",
+    "page/map=moyale_borana",
+    "page/map=mandera_triangle",
+    "page/map=dikhil",
+    "page/analysis",
+    "karamoja/core",
+    "moyale_borana/core",
+    "mandera_triangle/core",
+    "dikhil/core",
+    "page/regional-maps"
+  ],
+  "other_assets_unchanged": true,
+  "numeric_data_unchanged": true,
+  "regional_credit_removed": true,
+  "distinct_cluster_fills": 4,
+  "source_png_hashes": {
+    "01_Four_Priority_Clusters.png": "a453c13344587fd459104dc6ea6ab1b2ccd8053c78024b9701fd59e7d19b9216",
+    "02_ACLED_Event_Concentrations.png": "b4800689e3b883b1815d761162f3721705c5e6f27d1825cfd010b7eb376adf14",
+    "03_Drought_and_Flood_Hazards.png": "17ddaee3efc22d93387b38dedb6675abdb315fcb7fe795dadc0000f2294b0f32",
+    "04_Drought_Hazard.png": "d7bf219fb5ed973b4ffa7483dcc208f1ba1636e3c809cc24a33deed3536abdda",
+    "05_River_Flood_Hazard.png": "c7f215068258726d9af45a70b5733b1d06c82891b639ecfbd3b7d8aac62ddd66"
+  },
+  "source_resource_id": "3d067bc4-e6bd-413e-a490-2010aa842a63",
+  "bundle_matches_pngs": true
+}

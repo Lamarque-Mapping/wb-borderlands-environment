@@ -94,6 +94,7 @@ assert not conflicts
 assert hist.sum()==len(records)
 
 BG='#ffffff'; LAND='#f2f3f1'; SEA='#edf4f5'; INK='#23353d'; MUTED='#66767a'; BORDER='#9da7a8';GREEN='#285b4d'
+CLUSTER_COLOURS={'karamoja':('#a9cabc','#285b4d'),'moyale_borana':('#afc9df','#3c617c'),'mandera_triangle':('#e6c798','#876333'),'dikhil':('#c6b5d4','#705486')}
 plt.rcParams.update({'font.family':'DejaVu Sans','font.size':11,'text.color':INK,'axes.labelcolor':INK,'hatch.linewidth':.4})
 
 def polygons(g):
@@ -144,13 +145,14 @@ def border_lines(ax):
  border=unary_union([project(make_valid(shape(f['geometry']))) for c in CODES for f in cores[c]['borders']['features']]).intersection(U)
  add(border)
  ax.add_collection(LineCollection(segs,colors='#53686c',linewidths=.55,linestyles=(0,(3,2)),zorder=5))
-def cluster_labels(ax,small=False):
+def cluster_labels(ax,small=False,distinguish=False):
  border_lines(ax)
  for c,(point,lab,ha) in LABELS.items():
   px,py=T.transform(*point);lx,ly=T.transform(*lab)
   txt=NAMES[c].replace('Mandera Triangle','Mandera\nTriangle') if small else NAMES[c]
-  an=ax.annotate(txt,xy=(px,py),xytext=(lx,ly),fontsize=10 if small else 12.5,weight='bold',color=GREEN,ha=ha,va='center',zorder=15,
-   arrowprops=dict(arrowstyle='-',lw=.8,color=GREEN,connectionstyle='angle3,angleA=0,angleB=90',shrinkA=4,shrinkB=0),
+  colour=CLUSTER_COLOURS[c][1] if distinguish else GREEN
+  an=ax.annotate(txt,xy=(px,py),xytext=(lx,ly),fontsize=10 if small else 12.5,weight='bold',color=colour,ha=ha,va='center',zorder=15,
+   arrowprops=dict(arrowstyle='-',lw=.8,color=colour,connectionstyle='angle3,angleA=0,angleB=90',shrinkA=4,shrinkB=0),
    bbox=dict(facecolor='white',edgecolor='none',pad=2,alpha=.94))
 def scales(ax,small=False):
  sx,sy=x0+95000,y0+40000
@@ -169,7 +171,6 @@ def frame(title,subtitle):
 def footer(fig,source,extra=''):
  fig.text(.045,.060,source,fontsize=8.2,color=MUTED)
  if extra:fig.text(.045,.040,extra,fontsize=8.2,color=MUTED)
- fig.text(.955,.020,'Mapping by Hugh Lamarque',fontsize=8.2,color=MUTED,ha='right')
  fig.text(.045,.020,'Boundaries and names shown do not imply official endorsement.',fontsize=7.5,color='#869196')
 def aside(fig,title,lines_text):
  fig.text(.69,.745,title,fontsize=14,weight='bold',color=INK)
@@ -181,12 +182,20 @@ def single_map(title,subtitle):
  fig=frame(title,subtitle);ax=base(fig.add_axes([.032,.105,.63,.745]));return fig,ax
 
 fig,ax=single_map('Four priority borderland clusters','Regional overview · existing programme footprints')
-draw_polys(ax,U,'#a9cabc',z=4)
-for c,g in G.items():lines(ax,g,GREEN,1.2,6)
-cluster_labels(ax);scales(ax)
-aside(fig,'Priority clusters','Karamoja\nMoyale–Borana\nMandera Triangle\nDikhil')
+for c,g in G.items():draw_polys(ax,g,CLUSTER_COLOURS[c][0],z=4)
+overlap=G['moyale_borana'].intersection(G['mandera_triangle'])
+shared=draw_polys(ax,overlap,'#d4d3be',edge='#7c8378',lw=0,z=4.5)
+shared.set_hatch('////')
+for c,g in G.items():lines(ax,g,CLUSTER_COLOURS[c][1],1.2,6)
+cluster_labels(ax,distinguish=True);scales(ax)
+fig.text(.69,.745,'Priority clusters',fontsize=14,weight='bold',color=INK)
+legax=fig.add_axes([.69,.43,.265,.28]);legax.axis('off')
+for i,c in enumerate(CODES):
+ y=.88-i*.24;fill,edge=CLUSTER_COLOURS[c]
+ legax.add_patch(plt.Rectangle((0,y-.045),.075,.09,facecolor=fill,edgecolor=edge,lw=.7))
+ legax.text(.13,y,NAMES[c],fontsize=12.5,va='center',color=edge)
 fig.text(.69,.34,'Cluster footprints overlap in parts\nof Moyale–Borana and Mandera.',fontsize=11.5,color=MUTED,linespacing=1.5)
-ax2=fig.add_axes([.69,.23,.22,.06]);ax2.axis('off');ax2.add_patch(plt.Rectangle((0,.3),.10,.3,facecolor='#a9cabc',edgecolor=GREEN));ax2.text(.15,.45,'Priority cluster',va='center',fontsize=11.5)
+ax2=fig.add_axes([.69,.23,.25,.06]);ax2.axis('off');ax2.add_patch(plt.Rectangle((0,.3),.10,.3,facecolor='#d4d3be',edgecolor='#7c8378',hatch='////',lw=.5));ax2.text(.15,.45,'Shared footprint',va='center',fontsize=11.5)
 footer(fig,'Cluster boundaries: existing World Bank borderlands maps, derived from OCHA COD-AB. Regional context: Natural Earth.','Same programme footprints and geographic extent used across the overview series.')
 save(fig,'01_Four_Priority_Clusters.png')
 
@@ -234,21 +243,21 @@ def hazard_legend(fig,pos,drought,compact=False):
 
 for prop,drought,num in [('wb_hex_drought',True,'04'),('wb_hex_river_flood',False,'05')]:
  title='Drought hazard across the four clusters' if drought else 'River-flood hazard across the four clusters'
- subtitle='Modelled drought duration · SPEI ≤ −2.0 · 25-year return period' if drought else 'Modelled inundation depth · historical baseline · 25-year return period'
+ subtitle='Modelled months at SPEI ≤ −2.0 · 25-year return period' if drought else 'Modelled inundation depth · historical baseline · 25-year return period'
  fig,ax=single_map(title,subtitle);hazard(ax,prop);cluster_labels(ax);scales(ax)
- fig.text(.69,.755,'Drought duration (months)' if drought else 'Mean flood depth (metres)',fontsize=14,weight='bold')
+ fig.text(.69,.755,'Months at SPEI ≤ −2.0' if drought else 'Mean flood depth (metres)',fontsize=14,weight='bold')
  fig.text(.69,.709,'Mean within each 10 km hexagon',fontsize=11.5,color=MUTED)
  hazard_legend(fig,[.69,.32,.25,.33],drought)
  fig.text(.69,.25,'Grey means no valid data.\nIt does not mean zero hazard.',fontsize=11.5,color=MUTED,linespacing=1.5)
- footer(fig,('Source: Global Drought Hazard based on SPEI (Weller & Mann); source climate record 1902–2018.' if drought else 'Source: WRI Aqueduct Floods, historical river-inundation hazard; no flood-protection adjustment.'),'Existing 10 km hex means; one shared scale. Historical/modelled hazard, not a climate-change projection or a current warning.')
+ footer(fig,('Source: Weller & Mann (2022), IFHV / Ruhr University Bochum, via HDX; based on CSIC SPEI, 1902–2018.' if drought else 'Source: WRI Aqueduct Floods, historical river-inundation hazard; no flood-protection adjustment.'),('Global screening product; publisher advises against local/regional applications. Hex means; grey: no valid data.' if drought else 'Existing 10 km hex means; one shared scale. Historical/modelled hazard, not a climate-change projection or a current warning.'))
  save(fig,num+('_Drought_Hazard.png' if drought else '_River_Flood_Hazard.png'))
 
 fig=frame('Drought and flood hazards across the four clusters','Historical/modelled hazards · 25-year return periods · shared scales within each panel')
-for left,prop,title,sub in [(.045,'wb_hex_drought','Drought hazard','Modelled duration (months); SPEI ≤ −2.0'),(.525,'wb_hex_river_flood','River-flood hazard','Mean modelled inundation depth (metres)')]:
+for left,prop,title,sub in [(.045,'wb_hex_drought','Drought hazard','Modelled months at SPEI ≤ −2.0'),(.525,'wb_hex_river_flood','River-flood hazard','Mean modelled inundation depth (metres)')]:
  fig.text(left,.825,title,fontsize=16,weight='bold');fig.text(left,.793,sub,fontsize=10,color=MUTED)
  ax=base(fig.add_axes([left,.238,.43,.54]),small=True);hazard(ax,prop);cluster_labels(ax,True);scales(ax,True)
  hazard_legend(fig,[left+.015,.12,.40,.09],prop=='wb_hex_drought',True)
-footer(fig,'Sources: Global Drought Hazard based on SPEI (1902–2018 climate record); WRI Aqueduct Floods historical river hazard.','Values are means within existing 10 km hexagons. Grey: no valid data. These layers do not show projected climate change.')
+footer(fig,'Sources: Weller & Mann (2022), IFHV / HDX, based on CSIC SPEI (1902–2018); WRI Aqueduct Floods historical river hazard.','Hexagon means; grey: no valid data. Drought: global screening product; publisher advises against local/regional applications.')
 save(fig,'03_Drought_and_Flood_Hazards.png')
 
 meta={'site':'https://lamarque-mapping.github.io/wb-borderlands-environment/','site_commit':subprocess.check_output(['git','-C',str(ROOT.parent/'live_repo'),'rev-parse','HEAD'],text=True).strip(),'build_id':cores['karamoja']['build_id'],'data_period':cores['karamoja']['acledYearRange'],'acled':{'unique_events':len(records),'duplicate_records_removed':dups,'deduplication':'Exact full exported record including geometry and notes; maximum within-cluster multiplicity retained. Published exports do not retain ACLED event IDs.','event_types':dict(typecounts),'bandwidth_km':25,'cell_km':2,'normalization':'events per 1000 square kilometres, accumulated over the source period','outside_cluster_events':'not included; surface masked to union of four clusters'},'clusters':AUDIT,'drought_classes':DBINS,'flood_classes':FBINS,'display_overlap':'Valid per-cluster hex means averaged where footprints overlap; a missing observation never overwrites a valid one. No filling outside valid hex coverage.','projection':CRS_MAP.to_string(),'grey':'No valid exported numeric value; distinct from zero.'}

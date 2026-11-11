@@ -1,8 +1,8 @@
 WORLD BANK BORDERLANDS — FOUR-CLUSTER PRESENTATION MAPS
-Prepared 11 November 2026 | Mapping by Hugh Lamarque
+Prepared 11 November 2026
 
 CONTENTS
-01_Four_Priority_Clusters.png — locator map with all four clusters named.
+01_Four_Priority_Clusters.png — locator map with all four clusters named and shaded distinctly; shared Moyale–Borana/Mandera footprint is hatched.
 02_ACLED_Event_Concentrations.png — regional concentration of recorded events.
 03_Drought_and_Flood_Hazards.png — paired drought and river-flood overview.
 04_Drought_Hazard.png and 05_River_Flood_Hazard.png — full-size individual panels.
@@ -22,7 +22,13 @@ The four exports contain 2,683 records. Five repeated copies across cluster expo
 The heat surface uses a 25 km Gaussian bandwidth, a 2 km calculation grid and one common legend, expressed as smoothed events per 1,000 km² over the full period. Only events present in the four cluster exports contribute. The surface is masked to their combined footprint; concentrations close to the outer boundary omit any events outside it. Reporting and location precision vary. Low density is not proof of safety or an absence of violence.
 
 DROUGHT AND FLOOD
+Drought source: Weller, Daniel & Mann, Holger (2022), Global Drought Hazard. Produced by the Institute for International Law of Peace and Armed Conflict (IFHV), Ruhr University Bochum; distributed through the Humanitarian Data Exchange (HDX). Its climate inputs come from CSIC’s Global SPEI Database. The World Bank Data Catalog is a catalogue listing, not the original producer.
+
 Drought values represent modelled months at SPEI ≤ −2.0 for a 25-year return period. The source climate series covers 1902–2018. River-flood values represent modelled inundation depth in metres for the historical 25-year-return-period scenario. These are hazard surfaces, not forecasts, climate-change projections or estimates of the people exposed.
+
+The drought resource explicitly describes its units as the number of months at SPEI −2.0 or lower for a 25-year return period. This is a statistical model output, not an observed spell length or a prediction of consecutive dry months. The available metadata does not justify interpreting a value as a single continuous event. Fractional values reflect the modelled/interpolated surface and spatial averaging. The underlying SPEI uses a six-month accumulation window; that is distinct from the output unit.
+
+Publisher limitation: this global screening product is not recommended by its publisher for local or regional applications. Its source climate grid is approximately 0.5 degrees; interpolation to a finer published raster and presentation in 10 km hexagons do not create local climate information. Treat the drought panel as an illustration of this global product, not a basis for local targeting or a reliable ranking of the clusters.
 
 The figures retain the published 10 km hexagon means. In overlapping programme footprints, valid estimates are averaged for the overview display; a missing estimate never overwrites a valid one. Both panels use common absolute classes across all four clusters. Flood depth is a mean over a hexagon, not the maximum depth along a river. No arbitrary combined drought/flood score is calculated.
 
